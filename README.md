@@ -1,3 +1,9 @@
+Record store
+- Author
+- Genre
+- Language
+- Cover color
+
 ## Todo
 
 ### Issues
