@@ -1,0 +1,6 @@
+@import "./product-tile.css";
+
+.featured-products__title {
+    display: flex;
+    align-items: center;
+}

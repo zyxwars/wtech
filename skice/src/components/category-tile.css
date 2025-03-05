@@ -6,7 +6,7 @@
 }
 
 .category-tile__image {
-    width: 5rem;
+    width: 4rem;
     aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: var(--rounded);
@@ -16,6 +16,6 @@
     justify-content: center;
     padding-left: 1rem;
     padding-right: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: bold;
 }

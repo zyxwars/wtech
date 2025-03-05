@@ -6,23 +6,77 @@
         </include>
     </head>
     <body>
-        <main class="main">
-            <div class="genres-grid">
-                <include src="src/components/category-tile.html"></include>
-                <include src="src/components/category-tile.html"></include>
-                <include src="src/components/category-tile.html"></include>
-                <include src="src/components/category-tile.html"></include>
-            </div>
+        <include src="src/components/header.html"></include>
 
-            <div class="group-products">
-                <div class="group-text">Featured Row</div>
+        <main class="flex justify-center items-center">
+            <div
+                class="px-4 pt-28 pb-20 flex flex-col gap-10 max-w-4xl items-center"
+            >
+                <!-- banner -->
+                <img
+                    class="object-cover flex-none w-11/12 h-52 rounded-lg"
+                    src="https://picsum.photos/200/300"
+                />
 
-                <include src="src/components/product-tile.html"></include>
-                <include src="src/components/product-tile.html"></include>
-                <include src="src/components/product-tile.html"></include>
-                <include src="src/components/product-tile.html"></include>
-                <include src="src/components/product-tile.html"></include>
+                <include src="src/components/categories.html"></include>
+
+                <div class="w-10/12 gap-6 flex flex-col">
+                    <include
+                        src="src/components/featured-products.html"
+                    ></include>
+
+                    <!-- Random text -->
+                    <section>
+                        <h2 class="text-4xl font-bold mt-6 mb-6">
+                            Did you know
+                        </h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Vel quae repellat maiores perspiciatis illum
+                            deserunt quisquam qui assumenda voluptate
+                            voluptates, quaerat modi, accusamus cum mollitia
+                            ullam magni laudantium in pariatur.
+                        </p>
+                    </section>
+
+                    <include
+                        src="src/components/featured-products.html"
+                    ></include>
+
+                    <!-- Random text and image -->
+                    <div class="flex gap-4 mt-8 mb-6">
+                        <section class="bg-surface-medium p-4 rounded-lg">
+                            <h2 class="text-4xl font-bold mb-4">
+                                Did you know some other thing
+                            </h2>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Vel quae repellat maiores
+                                perspiciatis illum deserunt quisquam qui
+                                assumenda voluptate voluptates, quaerat modi,
+                                accusamus cum mollitia ullam magni laudantium in
+                                pariatur. Lorem ipsum dolor sit amet
+                                consectetur, adipisicing elit. Dolores veniam ex
+                                id porro laborum, consequatur consectetur
+                                aliquam officia nihil, maxime nisi harum
+                                pariatur labore accusamus quidem quam autem
+                                repellendus earum?
+                            </p>
+                        </section>
+
+                        <img
+                            class="w-64 h-64 object-cover flex-none rounded-lg"
+                            src="https://picsum.photos/200/300"
+                        />
+                    </div>
+
+                    <include
+                        src="src/components/featured-products.html"
+                    ></include>
+                </div>
             </div>
         </main>
+
+        <include src="src/components/footer.html"></include>
     </body>
 </html>
