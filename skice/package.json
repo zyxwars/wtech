@@ -1,0 +1,23 @@
+{
+    "name": "skice",
+    "version": "1.0.0",
+    "source": "src/pages/*.html",
+    "scripts": {
+        "dev": "parcel --host localhost",
+        "build": "parcel build --no-optimize --no-source-maps --no-scope-hoist --dist-dir skice"
+    },
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "devDependencies": {
+        "parcel": "^2.13.3",
+        "posthtml-expressions": "^1.11.4",
+        "posthtml-include": "^2.0.1"
+    },
+    "dependencies": {
+        "@tailwindcss/postcss": "^4.0.9",
+        "autoprefixer": "^10.4.20",
+        "postcss-modules": "^6.0.1",
+        "tailwindcss": "^4.0.9"
+    }
+}

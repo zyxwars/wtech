@@ -1,0 +1,28 @@
+@import "global.css";
+@import "../components/header.css";
+@import "../components/category-tile.css";
+@import "../components/product-tile.css";
+
+.genres-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 1.5rem;
+}
+
+.group-text {
+    display: flex;
+    align-items: center;
+}
+
+.group-products {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}

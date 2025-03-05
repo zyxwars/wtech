@@ -1,0 +1,21 @@
+.category-tile__card {
+    display: flex;
+    background-color: var(--surface-medium-color);
+    border-radius: var(--rounded);
+    align-items: center;
+}
+
+.category-tile__image {
+    width: 5rem;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: var(--rounded);
+}
+
+.category-tile__text {
+    justify-content: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
