@@ -4,23 +4,36 @@
         <include src="src/document-head.html">
             { "title": "Record Store" }
         </include>
+        <link href="./index.css" type="text/css" rel="stylesheet" />
     </head>
     <body>
         <include src="src/components/header.html"></include>
 
-        <main class="flex justify-center items-center">
+        <main class="flex justify-center min-h-screen">
             <div
-                class="px-4 pt-28 pb-20 flex flex-col gap-10 max-w-4xl items-center"
+                class="px-4 pt-28 pb-20 flex flex-col w-full max-w-4xl items-center"
             >
                 <!-- banner -->
+
                 <img
-                    class="object-cover flex-none w-11/12 h-52 rounded-lg"
-                    src="https://picsum.photos/200/300"
+                    class="object-cover flex-none w-full h-52 sm:h-64 rounded-lg"
+                    src="https://plus.unsplash.com/premium_photo-1682125896993-12a1758b6cb3?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 />
 
-                <include src="src/components/categories.html"></include>
+                <div class="flex gap-2 mt-4 mb-10">
+                    <span class="bg-white rounded-full w-2 h-2"></span>
+                    <span class="bg-white rounded-full w-2 h-2"></span>
+                    <span class="bg-white rounded-full w-2 h-2"></span>
+                </div>
 
-                <div class="w-10/12 gap-6 flex flex-col">
+                <div class="categories mb-10">
+                    <include src="src/components/category-tile.html"></include>
+                    <include src="src/components/category-tile.html"></include>
+                    <include src="src/components/category-tile.html"></include>
+                    <include src="src/components/category-tile.html"></include>
+                </div>
+
+                <div class="w-full gap-6 flex flex-col">
                     <include
                         src="src/components/featured-products.html"
                     ></include>
@@ -44,7 +57,7 @@
                     ></include>
 
                     <!-- Random text and image -->
-                    <div class="flex gap-4 mt-8 mb-6">
+                    <div class="flex gap-4 mt-8 mb-6 flex-wrap sm:flex-nowrap">
                         <section class="bg-surface-medium p-4 rounded-lg">
                             <h2 class="text-4xl font-bold mb-4">
                                 Did you know some other thing
@@ -65,14 +78,29 @@
                         </section>
 
                         <img
-                            class="w-64 h-64 object-cover flex-none rounded-lg"
-                            src="https://picsum.photos/200/300"
+                            class="w-full sm:w-64 h-64 object-cover flex-none rounded-lg"
+                            src="https://cdn.pixabay.com/photo/2016/10/17/16/35/concert-1748102_1280.jpg"
                         />
                     </div>
 
                     <include
                         src="src/components/featured-products.html"
                     ></include>
+
+                    <div class="categories">
+                        <include
+                            src="src/components/category-tile.html"
+                        ></include>
+                        <include
+                            src="src/components/category-tile.html"
+                        ></include>
+                        <include
+                            src="src/components/category-tile.html"
+                        ></include>
+                        <include
+                            src="src/components/category-tile.html"
+                        ></include>
+                    </div>
                 </div>
             </div>
         </main>

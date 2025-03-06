@@ -4,7 +4,7 @@
     "source": "src/pages/*.html",
     "scripts": {
         "dev": "parcel --host localhost",
-        "build": "parcel build --no-optimize --no-source-maps --no-scope-hoist --dist-dir skice"
+        "build": "parcel build --no-optimize --no-source-maps --no-scope-hoist --no-content-hash --dist-dir skice"
     },
     "author": "",
     "license": "ISC",

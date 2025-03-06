@@ -1,0 +1,66 @@
+/*! tailwindcss v4.0.9 | MIT License | https://tailwindcss.com */
+.product-tile__image {
+  object-fit: cover;
+  border-radius: var(--rounded);
+  width: 12rem;
+  height: 12rem;
+}
+
+.product-tile__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.product-tile__price {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.product-tile__price-cart {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.product-tile__cart {
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: var(--rounded);
+  justify-content: center;
+  align-items: center;
+  padding: .5rem;
+  display: flex;
+}
+
+.featured-products__title {
+  align-items: center;
+  display: flex;
+}
+
+.categories {
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  gap: 1rem;
+  width: 100%;
+  display: grid;
+}
+
+.category-tile__card {
+  background-color: var(--surface-medium-color);
+  border-radius: var(--rounded);
+  align-items: center;
+  display: flex;
+}
+
+.category-tile__image {
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: var(--rounded);
+  height: 4rem;
+}
+
+.category-tile__text {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
