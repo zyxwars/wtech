@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="mytheme">
     <head>
         <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -44,6 +44,26 @@
                 class="w-10 aspect-square hover:scale-120 transition-transform"
             />
         </a>
+        <!-- 
+        <label class="input invisible sm:visible">
+            <svg
+                class="h-[1em] opacity-50"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+            >
+                <g
+                    stroke-linejoin="round"
+                    stroke-linecap="round"
+                    stroke-width="2.5"
+                    fill="none"
+                    stroke="currentColor"
+                >
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.3-4.3"></path>
+                </g>
+            </svg>
+            <input type="search" class="grow" placeholder="Search" />
+        </label> -->
 
         <!-- Cart and account -->
         <div class="flex gap-4 text-white">
@@ -78,7 +98,7 @@
                 <div class="categories mb-10">
                     <a href="./category.html">
     <div
-        class="category-tile__card hover:scale-105 cursor-pointer transition-all duration-150"
+        class="category-tile__card hover:scale-105 cursor-pointer transition-all duration-150 shadow-s"
     >
         <img class="category-tile__image" src="https://picsum.photos/200/300" />
         <div class="flex justify-center w-full pr-10">
@@ -90,7 +110,7 @@
                     <!--  -->
                     <a href="./category.html">
     <div
-        class="category-tile__card hover:scale-105 cursor-pointer transition-all duration-150"
+        class="category-tile__card hover:scale-105 cursor-pointer transition-all duration-150 shadow-s"
     >
         <img class="category-tile__image" src="https://picsum.photos/200/300" />
         <div class="flex justify-center w-full pr-10">
@@ -102,7 +122,7 @@
                     <!--  -->
                     <a href="./category.html">
     <div
-        class="category-tile__card hover:scale-105 cursor-pointer transition-all duration-150"
+        class="category-tile__card hover:scale-105 cursor-pointer transition-all duration-150 shadow-s"
     >
         <img class="category-tile__image" src="https://picsum.photos/200/300" />
         <div class="flex justify-center w-full pr-10">
@@ -114,7 +134,7 @@
                     <!--  -->
                     <a href="./category.html">
     <div
-        class="category-tile__card hover:scale-105 cursor-pointer transition-all duration-150"
+        class="category-tile__card hover:scale-105 cursor-pointer transition-all duration-150 shadow-s"
     >
         <img class="category-tile__image" src="https://picsum.photos/200/300" />
         <div class="flex justify-center w-full pr-10">
@@ -126,7 +146,7 @@
                     <!--  -->
                     <a href="./category.html">
     <div
-        class="category-tile__card hover:scale-105 cursor-pointer transition-all duration-150"
+        class="category-tile__card hover:scale-105 cursor-pointer transition-all duration-150 shadow-s"
     >
         <img class="category-tile__image" src="https://picsum.photos/200/300" />
         <div class="flex justify-center w-full pr-10">
@@ -138,7 +158,7 @@
                     <!--  -->
                     <a href="./category.html">
     <div
-        class="category-tile__card hover:scale-105 cursor-pointer transition-all duration-150"
+        class="category-tile__card hover:scale-105 cursor-pointer transition-all duration-150 shadow-s"
     >
         <img class="category-tile__image" src="https://picsum.photos/200/300" />
         <div class="flex justify-center w-full pr-10">
@@ -150,7 +170,7 @@
                     <!--  -->
                     <a href="./category.html">
     <div
-        class="category-tile__card hover:scale-105 cursor-pointer transition-all duration-150"
+        class="category-tile__card hover:scale-105 cursor-pointer transition-all duration-150 shadow-s"
     >
         <img class="category-tile__image" src="https://picsum.photos/200/300" />
         <div class="flex justify-center w-full pr-10">
@@ -458,7 +478,7 @@
 
                     <!-- Random text and image -->
                     <div class="flex gap-4 mt-8 mb-6 flex-wrap sm:flex-nowrap">
-                        <section class="bg-surface-medium p-4 rounded-lg">
+                        <section class="bg-base-200 p-4 rounded-lg">
                             <h2 class="text-4xl font-bold mb-4">
                                 Did you know some other thing
                             </h2>
@@ -629,6 +649,7 @@
         <footer
     class="footer sm:footer-horizontal bg-neutral text-neutral-content p-10 mt-14"
 >
+    <!-- TODO: add meaningful data -->
     <nav>
         <h6 class="footer-title">Services</h6>
         <a class="link link-hover">Branding</a>

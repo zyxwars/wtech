@@ -6,7 +6,7 @@
     width: 15rem;
     height: 5rem;
     margin-right: 6rem;
-    border-radius: var(--rounded);
+    border-radius: var(--radius-box);
 
     /* Fallback color (optional) */
     background-color: var(--surface-medium-color);

@@ -1,7 +1,7 @@
 .category-tile__card {
     display: flex;
-    background-color: var(--surface-medium-color);
-    border-radius: var(--rounded);
+    background-color: var(--color-base-200);
+    border-radius: var(--radius-box);
     align-items: center;
 }
 
@@ -9,7 +9,7 @@
     height: 4rem;
     aspect-ratio: 1/1;
     object-fit: cover;
-    border-radius: var(--rounded);
+    border-radius: var(--radius-box);
 }
 
 .category-tile__text {

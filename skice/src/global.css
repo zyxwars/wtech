@@ -1,14 +1,54 @@
-:root {
-    --primary-color: #8d493a;
-    --surface-low-color: #f8ede3;
-    --surface-medium-color: #dfd3c3;
-    --surface-high-color: #d0b8a8;
-    --rounded: 0.5rem;
+[data-theme="mytheme"] {
+    name: "mytheme";
+    default: true; /* set as default */
+    prefersdark: false; /* set as default dark mode (prefers-color-scheme:dark) */
+    color-scheme: light; /* color of browser-provided UI */
+
+    --color-base-100: #f8ede3;
+    --color-base-200: #dfd3c3;
+    --color-base-300: #d0b8a8;
+    --color-base-content: oklch(0% 0 0);
+
+    --color-primary: #8d493a;
+    --color-primary-content: oklch(100% 0 0);
+
+    --color-secondary: #8d493a;
+    --color-secondary-content: oklch(100% 0 0);
+
+    --color-accent: #8d493a;
+    --color-accent-content: oklch(100% 0 0);
+
+    --color-accent: oklch(0% 0 0);
+    --color-accent-content: oklch(100% 0 0);
+
+    --color-info: oklch(70% 0.2 220);
+    --color-info-content: oklch(98% 0.01 220);
+    --color-success: oklch(65% 0.25 140);
+    --color-success-content: oklch(98% 0.01 140);
+    --color-warning: oklch(80% 0.25 80);
+    --color-warning-content: oklch(20% 0.05 80);
+    --color-error: oklch(65% 0.3 30);
+    --color-error-content: oklch(98% 0.01 30);
+
+    /* border radius */
+    --radius-selector: 1rem;
+    --radius-field: 0.25rem;
+    --radius-box: 0.5rem;
+
+    /* base sizes */
+    --size-selector: 0.25rem;
+    --size-field: 0.25rem;
+
+    /* border size */
+    --border: 1px;
+
+    /* effects */
+    --depth: 1;
+    --noise: 0;
 }
 
 body {
     font-family: "Inter", sans-serif;
-    background-color: var(--surface-low-color);
 }
 
 .no-scrollbar {
