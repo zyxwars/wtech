@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <include src="src/document-head.html">
-            { "title": "Detail" }
-        </include>
+        {% include "components/document-head.html" %}
+
         <link href="./detail.css" type="text/css" rel="stylesheet" />
     </head>
     <body>
-        <include src="src/components/header.html"></include>
+        {% include "components/header.html" %}
 
         <main class="flex justify-center ">S
                 <!-- main product image -->
@@ -54,6 +53,6 @@
             </div>
         </main>
 
-        <include src="src/components/footer.html"></include>
+        {% include "components/footer.html" %}
     </body>
 </html>
