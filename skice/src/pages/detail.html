@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <include src="src/document-head.html">
+            { "title": "Detail" }
+        </include>
+        <link href="./detail.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <include src="src/components/header.html"></include>
+
+        <main class="flex justify-center min-h-screen">
+            <div class = "w-full max-w-4xl">
+                <!-- main product image -->
+                    <img
+                        class = "main_image object-cover rounded-lg"
+                        src="https://cdn.pixabay.com/photo/2016/10/17/16/35/concert-1748102_1280.jpg"
+                    />
+                
+                <!-- Text for the product -->
+                <div>
+                    <!-- product title -->
+                    <div class="product_title">
+                        Product title
+                    </div>
+
+                    <!-- product description -->
+                    <div class="product_description">
+                        Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Vel quae repellat maiores
+                        perspiciatis illum deserunt quisquam qui
+                        assumenda voluptate voluptates, quaerat modi,
+                        accusamus cum mollitia ullam magni laudantium in
+                        pariatur. Lorem ipsum dolor sit amet
+                        consectetur, adipisicing elit. Dolores veniam ex
+                        id porro laborum, consequatur consectetur
+                        aliquam officia nihil, maxime nisi harum
+                        pariatur labore accusamus quidem quam autem
+                        repellendus earum?
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <include src="src/components/footer.html"></include>
+    </body>
+</html>
