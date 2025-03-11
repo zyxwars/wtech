@@ -1,5 +1,34 @@
 @import "../components/featured-products.css";
 
+.category-tile__card {
+    display: flex;
+    align-items: center;
+    width: 15rem;
+    height: 5rem;
+    margin-right: 6rem;
+    border-radius: var(--rounded);
+  
+    /* Fallback color (optional) */
+    background-color: var(--surface-medium-color);
+  
+    /* Gradient using your color stops */
+    background: linear-gradient(
+      to right,
+      #EBD197 0%,
+      #B48811 50%,
+      #A2790D 75%,
+      #BB9B49 100%
+    );
+  }
+  
+
+.category-tile__text {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
 .main_image {
     width: 25rem;
     height: 25rem;
@@ -8,16 +37,16 @@
     justify-content: flex-start;
 }
 
-.product_title{
-    font-size: 3rem;
-    font-weight: bold;
-    margin-left: 6rem;
-    margin-top: 10rem;
-}
-
 .product_description{
     font-size: 1.5rem;
     margin-left: 6rem;
     margin-top: 2rem;
     margin-right: 4rem;
+}
+
+.product_title{
+    font-size: 3rem;
+    font-weight: bold;
+    margin-left: 6rem;
+    margin-top: 10rem;
 }
