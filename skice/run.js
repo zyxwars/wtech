@@ -17,7 +17,8 @@ fs.readdirSync("./src")
     .forEach((fileName) => buildHtml(fileName));
 
 fs.readdirSync("./src")
-    .filter((name) => name.endsWith(".css"))
+    // TODO: Add file types to copy here
+    .filter((name) => name.endsWith(".css") || name.endsWith(".svg"))
     .forEach((fileName) =>
         fs.copyFileSync(
             path.join("./src", fileName),

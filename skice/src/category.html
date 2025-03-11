@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% include "components/document-head.html" %}
+
+        <link href="./category.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        {% include "components/header.html" %}
+
+        <div class="drawer">
+            <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+            <div class="drawer-content">
+                <!-- Page content here -->
+                <main class="min-h-screen flex justify-center mb-12">
+                    <div class="max-w-4xl">
+                        <section>
+                            <h1 class="font-bold text-4xl">Blues</h1>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Laborum minima eos doloremque,
+                                dicta assumenda cum molestiae? Labore minima
+                                magnam quaerat tempora consequuntur impedit
+                                aperiam? Maxime praesentium excepturi ullam qui
+                                vel!
+                            </p>
+                        </section>
+
+                        {% include "components/products-grid.html" %}
+                    </div>
+                </main>
+
+                {% include "components/footer.html" %}
+            </div>
+            <div class="drawer-side z-20">
+                <label
+                    for="my-drawer"
+                    aria-label="close sidebar"
+                    class="drawer-overlay"
+                ></label>
+
+                <div
+                    class="menu bg-base-200 text-base-content min-h-full w-80 p-4"
+                >
+                    <!-- Sidebar content here -->
+                    <form>
+                        <h2 class="font-bold text-lg">Price</h2>
+                        <div class="flex">
+                            <input
+                                type="number"
+                                placeholder="Start"
+                                class="input"
+                            />
+                            <input
+                                type="number"
+                                placeholder="End"
+                                class="input"
+                            />
+                        </div>
+                        <h2 class="font-bold text-lg">Author</h2>
+                        <select class="select">
+                            <option>Crimson</option>
+                            <option>Amber</option>
+                            <option>Velvet</option>
+                        </select>
+                        <h2 class="font-bold text-lg">Language</h2>
+                        <select class="select">
+                            <option>Slovak</option>
+                            <option>English</option>
+                            <option>Hungarian</option>
+                        </select>
+                        <h2 class="font-bold text-lg">Release year</h2>
+                        <div class="flex">
+                            <input
+                                type="number"
+                                placeholder="Start"
+                                class="input"
+                            />
+                            <input
+                                type="number"
+                                placeholder="End"
+                                class="input"
+                            />
+                        </div>
+
+                        <button class="btn btn-primary" type="submit">
+                            Filter
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
