@@ -1,0 +1,48 @@
+<!-- Controls -->
+<div class="w-full flex justify-end gap-2 mb-4">
+    <select class="select select-primary max-w-42">
+        <option>Recommended</option>
+        <option>Price Lowest</option>
+        <option>Price Highest</option>
+    </select>
+
+    <label for="my-drawer" class="drawer-button btn btn-primary">Filter</label>
+</div>
+
+<!-- Products -->
+<div class="products-grid mb-8">
+    {% include "components/product-tile-responsive.html" %}
+    <!--  -->
+    {% include "components/product-tile-responsive.html" %}
+    <!--  -->
+    {% include "components/product-tile-responsive.html" %}
+    <!--  -->
+    {% include "components/product-tile-responsive.html" %}
+    <!--  -->
+    {% include "components/product-tile-responsive.html" %}
+    <!--  -->
+    {% include "components/product-tile-responsive.html" %}
+    <!--  -->
+    {% include "components/product-tile-responsive.html" %}
+    <!--  -->
+    {% include "components/product-tile-responsive.html" %}
+    <!--  -->
+    {% include "components/product-tile-responsive.html" %}
+    <!--  -->
+    {% include "components/product-tile-responsive.html" %}
+    <!--  -->
+    {% include "components/product-tile-responsive.html" %}
+    <!--  -->
+    {% include "components/product-tile-responsive.html" %}
+</div>
+
+<!-- Pagination -->
+<div class="w-full flex justify-center">
+    <div class="join">
+        <button class="join-item btn">1</button>
+        <button class="join-item btn">2</button>
+        <button class="join-item btn btn-disabled">...</button>
+        <button class="join-item btn">99</button>
+        <button class="join-item btn">100</button>
+    </div>
+</div>

@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="mytheme">
+    <head>
+        <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Record Store</title>
+
+<!-- Google fonts -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet"
+/>
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+/>
+
+<!-- Global css -->
+<link href="./global.css" type="text/css" rel="stylesheet" />
+
+<!-- Daisy ui and tailwind-->
+<link
+    href="https://cdn.jsdelivr.net/npm/daisyui@5"
+    rel="stylesheet"
+    type="text/css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+
+        <link href="./category.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="bg-black w-full h-2"></div>
+<nav class="sticky top-0 left-0 right-0 shadow-lg mb-4 z-10">
+    <div class="bg-primary flex items-center justify-between py-2 px-4">
+        <!-- Logo -->
+        <a href="./index.html" class="cursor-pointer">
+            <img
+                src="./logo.svg"
+                class="w-10 aspect-square hover:scale-120 transition-transform"
+            />
+        </a>
+        <!-- 
+        <label class="input invisible sm:visible">
+            <svg
+                class="h-[1em] opacity-50"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+            >
+                <g
+                    stroke-linejoin="round"
+                    stroke-linecap="round"
+                    stroke-width="2.5"
+                    fill="none"
+                    stroke="currentColor"
+                >
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.3-4.3"></path>
+                </g>
+            </svg>
+            <input type="search" class="grow" placeholder="Search" />
+        </label> -->
+
+        <!-- Cart and account -->
+        <div class="flex gap-4 text-white">
+            <button>
+                <span class="material-symbols-outlined">shopping_cart</span>
+            </button>
+
+            <button>
+                <span class="material-symbols-outlined">person</span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+
+        <div class="drawer">
+            <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+            <div class="drawer-content">
+                <!-- Page content here -->
+                <main class="min-h-screen flex justify-center mb-12">
+                    <div class="max-w-4xl">
+                        <section>
+                            <h1 class="font-bold text-4xl">Blues</h1>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Laborum minima eos doloremque,
+                                dicta assumenda cum molestiae? Labore minima
+                                magnam quaerat tempora consequuntur impedit
+                                aperiam? Maxime praesentium excepturi ullam qui
+                                vel!
+                            </p>
+                        </section>
+
+                        <!-- Controls -->
+<div class="w-full flex justify-end gap-2 mb-4">
+    <select class="select select-primary max-w-42">
+        <option>Recommended</option>
+        <option>Price Lowest</option>
+        <option>Price Highest</option>
+    </select>
+
+    <label for="my-drawer" class="drawer-button btn btn-primary">Filter</label>
+</div>
+
+<!-- Products -->
+<div class="products-grid mb-8">
+    <div class="w-full">
+    <img
+        class="w-full aspect-square rounded-lg"
+        src="https://picsum.photos/200/300"
+    />
+
+    <div class="p-2">
+        <div class="font-bold text-xl">Lorem ipsum dolor sit</div>
+        <div class="font-semibold text-md mb-2">Artist name</div>
+
+        <div class="flex justify-between w-full items-center">
+            <div class="">3,89€</div>
+            <button class="btn btn-primary">
+                <span class="material-symbols-outlined text-white">
+                    shopping_cart
+                </span>
+            </button>
+        </div>
+    </div>
+</div>
+
+    <!--  -->
+    <div class="w-full">
+    <img
+        class="w-full aspect-square rounded-lg"
+        src="https://picsum.photos/200/300"
+    />
+
+    <div class="p-2">
+        <div class="font-bold text-xl">Lorem ipsum dolor sit</div>
+        <div class="font-semibold text-md mb-2">Artist name</div>
+
+        <div class="flex justify-between w-full items-center">
+            <div class="">3,89€</div>
+            <button class="btn btn-primary">
+                <span class="material-symbols-outlined text-white">
+                    shopping_cart
+                </span>
+            </button>
+        </div>
+    </div>
+</div>
+
+    <!--  -->
+    <div class="w-full">
+    <img
+        class="w-full aspect-square rounded-lg"
+        src="https://picsum.photos/200/300"
+    />
+
+    <div class="p-2">
+        <div class="font-bold text-xl">Lorem ipsum dolor sit</div>
+        <div class="font-semibold text-md mb-2">Artist name</div>
+
+        <div class="flex justify-between w-full items-center">
+            <div class="">3,89€</div>
+            <button class="btn btn-primary">
+                <span class="material-symbols-outlined text-white">
+                    shopping_cart
+                </span>
+            </button>
+        </div>
+    </div>
+</div>
+
+    <!--  -->
+    <div class="w-full">
+    <img
+        class="w-full aspect-square rounded-lg"
+        src="https://picsum.photos/200/300"
+    />
+
+    <div class="p-2">
+        <div class="font-bold text-xl">Lorem ipsum dolor sit</div>
+        <div class="font-semibold text-md mb-2">Artist name</div>
+
+        <div class="flex justify-between w-full items-center">
+            <div class="">3,89€</div>
+            <button class="btn btn-primary">
+                <span class="material-symbols-outlined text-white">
+                    shopping_cart
+                </span>
+            </button>
+        </div>
+    </div>
+</div>
+
+    <!--  -->
+    <div class="w-full">
+    <img
+        class="w-full aspect-square rounded-lg"
+        src="https://picsum.photos/200/300"
+    />
+
+    <div class="p-2">
+        <div class="font-bold text-xl">Lorem ipsum dolor sit</div>
+        <div class="font-semibold text-md mb-2">Artist name</div>
+
+        <div class="flex justify-between w-full items-center">
+            <div class="">3,89€</div>
+            <button class="btn btn-primary">
+                <span class="material-symbols-outlined text-white">
+                    shopping_cart
+                </span>
+            </button>
+        </div>
+    </div>
+</div>
+
+    <!--  -->
+    <div class="w-full">
+    <img
+        class="w-full aspect-square rounded-lg"
+        src="https://picsum.photos/200/300"
+    />
+
+    <div class="p-2">
+        <div class="font-bold text-xl">Lorem ipsum dolor sit</div>
+        <div class="font-semibold text-md mb-2">Artist name</div>
+
+        <div class="flex justify-between w-full items-center">
+            <div class="">3,89€</div>
+            <button class="btn btn-primary">
+                <span class="material-symbols-outlined text-white">
+                    shopping_cart
+                </span>
+            </button>
+        </div>
+    </div>
+</div>
+
+    <!--  -->
+    <div class="w-full">
+    <img
+        class="w-full aspect-square rounded-lg"
+        src="https://picsum.photos/200/300"
+    />
+
+    <div class="p-2">
+        <div class="font-bold text-xl">Lorem ipsum dolor sit</div>
+        <div class="font-semibold text-md mb-2">Artist name</div>
+
+        <div class="flex justify-between w-full items-center">
+            <div class="">3,89€</div>
+            <button class="btn btn-primary">
+                <span class="material-symbols-outlined text-white">
+                    shopping_cart
+                </span>
+            </button>
+        </div>
+    </div>
+</div>
+
+    <!--  -->
+    <div class="w-full">
+    <img
+        class="w-full aspect-square rounded-lg"
+        src="https://picsum.photos/200/300"
+    />
+
+    <div class="p-2">
+        <div class="font-bold text-xl">Lorem ipsum dolor sit</div>
+        <div class="font-semibold text-md mb-2">Artist name</div>
+
+        <div class="flex justify-between w-full items-center">
+            <div class="">3,89€</div>
+            <button class="btn btn-primary">
+                <span class="material-symbols-outlined text-white">
+                    shopping_cart
+                </span>
+            </button>
+        </div>
+    </div>
+</div>
+
+    <!--  -->
+    <div class="w-full">
+    <img
+        class="w-full aspect-square rounded-lg"
+        src="https://picsum.photos/200/300"
+    />
+
+    <div class="p-2">
+        <div class="font-bold text-xl">Lorem ipsum dolor sit</div>
+        <div class="font-semibold text-md mb-2">Artist name</div>
+
+        <div class="flex justify-between w-full items-center">
+            <div class="">3,89€</div>
+            <button class="btn btn-primary">
+                <span class="material-symbols-outlined text-white">
+                    shopping_cart
+                </span>
+            </button>
+        </div>
+    </div>
+</div>
+
+    <!--  -->
+    <div class="w-full">
+    <img
+        class="w-full aspect-square rounded-lg"
+        src="https://picsum.photos/200/300"
+    />
+
+    <div class="p-2">
+        <div class="font-bold text-xl">Lorem ipsum dolor sit</div>
+        <div class="font-semibold text-md mb-2">Artist name</div>
+
+        <div class="flex justify-between w-full items-center">
+            <div class="">3,89€</div>
+            <button class="btn btn-primary">
+                <span class="material-symbols-outlined text-white">
+                    shopping_cart
+                </span>
+            </button>
+        </div>
+    </div>
+</div>
+
+    <!--  -->
+    <div class="w-full">
+    <img
+        class="w-full aspect-square rounded-lg"
+        src="https://picsum.photos/200/300"
+    />
+
+    <div class="p-2">
+        <div class="font-bold text-xl">Lorem ipsum dolor sit</div>
+        <div class="font-semibold text-md mb-2">Artist name</div>
+
+        <div class="flex justify-between w-full items-center">
+            <div class="">3,89€</div>
+            <button class="btn btn-primary">
+                <span class="material-symbols-outlined text-white">
+                    shopping_cart
+                </span>
+            </button>
+        </div>
+    </div>
+</div>
+
+    <!--  -->
+    <div class="w-full">
+    <img
+        class="w-full aspect-square rounded-lg"
+        src="https://picsum.photos/200/300"
+    />
+
+    <div class="p-2">
+        <div class="font-bold text-xl">Lorem ipsum dolor sit</div>
+        <div class="font-semibold text-md mb-2">Artist name</div>
+
+        <div class="flex justify-between w-full items-center">
+            <div class="">3,89€</div>
+            <button class="btn btn-primary">
+                <span class="material-symbols-outlined text-white">
+                    shopping_cart
+                </span>
+            </button>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<!-- Pagination -->
+<div class="w-full flex justify-center">
+    <div class="join">
+        <button class="join-item btn">1</button>
+        <button class="join-item btn">2</button>
+        <button class="join-item btn btn-disabled">...</button>
+        <button class="join-item btn">99</button>
+        <button class="join-item btn">100</button>
+    </div>
+</div>
+
+                    </div>
+                </main>
+
+                <footer
+    class="footer sm:footer-horizontal bg-neutral text-neutral-content p-10 mt-14"
+>
+    <!-- TODO: add meaningful data -->
+    <nav>
+        <h6 class="footer-title">Services</h6>
+        <a class="link link-hover">Branding</a>
+        <a class="link link-hover">Design</a>
+        <a class="link link-hover">Marketing</a>
+        <a class="link link-hover">Advertisement</a>
+    </nav>
+    <nav>
+        <h6 class="footer-title">Company</h6>
+        <a class="link link-hover">About us</a>
+        <a class="link link-hover">Contact</a>
+        <a class="link link-hover">Jobs</a>
+        <a class="link link-hover">Press kit</a>
+    </nav>
+    <nav>
+        <h6 class="footer-title">Legal</h6>
+        <a class="link link-hover">Terms of use</a>
+        <a class="link link-hover">Privacy policy</a>
+        <a class="link link-hover">Cookie policy</a>
+    </nav>
+</footer>
+
+            </div>
+            <div class="drawer-side z-20">
+                <label
+                    for="my-drawer"
+                    aria-label="close sidebar"
+                    class="drawer-overlay"
+                ></label>
+
+                <div
+                    class="menu bg-base-200 text-base-content min-h-full w-80 p-4"
+                >
+                    <!-- Sidebar content here -->
+                    <form>
+                        <h2 class="font-bold text-lg">Price</h2>
+                        <div class="flex">
+                            <input
+                                type="number"
+                                placeholder="Start"
+                                class="input"
+                            />
+                            <input
+                                type="number"
+                                placeholder="End"
+                                class="input"
+                            />
+                        </div>
+                        <h2 class="font-bold text-lg">Author</h2>
+                        <select class="select">
+                            <option>Crimson</option>
+                            <option>Amber</option>
+                            <option>Velvet</option>
+                        </select>
+                        <h2 class="font-bold text-lg">Language</h2>
+                        <select class="select">
+                            <option>Slovak</option>
+                            <option>English</option>
+                            <option>Hungarian</option>
+                        </select>
+                        <h2 class="font-bold text-lg">Release year</h2>
+                        <div class="flex">
+                            <input
+                                type="number"
+                                placeholder="Start"
+                                class="input"
+                            />
+                            <input
+                                type="number"
+                                placeholder="End"
+                                class="input"
+                            />
+                        </div>
+
+                        <button class="btn btn-primary" type="submit">
+                            Filter
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
