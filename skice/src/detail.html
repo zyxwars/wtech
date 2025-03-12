@@ -8,47 +8,67 @@
     <body>
         {% include "components/header.html" %}
 
-        <main class="flex justify-center ">S
+        <main class="flex justify-center">
+            <!-- product images -->
+            <div>
                 <!-- main product image -->
-                    <img
-                        class = "main_image object-cover rounded-lg"
-                        src="https://cdn.pixabay.com/photo/2016/10/17/16/35/concert-1748102_1280.jpg"
-                    />
-                
-                <!-- Text for the product -->
-                <div>
-                    <!-- product title -->
-                    <div class="product_title">
-                        Product title
+                <img
+                    class="main_image object-cover rounded-lg flex-none square-image"
+                    src="https://cdn.pixabay.com/photo/2016/10/17/16/35/concert-1748102_1280.jpg"
+                />
+
+                <!-- secondary image -->
+                <img
+                    class="secondary_image object-cover rounded-lg mt-4"
+                    src="https://cdn.pixabay.com/photo/2016/10/17/16/35/concert-1748102_1280.jpg"
+                />
+            </div>
+
+            <!-- Text for the product -->
+            <div class="pl-25 flex flex-col justify-center">
+                <!-- product title -->
+                <div class="product_title">Product title</div>
+
+                <!-- product description -->
+                <div class="product_description">
+                    LLorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the...
+
+                    <!-- product specification list -->
+                    <div class="mt-4">
+                        <ul>
+                            <li>
+                                <span class="font-bold"> Genre: </span> Genre
+                            </li>
+                            <li>
+                                <span class="font-bold"> Author: </span> Mäkky
+                                Žbirka
+                            </li>
+                            <li>
+                                <span class="font-bold"> Release year: </span>
+                                2025
+                            </li>
+                        </ul>
                     </div>
+                </div>
 
-                    <!-- product description -->
-                    <div class="product_description">
-
-                        LLorem Ipsum is simply dummy text of the printing and
-                         typesetting industry. Lorem Ipsum has been the industry's 
-                         standard dummy text ever since the...
-                        
-                        <!-- product specification list -->
-                        <div class="mt-4">
-                            <ul>
-                                <li><span class = "font-bold"> Genre: </span> Genre</li>
-                                <li><span class = "font-bold"> Author: </span> Mäkky Žbirka</li>
-                                <li><span class = "font-bold"> Release year: </span> 2025</li>
-                            </ul>
+                <!-- product price button-->
+                <div class="categories mb-10 width-full flex justify-end">
+                    <div
+                        class="category-tile__card hover:scale-105 cursor-pointer transition-all duration-150"
+                    >
+                        <div class="flex justify-center w-full">
+                            <div class="category-tile__text">100$</div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- product price button-->
-                    <div class="categories mb-10 width-full flex justify-end">
-                        <div
-                            class="category-tile__card hover:scale-105 cursor-pointer transition-all duration-150"
-                        >
-                            <div class="flex justify-center w-full">
-                                <div class="category-tile__text">100$</div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="w-full gap-6 flex flex-col">
+                    <!-- featured products -->
+                    <include
+                        src="src/components/featured-products.html"
+                    ></include>
                 </div>
             </div>
         </main>
