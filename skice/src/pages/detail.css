@@ -25,16 +25,19 @@
 .category-tile__text {
     padding-left: 1rem;
     padding-right: 1rem;
-    font-size: 1.25rem;
+    font-size: 2rem;
     font-weight: bold;
+    color: whitesmoke;
 }
 
 .main_image {
-    width: 25rem;
-    height: 25rem;
+    width: 500px;
+    aspect-ratio: 1/1;
     margin-left: 8rem;
     margin-top: 10rem;
     justify-content: flex-start;
+    object-fit: cover;
+    display: block;
 }
 
 .product_description{
@@ -49,4 +52,12 @@
     font-weight: bold;
     margin-left: 6rem;
     margin-top: 10rem;
+}
+
+.secondary_image{
+    width: 10rem;
+    height: 10rem;
+    margin-left: 8rem;
+    justify-content: left;
+    margin-top: 1rem;
 }
