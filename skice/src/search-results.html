@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="mytheme">
+    <head>
+        {% include "components/document-head.html" %}
+
+        <link href="./search-results.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        {% include "components/header.html" %}
+
+        <div class="drawer">
+            <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+            <div class="drawer-content">
+                <!-- Page content here -->
+
+                <main class="min-h-screen flex justify-center mb-12">
+                    <div class="max-w-4xl w-full">
+                        <div class="breadcrumbs text-sm">
+                            <ul>
+                                <li><a href="./index.html">Home</a></li>
+                                <li>Search results</li>
+                            </ul>
+                        </div>
+
+                        <h1 class="font-bold text-3xl">
+                            Search results for: “Testing”
+                        </h1>
+
+                        {% include "components/products-grid.html" %}
+                    </div>
+                </main>
+
+                {% include "components/footer.html" %}
+            </div>
+            <div class="drawer-side z-20">
+                <label
+                    for="my-drawer"
+                    aria-label="close sidebar"
+                    class="drawer-overlay"
+                ></label>
+
+                <div
+                    class="menu bg-base-200 text-base-content min-h-full w-80 p-4"
+                >
+                    {% include "components/filter.html" %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

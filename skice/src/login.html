@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="mytheme">
+    <head>
+        {% include "components/document-head.html" %}
+    </head>
+    <body>
+        {% include "components/header.html" %}
+
+        <main class="flex justify-center items-start p-4">
+            <form class="grid grid-flow-row gap-2">
+                <h1 class="font-bold text-2xl mb-2">Sign in</h1>
+                <input type="text" placeholder="Email" class="input" />
+                <input type="password" placeholder="Password" class="input" />
+                <button class="btn btn-primary mt-2" type="submit">
+                    Sign in
+                </button>
+
+                <div class="justify-self-center mt-2">
+                    Don't have an account?
+                    <a class="font-bold underline" href="./register.html"
+                        >Sign up</a
+                    >
+                </div>
+            </form>
+        </main>
+    </body>
+</html>

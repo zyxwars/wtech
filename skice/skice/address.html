@@ -30,8 +30,6 @@
 />
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-
-        <link href="./detail.css" type="text/css" rel="stylesheet" />
     </head>
     <body>
         <div class="bg-black w-full h-2"></div>
@@ -80,47 +78,21 @@
 </nav>
 
 
-        <main class="flex justify-center ">S
-                <!-- main product image -->
-                    <img
-                        class = "main_image object-cover rounded-lg"
-                        src="https://cdn.pixabay.com/photo/2016/10/17/16/35/concert-1748102_1280.jpg"
-                    />
-                
-                <!-- Text for the product -->
-                <div>
-                    <!-- product title -->
-                    <div class="product_title">
-                        Product title
-                    </div>
+        <main class="min-h-screen flex justify-center mb-12">
+            <div class="max-w-4xl w-full">
+                <div class="breadcrumbs text-sm">
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li>Address</li>
+                    </ul>
+                </div>
 
-                    <!-- product description -->
-                    <div class="product_description">
-
-                        LLorem Ipsum is simply dummy text of the printing and
-                         typesetting industry. Lorem Ipsum has been the industry's 
-                         standard dummy text ever since the...
-                        
-                        <!-- product specification list -->
-                        <div class="mt-4">
-                            <ul>
-                                <li><span class = "font-bold"> Genre: </span> Genre</li>
-                                <li><span class = "font-bold"> Author: </span> Mäkky Žbirka</li>
-                                <li><span class = "font-bold"> Release year: </span> 2025</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- product price button-->
-                    <div class="categories mb-10 width-full flex justify-end">
-                        <div
-                            class="category-tile__card hover:scale-105 cursor-pointer transition-all duration-150"
-                        >
-                            <div class="flex justify-center w-full">
-                                <div class="category-tile__text">100$</div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="flex flex-col w-full items-center gap-4">
+                    <ul class="steps w-full mb-8">
+                        <li class="step step-primary">Details</li>
+                        <li class="step step-primary">Address</li>
+                        <li class="step">Payment</li>
+                    </ul>
                 </div>
             </div>
         </main>

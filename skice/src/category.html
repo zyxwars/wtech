@@ -13,9 +13,16 @@
             <div class="drawer-content">
                 <!-- Page content here -->
                 <main class="min-h-screen flex justify-center mb-12">
-                    <div class="max-w-4xl">
+                    <div class="max-w-4xl w-full">
+                        <div class="breadcrumbs text-sm">
+                            <ul>
+                                <li><a href="./index.html">Home</a></li>
+                                <li>Genre</li>
+                            </ul>
+                        </div>
+
                         <section>
-                            <h1 class="font-bold text-4xl">Blues</h1>
+                            <h1 class="font-bold text-4xl">Genre</h1>
                             <p>
                                 Lorem, ipsum dolor sit amet consectetur
                                 adipisicing elit. Laborum minima eos doloremque,
@@ -42,51 +49,7 @@
                 <div
                     class="menu bg-base-200 text-base-content min-h-full w-80 p-4"
                 >
-                    <!-- Sidebar content here -->
-                    <form>
-                        <h2 class="font-bold text-lg">Price</h2>
-                        <div class="flex">
-                            <input
-                                type="number"
-                                placeholder="Start"
-                                class="input"
-                            />
-                            <input
-                                type="number"
-                                placeholder="End"
-                                class="input"
-                            />
-                        </div>
-                        <h2 class="font-bold text-lg">Author</h2>
-                        <select class="select">
-                            <option>Crimson</option>
-                            <option>Amber</option>
-                            <option>Velvet</option>
-                        </select>
-                        <h2 class="font-bold text-lg">Language</h2>
-                        <select class="select">
-                            <option>Slovak</option>
-                            <option>English</option>
-                            <option>Hungarian</option>
-                        </select>
-                        <h2 class="font-bold text-lg">Release year</h2>
-                        <div class="flex">
-                            <input
-                                type="number"
-                                placeholder="Start"
-                                class="input"
-                            />
-                            <input
-                                type="number"
-                                placeholder="End"
-                                class="input"
-                            />
-                        </div>
-
-                        <button class="btn btn-primary" type="submit">
-                            Filter
-                        </button>
-                    </form>
+                    {% include "components/filter.html" %}
                 </div>
             </div>
         </div>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="mytheme">
+    <head>
+        {% include "components/document-head.html" %}
+
+        <link href="./category.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        {% include "components/header.html" %}
+
+        <main class="min-h-screen flex justify-center mb-12">
+            <div class="max-w-4xl w-full">
+                <div class="breadcrumbs text-sm">
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li>Cart</li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-col w-full items-center gap-4">
+                    <ul class="steps w-full mb-8">
+                        <li class="step step-primary">Details</li>
+                        <li class="step">Address</li>
+                        <li class="step">Payment</li>
+                    </ul>
+
+                    {% include "components/product-tile-cart.html" %}
+                    <!--  -->
+                    {% include "components/product-tile-cart.html" %}
+                    <!--  -->
+                    {% include "components/product-tile-cart.html" %}
+                    <!--  -->
+                    {% include "components/product-tile-cart.html" %}
+                    <!--  -->
+                    {% include "components/product-tile-cart.html" %}
+                    <!--  -->
+                    {% include "components/product-tile-cart.html" %}
+                    <!--  -->
+                    {% include "components/product-tile-cart.html" %}
+                    <!--  -->
+                    {% include "components/product-tile-cart.html" %}
+                    <!--  -->
+                    {% include "components/product-tile-cart.html" %}
+                    <!--  -->
+                    {% include "components/product-tile-cart.html" %}
+                    <!--  -->
+                    {% include "components/product-tile-cart.html" %}
+                    <!--  -->
+                    {% include "components/product-tile-cart.html" %}
+                    <!--  -->
+                    {% include "components/product-tile-cart.html" %}
+
+                    <a class="btn btn-primary" href="./address.html"
+                        >Checkout</a
+                    >
+                </div>
+            </div>
+        </main>
+
+        {% include "components/footer.html" %}
+    </body>
+</html>

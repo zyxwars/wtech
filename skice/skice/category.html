@@ -35,17 +35,18 @@
     </head>
     <body>
         <div class="bg-black w-full h-2"></div>
-<nav class="sticky top-0 left-0 right-0 shadow-lg mb-4 z-10">
-    <div class="bg-primary flex items-center justify-between py-2 px-4">
+<nav class="sticky top-0 left-0 right-0 shadow-lg mb-8 z-10">
+    <div class="bg-primary flex items-center justify-between py-2 px-4 gap-4">
         <!-- Logo -->
-        <a href="./index.html" class="cursor-pointer">
+        <a href="./index.html" class="cursor-pointer flex-none">
             <img
                 src="./logo.svg"
                 class="w-10 aspect-square hover:scale-120 transition-transform"
             />
         </a>
+
         <!-- 
-        <label class="input invisible sm:visible">
+        <label class="input invisible sm:visible bg-base-300">
             <svg
                 class="h-[1em] opacity-50"
                 xmlns="http://www.w3.org/2000/svg"
@@ -66,14 +67,14 @@
         </label> -->
 
         <!-- Cart and account -->
-        <div class="flex gap-4 text-white">
-            <button>
+        <div class="flex gap-4 text-white items-center">
+            <a href="./cart.html">
                 <span class="material-symbols-outlined">shopping_cart</span>
-            </button>
+            </a>
 
-            <button>
+            <a href="./login.html">
                 <span class="material-symbols-outlined">person</span>
-            </button>
+            </a>
         </div>
     </div>
 </nav>
@@ -84,9 +85,16 @@
             <div class="drawer-content">
                 <!-- Page content here -->
                 <main class="min-h-screen flex justify-center mb-12">
-                    <div class="max-w-4xl">
+                    <div class="max-w-4xl w-full">
+                        <div class="breadcrumbs text-sm">
+                            <ul>
+                                <li><a href="./index.html">Home</a></li>
+                                <li>Genre</li>
+                            </ul>
+                        </div>
+
                         <section>
-                            <h1 class="font-bold text-4xl">Blues</h1>
+                            <h1 class="font-bold text-4xl">Genre</h1>
                             <p>
                                 Lorem, ipsum dolor sit amet consectetur
                                 adipisicing elit. Laborum minima eos doloremque,
@@ -111,13 +119,17 @@
 <!-- Products -->
 <div class="products-grid mb-8">
     <div class="w-full">
-    <img
-        class="w-full aspect-square rounded-lg"
-        src="https://picsum.photos/200/300"
-    />
+    <a href="./detail.html">
+        <img
+            class="w-full aspect-square rounded-lg"
+            src="https://picsum.photos/200/300"
+        />
+    </a>
 
     <div class="p-2">
-        <div class="font-bold text-xl">Lorem ipsum dolor sit</div>
+        <a href="./detail.html" class="font-bold text-xl"
+            >Lorem ipsum dolor sit
+        </a>
         <div class="font-semibold text-md mb-2">Artist name</div>
 
         <div class="flex justify-between w-full items-center">
@@ -133,13 +145,17 @@
 
     <!--  -->
     <div class="w-full">
-    <img
-        class="w-full aspect-square rounded-lg"
-        src="https://picsum.photos/200/300"
-    />
+    <a href="./detail.html">
+        <img
+            class="w-full aspect-square rounded-lg"
+            src="https://picsum.photos/200/300"
+        />
+    </a>
 
     <div class="p-2">
-        <div class="font-bold text-xl">Lorem ipsum dolor sit</div>
+        <a href="./detail.html" class="font-bold text-xl"
+            >Lorem ipsum dolor sit
+        </a>
         <div class="font-semibold text-md mb-2">Artist name</div>
 
         <div class="flex justify-between w-full items-center">
@@ -155,13 +171,17 @@
 
     <!--  -->
     <div class="w-full">
-    <img
-        class="w-full aspect-square rounded-lg"
-        src="https://picsum.photos/200/300"
-    />
+    <a href="./detail.html">
+        <img
+            class="w-full aspect-square rounded-lg"
+            src="https://picsum.photos/200/300"
+        />
+    </a>
 
     <div class="p-2">
-        <div class="font-bold text-xl">Lorem ipsum dolor sit</div>
+        <a href="./detail.html" class="font-bold text-xl"
+            >Lorem ipsum dolor sit
+        </a>
         <div class="font-semibold text-md mb-2">Artist name</div>
 
         <div class="flex justify-between w-full items-center">
@@ -177,13 +197,17 @@
 
     <!--  -->
     <div class="w-full">
-    <img
-        class="w-full aspect-square rounded-lg"
-        src="https://picsum.photos/200/300"
-    />
+    <a href="./detail.html">
+        <img
+            class="w-full aspect-square rounded-lg"
+            src="https://picsum.photos/200/300"
+        />
+    </a>
 
     <div class="p-2">
-        <div class="font-bold text-xl">Lorem ipsum dolor sit</div>
+        <a href="./detail.html" class="font-bold text-xl"
+            >Lorem ipsum dolor sit
+        </a>
         <div class="font-semibold text-md mb-2">Artist name</div>
 
         <div class="flex justify-between w-full items-center">
@@ -199,13 +223,17 @@
 
     <!--  -->
     <div class="w-full">
-    <img
-        class="w-full aspect-square rounded-lg"
-        src="https://picsum.photos/200/300"
-    />
+    <a href="./detail.html">
+        <img
+            class="w-full aspect-square rounded-lg"
+            src="https://picsum.photos/200/300"
+        />
+    </a>
 
     <div class="p-2">
-        <div class="font-bold text-xl">Lorem ipsum dolor sit</div>
+        <a href="./detail.html" class="font-bold text-xl"
+            >Lorem ipsum dolor sit
+        </a>
         <div class="font-semibold text-md mb-2">Artist name</div>
 
         <div class="flex justify-between w-full items-center">
@@ -221,13 +249,17 @@
 
     <!--  -->
     <div class="w-full">
-    <img
-        class="w-full aspect-square rounded-lg"
-        src="https://picsum.photos/200/300"
-    />
+    <a href="./detail.html">
+        <img
+            class="w-full aspect-square rounded-lg"
+            src="https://picsum.photos/200/300"
+        />
+    </a>
 
     <div class="p-2">
-        <div class="font-bold text-xl">Lorem ipsum dolor sit</div>
+        <a href="./detail.html" class="font-bold text-xl"
+            >Lorem ipsum dolor sit
+        </a>
         <div class="font-semibold text-md mb-2">Artist name</div>
 
         <div class="flex justify-between w-full items-center">
@@ -243,13 +275,17 @@
 
     <!--  -->
     <div class="w-full">
-    <img
-        class="w-full aspect-square rounded-lg"
-        src="https://picsum.photos/200/300"
-    />
+    <a href="./detail.html">
+        <img
+            class="w-full aspect-square rounded-lg"
+            src="https://picsum.photos/200/300"
+        />
+    </a>
 
     <div class="p-2">
-        <div class="font-bold text-xl">Lorem ipsum dolor sit</div>
+        <a href="./detail.html" class="font-bold text-xl"
+            >Lorem ipsum dolor sit
+        </a>
         <div class="font-semibold text-md mb-2">Artist name</div>
 
         <div class="flex justify-between w-full items-center">
@@ -265,13 +301,17 @@
 
     <!--  -->
     <div class="w-full">
-    <img
-        class="w-full aspect-square rounded-lg"
-        src="https://picsum.photos/200/300"
-    />
+    <a href="./detail.html">
+        <img
+            class="w-full aspect-square rounded-lg"
+            src="https://picsum.photos/200/300"
+        />
+    </a>
 
     <div class="p-2">
-        <div class="font-bold text-xl">Lorem ipsum dolor sit</div>
+        <a href="./detail.html" class="font-bold text-xl"
+            >Lorem ipsum dolor sit
+        </a>
         <div class="font-semibold text-md mb-2">Artist name</div>
 
         <div class="flex justify-between w-full items-center">
@@ -287,13 +327,17 @@
 
     <!--  -->
     <div class="w-full">
-    <img
-        class="w-full aspect-square rounded-lg"
-        src="https://picsum.photos/200/300"
-    />
+    <a href="./detail.html">
+        <img
+            class="w-full aspect-square rounded-lg"
+            src="https://picsum.photos/200/300"
+        />
+    </a>
 
     <div class="p-2">
-        <div class="font-bold text-xl">Lorem ipsum dolor sit</div>
+        <a href="./detail.html" class="font-bold text-xl"
+            >Lorem ipsum dolor sit
+        </a>
         <div class="font-semibold text-md mb-2">Artist name</div>
 
         <div class="flex justify-between w-full items-center">
@@ -309,13 +353,17 @@
 
     <!--  -->
     <div class="w-full">
-    <img
-        class="w-full aspect-square rounded-lg"
-        src="https://picsum.photos/200/300"
-    />
+    <a href="./detail.html">
+        <img
+            class="w-full aspect-square rounded-lg"
+            src="https://picsum.photos/200/300"
+        />
+    </a>
 
     <div class="p-2">
-        <div class="font-bold text-xl">Lorem ipsum dolor sit</div>
+        <a href="./detail.html" class="font-bold text-xl"
+            >Lorem ipsum dolor sit
+        </a>
         <div class="font-semibold text-md mb-2">Artist name</div>
 
         <div class="flex justify-between w-full items-center">
@@ -331,13 +379,17 @@
 
     <!--  -->
     <div class="w-full">
-    <img
-        class="w-full aspect-square rounded-lg"
-        src="https://picsum.photos/200/300"
-    />
+    <a href="./detail.html">
+        <img
+            class="w-full aspect-square rounded-lg"
+            src="https://picsum.photos/200/300"
+        />
+    </a>
 
     <div class="p-2">
-        <div class="font-bold text-xl">Lorem ipsum dolor sit</div>
+        <a href="./detail.html" class="font-bold text-xl"
+            >Lorem ipsum dolor sit
+        </a>
         <div class="font-semibold text-md mb-2">Artist name</div>
 
         <div class="flex justify-between w-full items-center">
@@ -353,13 +405,17 @@
 
     <!--  -->
     <div class="w-full">
-    <img
-        class="w-full aspect-square rounded-lg"
-        src="https://picsum.photos/200/300"
-    />
+    <a href="./detail.html">
+        <img
+            class="w-full aspect-square rounded-lg"
+            src="https://picsum.photos/200/300"
+        />
+    </a>
 
     <div class="p-2">
-        <div class="font-bold text-xl">Lorem ipsum dolor sit</div>
+        <a href="./detail.html" class="font-bold text-xl"
+            >Lorem ipsum dolor sit
+        </a>
         <div class="font-semibold text-md mb-2">Artist name</div>
 
         <div class="flex justify-between w-full items-center">
@@ -426,51 +482,36 @@
                 <div
                     class="menu bg-base-200 text-base-content min-h-full w-80 p-4"
                 >
-                    <!-- Sidebar content here -->
                     <form>
-                        <h2 class="font-bold text-lg">Price</h2>
-                        <div class="flex">
-                            <input
-                                type="number"
-                                placeholder="Start"
-                                class="input"
-                            />
-                            <input
-                                type="number"
-                                placeholder="End"
-                                class="input"
-                            />
-                        </div>
-                        <h2 class="font-bold text-lg">Author</h2>
-                        <select class="select">
-                            <option>Crimson</option>
-                            <option>Amber</option>
-                            <option>Velvet</option>
-                        </select>
-                        <h2 class="font-bold text-lg">Language</h2>
-                        <select class="select">
-                            <option>Slovak</option>
-                            <option>English</option>
-                            <option>Hungarian</option>
-                        </select>
-                        <h2 class="font-bold text-lg">Release year</h2>
-                        <div class="flex">
-                            <input
-                                type="number"
-                                placeholder="Start"
-                                class="input"
-                            />
-                            <input
-                                type="number"
-                                placeholder="End"
-                                class="input"
-                            />
-                        </div>
+    <h2 class="font-bold text-lg">Price</h2>
+    <div class="flex gap-2">
+        <input type="number" placeholder="Start" class="input" />
+        <input type="number" placeholder="End" class="input" />
+    </div>
 
-                        <button class="btn btn-primary" type="submit">
-                            Filter
-                        </button>
-                    </form>
+    <h2 class="font-bold text-lg mt-4">Author</h2>
+    <select class="select">
+        <option>Crimson</option>
+        <option>Amber</option>
+        <option>Velvet</option>
+    </select>
+
+    <h2 class="font-bold text-lg mt-4">Language</h2>
+    <select class="select">
+        <option>Slovak</option>
+        <option>English</option>
+        <option>Hungarian</option>
+    </select>
+
+    <h2 class="font-bold text-lg mt-4">Release year</h2>
+    <div class="flex gap-2">
+        <input type="number" placeholder="Start" class="input" />
+        <input type="number" placeholder="End" class="input" />
+    </div>
+
+    <button class="btn btn-primary mt-4" type="submit">Filter</button>
+</form>
+
                 </div>
             </div>
         </div>
