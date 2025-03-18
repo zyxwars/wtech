@@ -11,7 +11,8 @@
                 <div class="breadcrumbs text-sm">
                     <ul>
                         <li><a href="./index.html">Home</a></li>
-                        <li>Delivery Details</li>
+                        <li><a href="./address.html">Delivery Details</a></li>
+                        <li>Payment Details</li>
                     </ul>
                 </div>
 
@@ -19,32 +20,32 @@
                     <ul class="steps w-full mb-8">
                         <li class="step step-primary">Details</li>
                         <li class="step step-primary">Address</li>
-                        <li class="step">Payment</li>
+                        <li class="step step-primary">Payment</li>
                     </ul>
                 </div>
                 
                 <div class="flex justify-center items-start p-4">
                     <form class="grid grid-flow-row gap-2 max-w-[18rem]">
-                        <h1 class="font-bold text-2xl mb-2">Delivery Form</h1>
-                        <div class="flex gap-2">
-                            <input type="text" placeholder="First Name" class="input" />
-                            <input type="text" placeholder="Last Name" class="input" />
-                        </div>
-                        <input type="text" placeholder="Email" class="input" />
-                        
-                        
-                        <input type="text" placeholder="Country" class="input" />
-                        <input type="text" placeholder="City" class="input" />
-                        <div class="flex gap-2">
-                            <input type="text" placeholder="Street" class="input" />
-                            <input type="text" placeholder="Postal Code" class="input" />
-                        </div>
+                        <h1 class="font-bold text-2xl mb-2">Payment Information</h1>
 
+                        <select class="select">
+                            <option disabled selected>Pick payment option</option>
+                            <option>Card</option>
+                            <option>Cash</option>
+                            <option>Apple Pay</option>
+                        </select>
                         
+                        <input type="text" placeholder="Card Number" class="input" />
+                        <div class="flex gap-2">
+                            <input type="text" placeholder="Expiration Date" class="input" />
+                            <input type="text" placeholder="CVV" class="input" />
                         
-                        <a class="btn btn-primary mt-2" type="submit" href="./payment.html">Countinue to Payment</a>
+                        </div>
                         
-                        
+
+                        <button class="btn btn-primary mt-2" type="submit">
+                            Pay Now!
+                        </button>
                     </form>
                 </div>
             </div>
