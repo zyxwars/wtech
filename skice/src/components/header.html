@@ -1,44 +1,75 @@
-<div class="bg-black w-full h-2"></div>
-<nav class="sticky top-0 left-0 right-0 shadow-lg mb-8 z-10">
-    <div class="bg-primary flex items-center justify-between py-2 px-4 gap-4">
-        <!-- Logo -->
-        <a href="./index.html" class="cursor-pointer flex-none">
-            <img
-                src="./logo.svg"
-                class="w-10 aspect-square hover:scale-120 transition-transform"
-            />
-        </a>
+<!-- <div class="bg-black w-full p-2 text-white text-center">
+    <h2>TODO: Free delivery over 50$</h2>
+</div> -->
 
-        <!-- 
-        <label class="input invisible sm:visible bg-base-300">
-            <svg
-                class="h-[1em] opacity-50"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-            >
-                <g
-                    stroke-linejoin="round"
-                    stroke-linecap="round"
-                    stroke-width="2.5"
-                    fill="none"
-                    stroke="currentColor"
-                >
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <path d="m21 21-4.3-4.3"></path>
-                </g>
-            </svg>
-            <input type="search" class="grow" placeholder="Search" />
-        </label> -->
-
-        <!-- Cart and account -->
-        <div class="flex gap-4 text-white items-center">
-            <a href="./cart.html">
-                <span class="material-symbols-outlined">shopping_cart</span>
+<nav
+    class="sticky top-0 left-0 right-0 shadow-sm mb-8 z-10 flex flex-col pt-3 pb-4 px-2 sm:pl-10 sm:pr-6 bg-base-100 flex-wrap"
+>
+    <div class="flex items-center justify-between">
+        <div class="flex items-center">
+            <!-- Logo -->
+            <a href="./index.html" class="flex-none font-bold text-lg">
+                Record Store
             </a>
 
-            <a href="./login.html">
+            <label class="input w-[32rem] ml-10 hidden md:flex">
+                <svg
+                    class="h-[1em] opacity-50"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                >
+                    <g
+                        stroke-linejoin="round"
+                        stroke-linecap="round"
+                        stroke-width="2.5"
+                        fill="none"
+                        stroke="currentColor"
+                    >
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.3-4.3"></path>
+                    </g>
+                </svg>
+                <input
+                    type="search"
+                    class="grow"
+                    placeholder="The Blues Ain't Never Gonna Die"
+                />
+            </label>
+        </div>
+
+        <!-- Action buttons -->
+        <div class="text-base-content flex-none">
+            <a href="./login.html" class="btn btn-ghost btn-circle">
                 <span class="material-symbols-outlined">person</span>
+            </a>
+
+            <a href="./cart.html" class="btn btn-ghost btn-circle">
+                <span class="material-symbols-outlined">shopping_cart</span>
             </a>
         </div>
     </div>
+
+    <label class="input md:hidden w-full">
+        <svg
+            class="h-[1em] opacity-50"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+        >
+            <g
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                stroke-width="2.5"
+                fill="none"
+                stroke="currentColor"
+            >
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.3-4.3"></path>
+            </g>
+        </svg>
+        <input
+            type="search"
+            class="grow"
+            placeholder="The Blues Ain't Never Gonna Die"
+        />
+    </label>
 </nav>

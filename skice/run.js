@@ -10,6 +10,8 @@ function buildHtml(fileName) {
 fs.rmSync("./skice", { recursive: true, force: true });
 fs.mkdirSync("skice/components", { recursive: true });
 
+fs.cpSync("./src/assets/", "./skice/assets/", { recursive: true });
+
 nunjucks.configure("./src", { autoescape: true });
 
 fs.readdirSync("./src")

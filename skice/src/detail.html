@@ -9,48 +9,58 @@
         {% include "components/header.html" %}
 
         <main class="flex justify-center min-h-screen px-4">
-            <div class="flex flex-col w-full max-w-4xl items-center sm:items-start gap-6">
+            <div
+                class="flex flex-col w-full max-w-6xl px-4 items-center sm:items-start gap-6"
+            >
                 <div class="flex flex-col sm:flex-row w-full gap-6">
-
-                
                     <!-- product images -->
                     <div>
                         <!-- main product image -->
                         <img
-                            class="main_image object-cover rounded-lg flex-none square-image"
-                            src="https://cdn.pixabay.com/photo/2016/10/17/16/35/concert-1748102_1280.jpg"
+                            class="main_image object-cover flex-none square-image shadow-sm"
+                            src="./assets/album-3-cover.jpg"
                         />
 
-                        <!-- secondary image -->
-                        <img
-                            class="secondary_image object-cover rounded-lg mt-4"
-                            src="https://cdn.pixabay.com/photo/2016/10/17/16/35/concert-1748102_1280.jpg"
-                        />
+                        <div class="flex gap-4 flex-wrap">
+                            <!-- secondary image -->
+                            <img
+                                class="secondary_image object-cover mt-4 shadow-sm flex-none"
+                                src="./assets/album-3-front.jpg"
+                            />
+
+                            <img
+                                class="secondary_image object-cover mt-4 shadow-sm flex-none"
+                                src="./assets/album-3-back.jpg"
+                            />
+                        </div>
                     </div>
 
                     <!-- Text for the product -->
-                    <div class="flex flex-col justify-center">
+                    <div class="flex flex-col">
                         <!-- product title -->
                         <div class="product_title">Product title</div>
 
                         <!-- product description -->
                         <div class="product_description">
-                            LLorem Ipsum is simply dummy text of the printing and
-                            typesetting industry. Lorem Ipsum has been the industry's
-                            standard dummy text ever since the...
+                            LLorem Ipsum is simply dummy text of the printing
+                            and typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy text ever since the...
 
                             <!-- product specification list -->
                             <div class="mt-4">
                                 <ul>
                                     <li>
-                                        <span class="font-bold"> Genre: </span> Genre
+                                        <span class="font-bold"> Genre: </span>
+                                        Genre
                                     </li>
                                     <li>
-                                        <span class="font-bold"> Author: </span> Mäkky
-                                        Žbirka
+                                        <span class="font-bold"> Author: </span>
+                                        Mäkky Žbirka
                                     </li>
                                     <li>
-                                        <span class="font-bold"> Release year: </span>
+                                        <span class="font-bold">
+                                            Release year:
+                                        </span>
                                         2025
                                     </li>
                                 </ul>

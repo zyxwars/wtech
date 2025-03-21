@@ -34,95 +34,136 @@
         <link href="./detail.css" type="text/css" rel="stylesheet" />
     </head>
     <body>
-        <div class="bg-black w-full h-2"></div>
-<nav class="sticky top-0 left-0 right-0 shadow-lg mb-8 z-10">
-    <div class="bg-primary flex items-center justify-between py-2 px-4 gap-4">
-        <!-- Logo -->
-        <a href="./index.html" class="cursor-pointer flex-none">
-            <img
-                src="./logo.svg"
-                class="w-10 aspect-square hover:scale-120 transition-transform"
-            />
-        </a>
+        <!-- <div class="bg-black w-full p-2 text-white text-center">
+    <h2>TODO: Free delivery over 50$</h2>
+</div> -->
 
-        <!-- 
-        <label class="input invisible sm:visible bg-base-300">
-            <svg
-                class="h-[1em] opacity-50"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-            >
-                <g
-                    stroke-linejoin="round"
-                    stroke-linecap="round"
-                    stroke-width="2.5"
-                    fill="none"
-                    stroke="currentColor"
-                >
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <path d="m21 21-4.3-4.3"></path>
-                </g>
-            </svg>
-            <input type="search" class="grow" placeholder="Search" />
-        </label> -->
-
-        <!-- Cart and account -->
-        <div class="flex gap-4 text-white items-center">
-            <a href="./cart.html">
-                <span class="material-symbols-outlined">shopping_cart</span>
+<nav
+    class="sticky top-0 left-0 right-0 shadow-sm mb-8 z-10 flex flex-col pt-3 pb-4 px-2 sm:pl-10 sm:pr-6 bg-base-100 flex-wrap"
+>
+    <div class="flex items-center justify-between">
+        <div class="flex items-center">
+            <!-- Logo -->
+            <a href="./index.html" class="flex-none font-bold text-lg">
+                Record Store
             </a>
 
-            <a href="./login.html">
+            <label class="input w-[32rem] ml-10 hidden md:flex">
+                <svg
+                    class="h-[1em] opacity-50"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                >
+                    <g
+                        stroke-linejoin="round"
+                        stroke-linecap="round"
+                        stroke-width="2.5"
+                        fill="none"
+                        stroke="currentColor"
+                    >
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.3-4.3"></path>
+                    </g>
+                </svg>
+                <input
+                    type="search"
+                    class="grow"
+                    placeholder="The Blues Ain't Never Gonna Die"
+                />
+            </label>
+        </div>
+
+        <!-- Action buttons -->
+        <div class="text-base-content flex-none">
+            <a href="./login.html" class="btn btn-ghost btn-circle">
                 <span class="material-symbols-outlined">person</span>
+            </a>
+
+            <a href="./cart.html" class="btn btn-ghost btn-circle">
+                <span class="material-symbols-outlined">shopping_cart</span>
             </a>
         </div>
     </div>
+
+    <label class="input md:hidden w-full">
+        <svg
+            class="h-[1em] opacity-50"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+        >
+            <g
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                stroke-width="2.5"
+                fill="none"
+                stroke="currentColor"
+            >
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.3-4.3"></path>
+            </g>
+        </svg>
+        <input
+            type="search"
+            class="grow"
+            placeholder="The Blues Ain't Never Gonna Die"
+        />
+    </label>
 </nav>
 
 
         <main class="flex justify-center min-h-screen px-4">
-            <div class="flex flex-col w-full max-w-4xl items-center sm:items-start gap-6">
+            <div
+                class="flex flex-col w-full max-w-6xl px-4 items-center sm:items-start gap-6"
+            >
                 <div class="flex flex-col sm:flex-row w-full gap-6">
-
-                
                     <!-- product images -->
                     <div>
                         <!-- main product image -->
                         <img
-                            class="main_image object-cover rounded-lg flex-none square-image"
-                            src="https://cdn.pixabay.com/photo/2016/10/17/16/35/concert-1748102_1280.jpg"
+                            class="main_image object-cover flex-none square-image shadow-sm"
+                            src="./assets/album-3-cover.jpg"
                         />
 
-                        <!-- secondary image -->
-                        <img
-                            class="secondary_image object-cover rounded-lg mt-4"
-                            src="https://cdn.pixabay.com/photo/2016/10/17/16/35/concert-1748102_1280.jpg"
-                        />
+                        <div class="flex gap-4 flex-wrap">
+                            <!-- secondary image -->
+                            <img
+                                class="secondary_image object-cover mt-4 shadow-sm flex-none"
+                                src="./assets/album-3-front.jpg"
+                            />
+
+                            <img
+                                class="secondary_image object-cover mt-4 shadow-sm flex-none"
+                                src="./assets/album-3-back.jpg"
+                            />
+                        </div>
                     </div>
 
                     <!-- Text for the product -->
-                    <div class="flex flex-col justify-center">
+                    <div class="flex flex-col">
                         <!-- product title -->
                         <div class="product_title">Product title</div>
 
                         <!-- product description -->
                         <div class="product_description">
-                            LLorem Ipsum is simply dummy text of the printing and
-                            typesetting industry. Lorem Ipsum has been the industry's
-                            standard dummy text ever since the...
+                            LLorem Ipsum is simply dummy text of the printing
+                            and typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy text ever since the...
 
                             <!-- product specification list -->
                             <div class="mt-4">
                                 <ul>
                                     <li>
-                                        <span class="font-bold"> Genre: </span> Genre
+                                        <span class="font-bold"> Genre: </span>
+                                        Genre
                                     </li>
                                     <li>
-                                        <span class="font-bold"> Author: </span> Mäkky
-                                        Žbirka
+                                        <span class="font-bold"> Author: </span>
+                                        Mäkky Žbirka
                                     </li>
                                     <li>
-                                        <span class="font-bold"> Release year: </span>
+                                        <span class="font-bold">
+                                            Release year:
+                                        </span>
                                         2025
                                     </li>
                                 </ul>
@@ -147,16 +188,18 @@
                     </div>
                 </div>
                 <!-- featured products -->
-                <div class="w-full sm:px-4">
-    <div class="text-3xl font-bold mb-4">Featured Row</div>
+                <div class="w-full">
+    <div class="text-4xl font-bold mb-4"></div>
     <div
         class="flex gap-6 w-full min-w-0 overflow-auto snap-x snap-mandatory no-scrollbar"
     >
-        <div class="w-[15rem] flex-none snap-center snap-always no-scrollbar">
+        <div
+    class="w-[15rem] sm:w-[18rem] flex-none snap-center snap-always no-scrollbar"
+>
     <a href="./detail.html">
         <img
-            class="w-full aspect-square rounded-lg"
-            src="https://picsum.photos/200/300"
+            class="w-full aspect-square object-cover object-center"
+            src="./assets/album-6-cover.jpg"
         />
     </a>
 
@@ -178,11 +221,13 @@
 </div>
 
         <!--  -->
-        <div class="w-[15rem] flex-none snap-center snap-always no-scrollbar">
+        <div
+    class="w-[15rem] sm:w-[18rem] flex-none snap-center snap-always no-scrollbar"
+>
     <a href="./detail.html">
         <img
-            class="w-full aspect-square rounded-lg"
-            src="https://picsum.photos/200/300"
+            class="w-full aspect-square object-cover object-center"
+            src="./assets/album-1-cover.jpg"
         />
     </a>
 
@@ -204,11 +249,13 @@
 </div>
 
         <!--  -->
-        <div class="w-[15rem] flex-none snap-center snap-always no-scrollbar">
+        <div
+    class="w-[15rem] sm:w-[18rem] flex-none snap-center snap-always no-scrollbar"
+>
     <a href="./detail.html">
         <img
-            class="w-full aspect-square rounded-lg"
-            src="https://picsum.photos/200/300"
+            class="w-full aspect-square object-cover object-center"
+            src="./assets/album-3-cover.jpg"
         />
     </a>
 
@@ -230,11 +277,13 @@
 </div>
 
         <!--  -->
-        <div class="w-[15rem] flex-none snap-center snap-always no-scrollbar">
+        <div
+    class="w-[15rem] sm:w-[18rem] flex-none snap-center snap-always no-scrollbar"
+>
     <a href="./detail.html">
         <img
-            class="w-full aspect-square rounded-lg"
-            src="https://picsum.photos/200/300"
+            class="w-full aspect-square object-cover object-center"
+            src="./assets/album-3-cover.jpg"
         />
     </a>
 
@@ -256,11 +305,13 @@
 </div>
 
         <!--  -->
-        <div class="w-[15rem] flex-none snap-center snap-always no-scrollbar">
+        <div
+    class="w-[15rem] sm:w-[18rem] flex-none snap-center snap-always no-scrollbar"
+>
     <a href="./detail.html">
         <img
-            class="w-full aspect-square rounded-lg"
-            src="https://picsum.photos/200/300"
+            class="w-full aspect-square object-cover object-center"
+            src="./assets/album-8-cover.jpg"
         />
     </a>
 
@@ -282,11 +333,13 @@
 </div>
 
         <!--  -->
-        <div class="w-[15rem] flex-none snap-center snap-always no-scrollbar">
+        <div
+    class="w-[15rem] sm:w-[18rem] flex-none snap-center snap-always no-scrollbar"
+>
     <a href="./detail.html">
         <img
-            class="w-full aspect-square rounded-lg"
-            src="https://picsum.photos/200/300"
+            class="w-full aspect-square object-cover object-center"
+            src="./assets/album-5-cover.jpg"
         />
     </a>
 

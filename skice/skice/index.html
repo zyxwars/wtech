@@ -34,58 +34,89 @@
         <link href="./index.css" type="text/css" rel="stylesheet" />
     </head>
     <body>
-        <div class="bg-black w-full h-2"></div>
-<nav class="sticky top-0 left-0 right-0 shadow-lg mb-8 z-10">
-    <div class="bg-primary flex items-center justify-between py-2 px-4 gap-4">
-        <!-- Logo -->
-        <a href="./index.html" class="cursor-pointer flex-none">
-            <img
-                src="./logo.svg"
-                class="w-10 aspect-square hover:scale-120 transition-transform"
-            />
-        </a>
+        <!-- <div class="bg-black w-full p-2 text-white text-center">
+    <h2>TODO: Free delivery over 50$</h2>
+</div> -->
 
-        <!-- 
-        <label class="input invisible sm:visible bg-base-300">
-            <svg
-                class="h-[1em] opacity-50"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-            >
-                <g
-                    stroke-linejoin="round"
-                    stroke-linecap="round"
-                    stroke-width="2.5"
-                    fill="none"
-                    stroke="currentColor"
-                >
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <path d="m21 21-4.3-4.3"></path>
-                </g>
-            </svg>
-            <input type="search" class="grow" placeholder="Search" />
-        </label> -->
-
-        <!-- Cart and account -->
-        <div class="flex gap-4 text-white items-center">
-            <a href="./cart.html">
-                <span class="material-symbols-outlined">shopping_cart</span>
+<nav
+    class="sticky top-0 left-0 right-0 shadow-sm mb-8 z-10 flex flex-col pt-3 pb-4 px-2 sm:pl-10 sm:pr-6 bg-base-100 flex-wrap"
+>
+    <div class="flex items-center justify-between">
+        <div class="flex items-center">
+            <!-- Logo -->
+            <a href="./index.html" class="flex-none font-bold text-lg">
+                Record Store
             </a>
 
-            <a href="./login.html">
+            <label class="input w-[32rem] ml-10 hidden md:flex">
+                <svg
+                    class="h-[1em] opacity-50"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                >
+                    <g
+                        stroke-linejoin="round"
+                        stroke-linecap="round"
+                        stroke-width="2.5"
+                        fill="none"
+                        stroke="currentColor"
+                    >
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.3-4.3"></path>
+                    </g>
+                </svg>
+                <input
+                    type="search"
+                    class="grow"
+                    placeholder="The Blues Ain't Never Gonna Die"
+                />
+            </label>
+        </div>
+
+        <!-- Action buttons -->
+        <div class="text-base-content flex-none">
+            <a href="./login.html" class="btn btn-ghost btn-circle">
                 <span class="material-symbols-outlined">person</span>
+            </a>
+
+            <a href="./cart.html" class="btn btn-ghost btn-circle">
+                <span class="material-symbols-outlined">shopping_cart</span>
             </a>
         </div>
     </div>
+
+    <label class="input md:hidden w-full">
+        <svg
+            class="h-[1em] opacity-50"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+        >
+            <g
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                stroke-width="2.5"
+                fill="none"
+                stroke="currentColor"
+            >
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.3-4.3"></path>
+            </g>
+        </svg>
+        <input
+            type="search"
+            class="grow"
+            placeholder="The Blues Ain't Never Gonna Die"
+        />
+    </label>
 </nav>
 
 
         <main class="flex justify-center min-h-screen">
-            <div class="flex flex-col w-full max-w-4xl items-center">
+            <div class="flex flex-col w-full px-4 md:px-20 items-center">
                 <!-- Banner -->
                 <img
-                    class="object-cover flex-none w-full h-52 sm:h-64 rounded-lg shadow-sm"
-                    src="https://plus.unsplash.com/premium_photo-1682125896993-12a1758b6cb3?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    class="object-cover flex-none w-full h-52 sm:h-72 shadow-sm"
+                    src="./assets/album-1-cover.jpg"
                 />
 
                 <!-- Dots for banner -->
@@ -183,16 +214,20 @@
                 </div>
 
                 <div class="w-full gap-6 flex flex-col">
-                    <div class="w-full sm:px-4">
-    <div class="text-3xl font-bold mb-4">Featured Row</div>
+                    
+                    <!--  -->
+                    <div class="w-full">
+    <div class="text-4xl font-bold mb-4">New arrivals</div>
     <div
         class="flex gap-6 w-full min-w-0 overflow-auto snap-x snap-mandatory no-scrollbar"
     >
-        <div class="w-[15rem] flex-none snap-center snap-always no-scrollbar">
+        <div
+    class="w-[15rem] sm:w-[18rem] flex-none snap-center snap-always no-scrollbar"
+>
     <a href="./detail.html">
         <img
-            class="w-full aspect-square rounded-lg"
-            src="https://picsum.photos/200/300"
+            class="w-full aspect-square object-cover object-center"
+            src="./assets/album-5-cover.jpg"
         />
     </a>
 
@@ -214,11 +249,13 @@
 </div>
 
         <!--  -->
-        <div class="w-[15rem] flex-none snap-center snap-always no-scrollbar">
+        <div
+    class="w-[15rem] sm:w-[18rem] flex-none snap-center snap-always no-scrollbar"
+>
     <a href="./detail.html">
         <img
-            class="w-full aspect-square rounded-lg"
-            src="https://picsum.photos/200/300"
+            class="w-full aspect-square object-cover object-center"
+            src="./assets/album-9-cover.jpg"
         />
     </a>
 
@@ -240,11 +277,13 @@
 </div>
 
         <!--  -->
-        <div class="w-[15rem] flex-none snap-center snap-always no-scrollbar">
+        <div
+    class="w-[15rem] sm:w-[18rem] flex-none snap-center snap-always no-scrollbar"
+>
     <a href="./detail.html">
         <img
-            class="w-full aspect-square rounded-lg"
-            src="https://picsum.photos/200/300"
+            class="w-full aspect-square object-cover object-center"
+            src="./assets/album-9-cover.jpg"
         />
     </a>
 
@@ -266,11 +305,13 @@
 </div>
 
         <!--  -->
-        <div class="w-[15rem] flex-none snap-center snap-always no-scrollbar">
+        <div
+    class="w-[15rem] sm:w-[18rem] flex-none snap-center snap-always no-scrollbar"
+>
     <a href="./detail.html">
         <img
-            class="w-full aspect-square rounded-lg"
-            src="https://picsum.photos/200/300"
+            class="w-full aspect-square object-cover object-center"
+            src="./assets/album-4-cover.jpg"
         />
     </a>
 
@@ -292,11 +333,13 @@
 </div>
 
         <!--  -->
-        <div class="w-[15rem] flex-none snap-center snap-always no-scrollbar">
+        <div
+    class="w-[15rem] sm:w-[18rem] flex-none snap-center snap-always no-scrollbar"
+>
     <a href="./detail.html">
         <img
-            class="w-full aspect-square rounded-lg"
-            src="https://picsum.photos/200/300"
+            class="w-full aspect-square object-cover object-center"
+            src="./assets/album-8-cover.jpg"
         />
     </a>
 
@@ -318,11 +361,13 @@
 </div>
 
         <!--  -->
-        <div class="w-[15rem] flex-none snap-center snap-always no-scrollbar">
+        <div
+    class="w-[15rem] sm:w-[18rem] flex-none snap-center snap-always no-scrollbar"
+>
     <a href="./detail.html">
         <img
-            class="w-full aspect-square rounded-lg"
-            src="https://picsum.photos/200/300"
+            class="w-full aspect-square object-cover object-center"
+            src="./assets/album-9-cover.jpg"
         />
     </a>
 
@@ -349,28 +394,32 @@
 
                     <!-- Random text -->
                     <section>
-                        <h2 class="text-4xl font-bold mt-6 mb-6">
+                        <h2 class="text-3xl font-semibold mt-6 mb-6">
                             Did you know
                         </h2>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Vel quae repellat maiores perspiciatis illum
-                            deserunt quisquam qui assumenda voluptate
-                            voluptates, quaerat modi, accusamus cum mollitia
-                            ullam magni laudantium in pariatur.
+                            Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. Praesentium, dicta architecto. Ipsa similique
+                            perspiciatis quibusdam laborum labore dolores fugiat
+                            inventore provident obcaecati voluptatem delectus
+                            expedita reiciendis, esse quo et accusamus!
                         </p>
                     </section>
 
-                    <div class="w-full sm:px-4">
-    <div class="text-3xl font-bold mb-4">Featured Row</div>
+                    
+                    <!--  -->
+                    <div class="w-full">
+    <div class="text-4xl font-bold mb-4">Our classics</div>
     <div
         class="flex gap-6 w-full min-w-0 overflow-auto snap-x snap-mandatory no-scrollbar"
     >
-        <div class="w-[15rem] flex-none snap-center snap-always no-scrollbar">
+        <div
+    class="w-[15rem] sm:w-[18rem] flex-none snap-center snap-always no-scrollbar"
+>
     <a href="./detail.html">
         <img
-            class="w-full aspect-square rounded-lg"
-            src="https://picsum.photos/200/300"
+            class="w-full aspect-square object-cover object-center"
+            src="./assets/album-8-cover.jpg"
         />
     </a>
 
@@ -392,11 +441,13 @@
 </div>
 
         <!--  -->
-        <div class="w-[15rem] flex-none snap-center snap-always no-scrollbar">
+        <div
+    class="w-[15rem] sm:w-[18rem] flex-none snap-center snap-always no-scrollbar"
+>
     <a href="./detail.html">
         <img
-            class="w-full aspect-square rounded-lg"
-            src="https://picsum.photos/200/300"
+            class="w-full aspect-square object-cover object-center"
+            src="./assets/album-7-cover.jpg"
         />
     </a>
 
@@ -418,11 +469,13 @@
 </div>
 
         <!--  -->
-        <div class="w-[15rem] flex-none snap-center snap-always no-scrollbar">
+        <div
+    class="w-[15rem] sm:w-[18rem] flex-none snap-center snap-always no-scrollbar"
+>
     <a href="./detail.html">
         <img
-            class="w-full aspect-square rounded-lg"
-            src="https://picsum.photos/200/300"
+            class="w-full aspect-square object-cover object-center"
+            src="./assets/album-4-cover.jpg"
         />
     </a>
 
@@ -444,11 +497,13 @@
 </div>
 
         <!--  -->
-        <div class="w-[15rem] flex-none snap-center snap-always no-scrollbar">
+        <div
+    class="w-[15rem] sm:w-[18rem] flex-none snap-center snap-always no-scrollbar"
+>
     <a href="./detail.html">
         <img
-            class="w-full aspect-square rounded-lg"
-            src="https://picsum.photos/200/300"
+            class="w-full aspect-square object-cover object-center"
+            src="./assets/album-3-cover.jpg"
         />
     </a>
 
@@ -470,11 +525,13 @@
 </div>
 
         <!--  -->
-        <div class="w-[15rem] flex-none snap-center snap-always no-scrollbar">
+        <div
+    class="w-[15rem] sm:w-[18rem] flex-none snap-center snap-always no-scrollbar"
+>
     <a href="./detail.html">
         <img
-            class="w-full aspect-square rounded-lg"
-            src="https://picsum.photos/200/300"
+            class="w-full aspect-square object-cover object-center"
+            src="./assets/album-6-cover.jpg"
         />
     </a>
 
@@ -496,11 +553,13 @@
 </div>
 
         <!--  -->
-        <div class="w-[15rem] flex-none snap-center snap-always no-scrollbar">
+        <div
+    class="w-[15rem] sm:w-[18rem] flex-none snap-center snap-always no-scrollbar"
+>
     <a href="./detail.html">
         <img
-            class="w-full aspect-square rounded-lg"
-            src="https://picsum.photos/200/300"
+            class="w-full aspect-square object-cover object-center"
+            src="./assets/album-2-cover.jpg"
         />
     </a>
 
@@ -527,8 +586,8 @@
 
                     <!-- Random text and image -->
                     <div class="flex gap-4 mt-8 mb-6 flex-wrap sm:flex-nowrap">
-                        <section class="bg-base-200 p-4 rounded-lg">
-                            <h2 class="text-4xl font-bold mb-4">
+                        <section class="p-4">
+                            <h2 class="text-3xl font-semibold mb-4">
                                 Did you know some other thing
                             </h2>
                             <p>
@@ -547,21 +606,25 @@
                         </section>
 
                         <img
-                            class="w-full sm:w-64 h-64 object-cover flex-none rounded-lg"
+                            class="w-full sm:h-[20rem] sm:w-[20rem] lg:w-[25rem] lg:w-[30rem] h-64 object-cover flex-none"
                             src="https://cdn.pixabay.com/photo/2016/10/17/16/35/concert-1748102_1280.jpg"
                         />
                     </div>
 
-                    <div class="w-full sm:px-4">
-    <div class="text-3xl font-bold mb-4">Featured Row</div>
+                    
+                    <!--  -->
+                    <div class="w-full">
+    <div class="text-4xl font-bold mb-4">Try some indie</div>
     <div
         class="flex gap-6 w-full min-w-0 overflow-auto snap-x snap-mandatory no-scrollbar"
     >
-        <div class="w-[15rem] flex-none snap-center snap-always no-scrollbar">
+        <div
+    class="w-[15rem] sm:w-[18rem] flex-none snap-center snap-always no-scrollbar"
+>
     <a href="./detail.html">
         <img
-            class="w-full aspect-square rounded-lg"
-            src="https://picsum.photos/200/300"
+            class="w-full aspect-square object-cover object-center"
+            src="./assets/album-4-cover.jpg"
         />
     </a>
 
@@ -583,11 +646,13 @@
 </div>
 
         <!--  -->
-        <div class="w-[15rem] flex-none snap-center snap-always no-scrollbar">
+        <div
+    class="w-[15rem] sm:w-[18rem] flex-none snap-center snap-always no-scrollbar"
+>
     <a href="./detail.html">
         <img
-            class="w-full aspect-square rounded-lg"
-            src="https://picsum.photos/200/300"
+            class="w-full aspect-square object-cover object-center"
+            src="./assets/album-1-cover.jpg"
         />
     </a>
 
@@ -609,11 +674,13 @@
 </div>
 
         <!--  -->
-        <div class="w-[15rem] flex-none snap-center snap-always no-scrollbar">
+        <div
+    class="w-[15rem] sm:w-[18rem] flex-none snap-center snap-always no-scrollbar"
+>
     <a href="./detail.html">
         <img
-            class="w-full aspect-square rounded-lg"
-            src="https://picsum.photos/200/300"
+            class="w-full aspect-square object-cover object-center"
+            src="./assets/album-1-cover.jpg"
         />
     </a>
 
@@ -635,11 +702,13 @@
 </div>
 
         <!--  -->
-        <div class="w-[15rem] flex-none snap-center snap-always no-scrollbar">
+        <div
+    class="w-[15rem] sm:w-[18rem] flex-none snap-center snap-always no-scrollbar"
+>
     <a href="./detail.html">
         <img
-            class="w-full aspect-square rounded-lg"
-            src="https://picsum.photos/200/300"
+            class="w-full aspect-square object-cover object-center"
+            src="./assets/album-8-cover.jpg"
         />
     </a>
 
@@ -661,11 +730,13 @@
 </div>
 
         <!--  -->
-        <div class="w-[15rem] flex-none snap-center snap-always no-scrollbar">
+        <div
+    class="w-[15rem] sm:w-[18rem] flex-none snap-center snap-always no-scrollbar"
+>
     <a href="./detail.html">
         <img
-            class="w-full aspect-square rounded-lg"
-            src="https://picsum.photos/200/300"
+            class="w-full aspect-square object-cover object-center"
+            src="./assets/album-4-cover.jpg"
         />
     </a>
 
@@ -687,11 +758,13 @@
 </div>
 
         <!--  -->
-        <div class="w-[15rem] flex-none snap-center snap-always no-scrollbar">
+        <div
+    class="w-[15rem] sm:w-[18rem] flex-none snap-center snap-always no-scrollbar"
+>
     <a href="./detail.html">
         <img
-            class="w-full aspect-square rounded-lg"
-            src="https://picsum.photos/200/300"
+            class="w-full aspect-square object-cover object-center"
+            src="./assets/album-8-cover.jpg"
         />
     </a>
 
