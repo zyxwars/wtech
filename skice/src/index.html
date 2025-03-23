@@ -30,8 +30,8 @@
                     </a>
 
                     <img
-                        class="h-52 w-full object-cover shadow-sm sm:h-64 lg:h-80"
-                        src="https://images.unsplash.com/photo-1559366682-b24d010f6d65?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        class="h-52 w-full object-cover object-center shadow-sm sm:h-64 lg:h-80"
+                        src="./assets/banner.avif"
                     />
                 </figure>
 
@@ -39,37 +39,63 @@
                 <nav class="categories mb-10">
                     {% set categoryName = "Pop" %}
                     <!--  -->
+                    {% set categoryImage = "album-11-cover.jpg" %}
+                    <!--  -->
                     {% include "components/category-tile.html" %}
+
                     <!--  -->
                     {% set categoryName = "Rock" %}
                     <!--  -->
+                    {% set categoryImage = "album-10-cover.jpg" %}
+                    <!--  -->
                     {% include "components/category-tile.html" %}
+
                     <!--  -->
                     {% set categoryName = "Blues" %}
                     <!--  -->
+                    {% set categoryImage = "album-5-cover.jpg" %}
+                    <!--  -->
                     {% include "components/category-tile.html" %}
+
                     <!--  -->
                     {% set categoryName = "Country" %}
                     <!--  -->
+                    {% set categoryImage = "album-4-cover.jpg" %}
+                    <!--  -->
                     {% include "components/category-tile.html" %}
+
                     <!--  -->
                     {% set categoryName = "Metal" %}
                     <!--  -->
+                    {% set categoryImage = "album-3-cover.jpg" %}
+                    <!--  -->
                     {% include "components/category-tile.html" %}
+
                     <!--  -->
                     {% set categoryName = "Indie" %}
                     <!--  -->
+                    {% set categoryImage = "album-6-cover.jpg" %}
+                    <!--  -->
                     {% include "components/category-tile.html" %}
+
                     <!--  -->
                     {% set categoryName = "Hip-Hop" %}
                     <!--  -->
+                    {% set categoryImage = "album-7-cover.jpg" %}
+                    <!--  -->
                     {% include "components/category-tile.html" %}
+
                     <!--  -->
                     {% set categoryName = "Classical" %}
                     <!--  -->
+                    {% set categoryImage = "album-1-cover.jpg" %}
+                    <!--  -->
                     {% include "components/category-tile.html" %}
+
                     <!--  -->
                     {% set categoryName = "Punk" %}
+                    <!--  -->
+                    {% set categoryImage = "album-2-cover.jpg" %}
                     <!--  -->
                     {% include "components/category-tile.html" %}
                 </nav>
@@ -78,15 +104,21 @@
                 <section class="flex w-full flex-col gap-6">
                     {% set featuredProductsTitle = "New arrivals" %}
                     <!--  -->
+                    {% set featuredAlbumIds = [1,2,3,4,5,6,7,8] %}
+                    <!--  -->
                     {% include "components/featured-products.html" %}
 
                     <!--  -->
                     {% set featuredProductsTitle = "Best sellers" %}
                     <!--  -->
+                    {% set featuredAlbumIds = [11,10,9,8,6,1,2] %}
+                    <!--  -->
                     {% include "components/featured-products.html" %}
 
                     <!--  -->
                     {% set featuredProductsTitle = "Try some indie" %}
+                    <!--  -->
+                    {% set featuredAlbumIds = [4,3,5,7,11,1,2,6] %}
                     <!--  -->
                     {% include "components/featured-products.html" %}
                 </section>

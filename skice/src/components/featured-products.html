@@ -3,25 +3,12 @@
     <section
         class="no-scrollbar rs-carousel-scroll flex w-full min-w-0 snap-x snap-mandatory gap-6 overflow-auto"
     >
-        {% include "components/product-tile.html" %}
+        <!--  -->
+        {% for albumId in featuredAlbumIds %}
         <!--  -->
         {% include "components/product-tile.html" %}
         <!--  -->
-        {% include "components/product-tile.html" %}
-        <!--  -->
-        {% include "components/product-tile.html" %}
-        <!--  -->
-        {% include "components/product-tile.html" %}
-        <!--  -->
-        {% include "components/product-tile.html" %}
-        <!--  -->
-        {% include "components/product-tile.html" %}
-        <!--  -->
-        {% include "components/product-tile.html" %}
-        <!--  -->
-        {% include "components/product-tile.html" %}
-        <!--  -->
-        {% include "components/product-tile.html" %}
+        {% endfor %}
 
         <button
             class="btn btn-base-100 btn-circle rs-carousel-left top-2/5 absolute left-2"
