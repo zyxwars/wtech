@@ -8,21 +8,22 @@
     <body>
         {% include "components/header.html" %}
 
+        <!-- https://daisyui.com/components/drawer/ -->
         <div class="drawer">
-            <input id="my-drawer" type="checkbox" class="drawer-toggle" />
-            <div class="drawer-content">
-                <!-- Page content here -->
+            <input id="filter-drawer" type="checkbox" class="drawer-toggle" />
 
-                <main class="mb-12 flex min-h-screen justify-center">
-                    <div class="w-full px-4 sm:px-20">
-                        <div class="breadcrumbs text-sm">
+            <div class="drawer-content w-full">
+                <!-- Page layout -->
+                <main class="flex min-h-screen justify-center">
+                    <div class="w-full max-w-[1600px] px-4 md:px-20">
+                        <!-- Breadcrumbs -->
+                        <nav class="breadcrumbs pb-3 pt-4 text-sm sm:pt-4">
                             <ul>
                                 <li><a href="./index.html">Home</a></li>
-                                <li>Search results</li>
+                                <li>Search</li>
                             </ul>
-                        </div>
-
-                        <h1 class="text-3xl font-bold">
+                        </nav>
+                        <h1 class="mb-2 text-3xl font-bold">
                             Search results for: “Testing”
                         </h1>
 
@@ -32,9 +33,10 @@
 
                 {% include "components/footer.html" %}
             </div>
+
             <div class="drawer-side z-20">
                 <label
-                    for="my-drawer"
+                    for="filter-drawer"
                     aria-label="close sidebar"
                     class="drawer-overlay"
                 ></label>

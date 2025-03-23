@@ -8,87 +8,100 @@
     <body>
         {% include "components/header.html" %}
 
-        <main class="flex min-h-screen justify-center px-4">
-            <div
-                class="flex w-full max-w-6xl flex-col items-center gap-6 px-4 sm:items-start"
-            >
-                <div class="flex w-full flex-col gap-6 sm:flex-row">
+        <!-- Page layout -->
+        <main class="flex min-h-screen justify-center">
+            <div class="w-full max-w-[1600px] px-4 md:px-20">
+                <nav class="breadcrumbs pb-3 pt-4 text-sm sm:pt-4">
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li>Detail</li>
+                    </ul>
+                </nav>
+
+                <article class="mb-8 flex w-full flex-col gap-6 sm:flex-row">
                     <!-- product images -->
                     <div>
                         <!-- main product image -->
                         <img
-                            class="main_image square-image flex-none object-cover shadow-sm"
+                            class="rs-gallery aspect-square w-full cursor-pointer object-cover object-center shadow-sm sm:w-[40rem]"
                             src="./assets/album-3-cover.jpg"
                         />
 
                         <div class="flex flex-wrap gap-4">
                             <!-- secondary image -->
                             <img
-                                class="secondary_image mt-4 flex-none object-cover shadow-sm"
+                                class="secondary_image rs-gallery mt-4 flex-none cursor-pointer object-cover shadow-sm"
                                 src="./assets/album-3-front.jpg"
                             />
 
                             <img
-                                class="secondary_image mt-4 flex-none object-cover shadow-sm"
+                                class="secondary_image rs-gallery mt-4 flex-none cursor-pointer object-cover shadow-sm"
                                 src="./assets/album-3-back.jpg"
                             />
                         </div>
                     </div>
 
-                    <!-- Text for the product -->
-                    <div class="flex flex-col">
-                        <!-- product title -->
-                        <div class="product_title">Product title</div>
+                    <!-- Product detail -->
+                    <section class="flex flex-col items-start">
+                        <h1 class="mb-2 text-4xl font-bold sm:text-4xl">
+                            Chronicles of the Endless Voyage
+                        </h1>
 
-                        <!-- product description -->
-                        <div class="product_description">
-                            LLorem Ipsum is simply dummy text of the printing
-                            and typesetting industry. Lorem Ipsum has been the
-                            industry's standard dummy text ever since the...
+                        <p class="text-md mb-4">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Veritatis sequi, ex repellendus aliquam
+                            laborum voluptatum maxime unde maiores rem adipisci
+                            rerum nulla pariatur. Nemo id odit facilis quam
+                            aliquam ab.
+                        </p>
 
-                            <!-- product specification list -->
-                            <div class="mt-4">
-                                <ul>
-                                    <li>
-                                        <span class="font-bold"> Genre: </span>
-                                        Genre
-                                    </li>
-                                    <li>
-                                        <span class="font-bold"> Author: </span>
-                                        Mäkky Žbirka
-                                    </li>
-                                    <li>
-                                        <span class="font-bold">
-                                            Release year:
-                                        </span>
-                                        2025
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                        <ul class="mb-8 sm:text-lg">
+                            <li>
+                                <span class="font-bold"> Category: </span>
+                                Indie
+                            </li>
+                            <li>
+                                <span class="font-bold"> Author: </span>
+                                Neon Solstice
+                            </li>
+                            <li>
+                                <span class="font-bold"> Release year: </span>
+                                2025
+                            </li>
+                        </ul>
 
                         <!-- product price button-->
-                        <div class="categories flex w-full justify-end">
-                            <button
-                                class="buy-button cursor-pointer transition-all duration-150 hover:scale-105"
-                            >
-                                100$
-                            </button>
-                        </div>
+                        <button
+                            class="buy-button cursor-pointer transition-all duration-150 hover:scale-105"
+                        >
+                            15,99$
+                        </button>
+                    </section>
+                </article>
 
-                        <div class="flex w-full flex-col gap-6">
-                            <!-- featured products -->
-                            <include
-                                src="src/components/featured-products.html"
-                            ></include>
-                        </div>
-                    </div>
-                </div>
-                <!-- featured products -->
+                {% set featuredProductsTitle = "You might also like" %}
+                <!--  -->
                 {% include "components/featured-products.html" %}
             </div>
         </main>
 
         {% include "components/footer.html" %}
+
+        <div
+            class="rs-gallery-frame bg-base-100 fixed left-0 top-0 z-30 hidden h-screen w-screen items-center justify-center"
+        >
+            <img
+                class="gallery-frame-img aspect-square object-cover object-center"
+            />
+
+            <!-- This button doesn't actually do anything since the close is
+            triggered by clicking anywhere -->
+            <button class="btn btn-ghost btn-circle absolute right-4 top-4">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+
+        <script src="./detail-gallery.js"></script>
+        <script src="./carousel.js"></script>
     </body>
 </html>

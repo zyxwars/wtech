@@ -35,17 +35,16 @@
         <link href="./search-results.css" type="text/css" rel="stylesheet" />
     </head>
     <body>
-        <!-- <div class="bg-black w-full p-2 text-white text-center">
-    <h2>TODO: Free delivery over 50$</h2>
-</div> -->
-
-<nav
-    class="bg-base-100 sticky left-0 right-0 top-0 z-10 mb-8 flex flex-col flex-wrap px-2 pb-4 pt-3 shadow-sm sm:pl-10 sm:pr-6"
+        <nav
+    class="bg-base-100 sticky left-0 right-0 top-0 z-10 flex flex-col flex-wrap px-2 pb-4 pt-3 shadow-sm sm:pl-10 sm:pr-6"
 >
     <div class="flex items-center justify-between">
         <div class="flex items-center">
             <!-- Logo -->
-            <a href="./index.html" class="flex-none text-lg font-bold">
+            <a
+                href="./index.html"
+                class="flex-none text-lg font-bold hover:line-through"
+            >
                 Record Store
             </a>
 
@@ -114,40 +113,43 @@
 </nav>
 
 
+        <!-- https://daisyui.com/components/drawer/ -->
         <div class="drawer">
-            <input id="my-drawer" type="checkbox" class="drawer-toggle" />
-            <div class="drawer-content">
-                <!-- Page content here -->
+            <input id="filter-drawer" type="checkbox" class="drawer-toggle" />
 
-                <main class="mb-12 flex min-h-screen justify-center">
-                    <div class="w-full px-4 sm:px-20">
-                        <div class="breadcrumbs text-sm">
+            <div class="drawer-content w-full">
+                <!-- Page layout -->
+                <main class="flex min-h-screen justify-center">
+                    <div class="w-full max-w-[1600px] px-4 md:px-20">
+                        <!-- Breadcrumbs -->
+                        <nav class="breadcrumbs pb-3 pt-4 text-sm sm:pt-4">
                             <ul>
                                 <li><a href="./index.html">Home</a></li>
-                                <li>Search results</li>
+                                <li>Search</li>
                             </ul>
-                        </div>
-
-                        <h1 class="text-3xl font-bold">
+                        </nav>
+                        <h1 class="mb-2 text-3xl font-bold">
                             Search results for: “Testing”
                         </h1>
 
                         <!-- Controls -->
-<div class="mb-4 flex w-full justify-end gap-2">
+<section class="mb-4 flex w-full justify-end gap-2">
     <select class="select select-primary max-w-42">
         <option>Recommended</option>
         <option>Price Lowest</option>
         <option>Price Highest</option>
     </select>
 
-    <label for="my-drawer" class="drawer-button btn btn-primary">Filter</label>
-</div>
+    <label for="filter-drawer" class="drawer-button btn btn-primary"
+        >Filter</label
+    >
+</section>
 
 <!-- Products -->
-<div class="products-grid mb-8">
+<article class="products-grid mb-8">
     
     <!--  -->
-    <div class="w-full">
+    <article class="w-full">
     <a href="./detail.html">
         <img
             class="aspect-square w-full object-cover object-center"
@@ -156,13 +158,18 @@
     </a>
 
     <div class="p-2">
-        <a href="./detail.html" class="text-xl font-bold"
-            >Lorem ipsum dolor sit
+        <a href="./detail.html" class="text-xl font-bold">
+            <h3>
+                Drift
+            </h3>
         </a>
-        <div class="text-md mb-2">Artist name</div>
+        <h4 class="text-md mb-2">
+            Celestial
+            Undertow
+        </h4>
 
         <div class="flex w-full items-center justify-between">
-            <div class="">3,89€</div>
+            <p class="font-bold">15,99€</p>
             <button class="btn btn-primary">
                 <span class="material-symbols-outlined text-white">
                     shopping_cart
@@ -170,12 +177,12 @@
             </button>
         </div>
     </div>
-</div>
+</article>
 
     <!--  -->
     
     <!--  -->
-    <div class="w-full">
+    <article class="w-full">
     <a href="./detail.html">
         <img
             class="aspect-square w-full object-cover object-center"
@@ -184,13 +191,17 @@
     </a>
 
     <div class="p-2">
-        <a href="./detail.html" class="text-xl font-bold"
-            >Lorem ipsum dolor sit
+        <a href="./detail.html" class="text-xl font-bold">
+            <h3>
+                Whispers Beneath the Moonlit Sky
+            </h3>
         </a>
-        <div class="text-md mb-2">Artist name</div>
+        <h4 class="text-md mb-2">
+            Echo Circuit
+        </h4>
 
         <div class="flex w-full items-center justify-between">
-            <div class="">3,89€</div>
+            <p class="font-bold">15,99€</p>
             <button class="btn btn-primary">
                 <span class="material-symbols-outlined text-white">
                     shopping_cart
@@ -198,12 +209,12 @@
             </button>
         </div>
     </div>
-</div>
+</article>
 
     <!--  -->
     
     <!--  -->
-    <div class="w-full">
+    <article class="w-full">
     <a href="./detail.html">
         <img
             class="aspect-square w-full object-cover object-center"
@@ -212,13 +223,17 @@
     </a>
 
     <div class="p-2">
-        <a href="./detail.html" class="text-xl font-bold"
-            >Lorem ipsum dolor sit
+        <a href="./detail.html" class="text-xl font-bold">
+            <h3>
+                Shattered Illusions
+            </h3>
         </a>
-        <div class="text-md mb-2">Artist name</div>
+        <h4 class="text-md mb-2">
+            Vermillion Ghosts
+        </h4>
 
         <div class="flex w-full items-center justify-between">
-            <div class="">3,89€</div>
+            <p class="font-bold">15,99€</p>
             <button class="btn btn-primary">
                 <span class="material-symbols-outlined text-white">
                     shopping_cart
@@ -226,12 +241,12 @@
             </button>
         </div>
     </div>
-</div>
+</article>
 
     <!--  -->
     
     <!--  -->
-    <div class="w-full">
+    <article class="w-full">
     <a href="./detail.html">
         <img
             class="aspect-square w-full object-cover object-center"
@@ -240,13 +255,17 @@
     </a>
 
     <div class="p-2">
-        <a href="./detail.html" class="text-xl font-bold"
-            >Lorem ipsum dolor sit
+        <a href="./detail.html" class="text-xl font-bold">
+            <h3>
+                Frost
+            </h3>
         </a>
-        <div class="text-md mb-2">Artist name</div>
+        <h4 class="text-md mb-2">
+            The Lucid Prophets
+        </h4>
 
         <div class="flex w-full items-center justify-between">
-            <div class="">3,89€</div>
+            <p class="font-bold">15,99€</p>
             <button class="btn btn-primary">
                 <span class="material-symbols-outlined text-white">
                     shopping_cart
@@ -254,12 +273,12 @@
             </button>
         </div>
     </div>
-</div>
+</article>
 
     <!--  -->
     
     <!--  -->
-    <div class="w-full">
+    <article class="w-full">
     <a href="./detail.html">
         <img
             class="aspect-square w-full object-cover object-center"
@@ -268,13 +287,17 @@
     </a>
 
     <div class="p-2">
-        <a href="./detail.html" class="text-xl font-bold"
-            >Lorem ipsum dolor sit
+        <a href="./detail.html" class="text-xl font-bold">
+            <h3>
+                Electric Serenity
+            </h3>
         </a>
-        <div class="text-md mb-2">Artist name</div>
+        <h4 class="text-md mb-2">
+            Hollow Skyline
+        </h4>
 
         <div class="flex w-full items-center justify-between">
-            <div class="">3,89€</div>
+            <p class="font-bold">15,99€</p>
             <button class="btn btn-primary">
                 <span class="material-symbols-outlined text-white">
                     shopping_cart
@@ -282,12 +305,12 @@
             </button>
         </div>
     </div>
-</div>
+</article>
 
     <!--  -->
     
     <!--  -->
-    <div class="w-full">
+    <article class="w-full">
     <a href="./detail.html">
         <img
             class="aspect-square w-full object-cover object-center"
@@ -296,13 +319,17 @@
     </a>
 
     <div class="p-2">
-        <a href="./detail.html" class="text-xl font-bold"
-            >Lorem ipsum dolor sit
+        <a href="./detail.html" class="text-xl font-bold">
+            <h3>
+                Shattered Illusions
+            </h3>
         </a>
-        <div class="text-md mb-2">Artist name</div>
+        <h4 class="text-md mb-2">
+            Scarlet Reverie
+        </h4>
 
         <div class="flex w-full items-center justify-between">
-            <div class="">3,89€</div>
+            <p class="font-bold">15,99€</p>
             <button class="btn btn-primary">
                 <span class="material-symbols-outlined text-white">
                     shopping_cart
@@ -310,12 +337,12 @@
             </button>
         </div>
     </div>
-</div>
+</article>
 
     <!--  -->
     
     <!--  -->
-    <div class="w-full">
+    <article class="w-full">
     <a href="./detail.html">
         <img
             class="aspect-square w-full object-cover object-center"
@@ -324,13 +351,17 @@
     </a>
 
     <div class="p-2">
-        <a href="./detail.html" class="text-xl font-bold"
-            >Lorem ipsum dolor sit
+        <a href="./detail.html" class="text-xl font-bold">
+            <h3>
+                Drift
+            </h3>
         </a>
-        <div class="text-md mb-2">Artist name</div>
+        <h4 class="text-md mb-2">
+            Scarlet Reverie
+        </h4>
 
         <div class="flex w-full items-center justify-between">
-            <div class="">3,89€</div>
+            <p class="font-bold">15,99€</p>
             <button class="btn btn-primary">
                 <span class="material-symbols-outlined text-white">
                     shopping_cart
@@ -338,12 +369,12 @@
             </button>
         </div>
     </div>
-</div>
+</article>
 
     <!--  -->
     
     <!--  -->
-    <div class="w-full">
+    <article class="w-full">
     <a href="./detail.html">
         <img
             class="aspect-square w-full object-cover object-center"
@@ -352,13 +383,17 @@
     </a>
 
     <div class="p-2">
-        <a href="./detail.html" class="text-xl font-bold"
-            >Lorem ipsum dolor sit
+        <a href="./detail.html" class="text-xl font-bold">
+            <h3>
+                The Melancholy of Forgotten Dreams
+            </h3>
         </a>
-        <div class="text-md mb-2">Artist name</div>
+        <h4 class="text-md mb-2">
+            Scarlet Reverie
+        </h4>
 
         <div class="flex w-full items-center justify-between">
-            <div class="">3,89€</div>
+            <p class="font-bold">15,99€</p>
             <button class="btn btn-primary">
                 <span class="material-symbols-outlined text-white">
                     shopping_cart
@@ -366,12 +401,12 @@
             </button>
         </div>
     </div>
-</div>
+</article>
 
     <!--  -->
     
     <!--  -->
-    <div class="w-full">
+    <article class="w-full">
     <a href="./detail.html">
         <img
             class="aspect-square w-full object-cover object-center"
@@ -380,13 +415,17 @@
     </a>
 
     <div class="p-2">
-        <a href="./detail.html" class="text-xl font-bold"
-            >Lorem ipsum dolor sit
+        <a href="./detail.html" class="text-xl font-bold">
+            <h3>
+                Electric Serenity
+            </h3>
         </a>
-        <div class="text-md mb-2">Artist name</div>
+        <h4 class="text-md mb-2">
+            The Velvet Alchemists
+        </h4>
 
         <div class="flex w-full items-center justify-between">
-            <div class="">3,89€</div>
+            <p class="font-bold">15,99€</p>
             <button class="btn btn-primary">
                 <span class="material-symbols-outlined text-white">
                     shopping_cart
@@ -394,12 +433,12 @@
             </button>
         </div>
     </div>
-</div>
+</article>
 
     <!--  -->
     
     <!--  -->
-    <div class="w-full">
+    <article class="w-full">
     <a href="./detail.html">
         <img
             class="aspect-square w-full object-cover object-center"
@@ -408,13 +447,17 @@
     </a>
 
     <div class="p-2">
-        <a href="./detail.html" class="text-xl font-bold"
-            >Lorem ipsum dolor sit
+        <a href="./detail.html" class="text-xl font-bold">
+            <h3>
+                Horizon
+            </h3>
         </a>
-        <div class="text-md mb-2">Artist name</div>
+        <h4 class="text-md mb-2">
+            Oblivion Choir
+        </h4>
 
         <div class="flex w-full items-center justify-between">
-            <div class="">3,89€</div>
+            <p class="font-bold">15,99€</p>
             <button class="btn btn-primary">
                 <span class="material-symbols-outlined text-white">
                     shopping_cart
@@ -422,12 +465,12 @@
             </button>
         </div>
     </div>
-</div>
+</article>
 
     <!--  -->
     
     <!--  -->
-    <div class="w-full">
+    <article class="w-full">
     <a href="./detail.html">
         <img
             class="aspect-square w-full object-cover object-center"
@@ -436,13 +479,17 @@
     </a>
 
     <div class="p-2">
-        <a href="./detail.html" class="text-xl font-bold"
-            >Lorem ipsum dolor sit
+        <a href="./detail.html" class="text-xl font-bold">
+            <h3>
+                The Melancholy of Forgotten Dreams
+            </h3>
         </a>
-        <div class="text-md mb-2">Artist name</div>
+        <h4 class="text-md mb-2">
+            Solaris Bloom
+        </h4>
 
         <div class="flex w-full items-center justify-between">
-            <div class="">3,89€</div>
+            <p class="font-bold">15,99€</p>
             <button class="btn btn-primary">
                 <span class="material-symbols-outlined text-white">
                     shopping_cart
@@ -450,40 +497,12 @@
             </button>
         </div>
     </div>
-</div>
+</article>
 
-    <!--  -->
-    
-    <!--  -->
-    <div class="w-full">
-    <a href="./detail.html">
-        <img
-            class="aspect-square w-full object-cover object-center"
-            src="./assets/album-1-cover.jpg"
-        />
-    </a>
+</article>
 
-    <div class="p-2">
-        <a href="./detail.html" class="text-xl font-bold"
-            >Lorem ipsum dolor sit
-        </a>
-        <div class="text-md mb-2">Artist name</div>
-
-        <div class="flex w-full items-center justify-between">
-            <div class="">3,89€</div>
-            <button class="btn btn-primary">
-                <span class="material-symbols-outlined text-white">
-                    shopping_cart
-                </span>
-            </button>
-        </div>
-    </div>
-</div>
-
-</div>
-
-<!-- Pagination -->
-<div class="flex w-full justify-center">
+<!-- https://daisyui.com/components/pagination/ -->
+<nav class="flex w-full justify-center">
     <div class="join">
         <button class="join-item btn">1</button>
         <button class="join-item btn">2</button>
@@ -491,41 +510,25 @@
         <button class="join-item btn">99</button>
         <button class="join-item btn">100</button>
     </div>
-</div>
+</nav>
 
                     </div>
                 </main>
 
-                <footer
-    class="footer sm:footer-horizontal bg-neutral text-neutral-content mt-14 p-10"
+                <!-- https://daisyui.com/components/footer/ -->
+<footer
+    class="footer footer-horizontal footer-center bg-neutral text-neutral-content mt-10 p-10"
 >
-    <!-- TODO: add meaningful data -->
-    <nav>
-        <h6 class="footer-title">Services</h6>
-        <a class="link link-hover">Branding</a>
-        <a class="link link-hover">Design</a>
-        <a class="link link-hover">Marketing</a>
-        <a class="link link-hover">Advertisement</a>
-    </nav>
-    <nav>
-        <h6 class="footer-title">Company</h6>
-        <a class="link link-hover">About us</a>
-        <a class="link link-hover">Contact</a>
-        <a class="link link-hover">Jobs</a>
-        <a class="link link-hover">Press kit</a>
-    </nav>
-    <nav>
-        <h6 class="footer-title">Legal</h6>
-        <a class="link link-hover">Terms of use</a>
-        <a class="link link-hover">Privacy policy</a>
-        <a class="link link-hover">Cookie policy</a>
-    </nav>
+    <aside>
+        <p class="font-bold">Record Store ❤️</p>
+    </aside>
 </footer>
 
             </div>
+
             <div class="drawer-side z-20">
                 <label
-                    for="my-drawer"
+                    for="filter-drawer"
                     aria-label="close sidebar"
                     class="drawer-overlay"
                 ></label>

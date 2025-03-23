@@ -8,21 +8,24 @@
     <body>
         {% include "components/header.html" %}
 
+        <!-- https://daisyui.com/components/drawer/ -->
         <div class="drawer">
-            <input id="my-drawer" type="checkbox" class="drawer-toggle" />
-            <div class="drawer-content">
-                <!-- Page content here -->
-                <main class="mb-12 flex min-h-screen justify-center">
-                    <div class="max-w-8xl w-full px-4 md:px-20">
-                        <div class="breadcrumbs text-sm">
+            <input id="filter-drawer" type="checkbox" class="drawer-toggle" />
+
+            <div class="drawer-content w-full">
+                <!-- Page layout -->
+                <main class="flex min-h-screen justify-center">
+                    <div class="w-full max-w-[1600px] px-4 md:px-20">
+                        <!-- Breadcrumbs -->
+                        <nav class="breadcrumbs pb-3 pt-4 text-sm sm:pt-4">
                             <ul>
                                 <li><a href="./index.html">Home</a></li>
                                 <li>Category</li>
                             </ul>
-                        </div>
+                        </nav>
 
-                        <section>
-                            <h1 class="text-4xl font-bold">Category</h1>
+                        <section class="mb-2">
+                            <h1 class="mb-2 text-4xl font-bold">Category</h1>
                             <p>
                                 Lorem, ipsum dolor sit amet consectetur
                                 adipisicing elit. Laborum minima eos doloremque,
@@ -39,9 +42,10 @@
 
                 {% include "components/footer.html" %}
             </div>
+
             <div class="drawer-side z-20">
                 <label
-                    for="my-drawer"
+                    for="filter-drawer"
                     aria-label="close sidebar"
                     class="drawer-overlay"
                 ></label>

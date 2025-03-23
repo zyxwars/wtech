@@ -20,12 +20,17 @@ fs.readdirSync("./src")
 
 fs.readdirSync("./src")
     // TODO: Add file types to copy here
-    .filter((name) => name.endsWith(".css") || name.endsWith(".svg"))
+    .filter(
+        (name) =>
+            name.endsWith(".css") ||
+            name.endsWith(".svg") ||
+            name.endsWith(".js"),
+    )
     .forEach((fileName) =>
         fs.copyFileSync(
             path.join("./src", fileName),
-            path.join("./skice", fileName)
-        )
+            path.join("./skice", fileName),
+        ),
     );
 
 fs.readdirSync("./src/components")
@@ -33,6 +38,6 @@ fs.readdirSync("./src/components")
     .forEach((fileName) =>
         fs.copyFileSync(
             path.join("./src/components", fileName),
-            path.join("./skice/components", fileName)
-        )
+            path.join("./skice/components", fileName),
+        ),
     );

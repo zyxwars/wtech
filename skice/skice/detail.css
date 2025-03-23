@@ -1,5 +1,3 @@
-@import "./components/featured-products.css";
-
 .buy-button {
     display: flex;
     align-items: center;
@@ -9,9 +7,9 @@
     background-color: var(--surface-medium-color);
 
     color: whitesmoke;
-    font-size: 2rem;
+    font-size: 1.25rem;
     font-weight: bold;
-    padding: 1rem 2rem 1rem 2rem;
+    padding: 1rem 1.5rem 1rem 1.5rem;
 
     /* Gradient using your color stops */
     background: linear-gradient(
@@ -23,31 +21,14 @@
     );
 }
 
-.main_image {
-    
-    width: 500px;
-    aspect-ratio: 1/1;
-    justify-content: flex-start;
-    object-fit: cover;
-    display: block;
-}
-
-@media (width >= 40rem) {
-    .main_image {
-        width: 1000px;
-    }
-}
-.product_description {
-    font-size: 1.2rem;
-}
-
-.product_title {
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-.secondary_image{
+.secondary_image {
     width: 6rem;
     height: 6rem;
     justify-content: left;
+}
+
+/* Keep square at a reasonable width and height for all devices */
+.gallery-frame-img {
+    width: min(90vw, 60vh);
+    height: min(90vw, 60vh);
 }
