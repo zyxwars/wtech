@@ -1,10 +1,12 @@
-<a href="./category.html">
-    <div
-        class="category-tile__card hover:scale-105 cursor-pointer transition-all duration-150 shadow-sm"
-    >
-        <img class="category-tile__image" src="https://picsum.photos/200/300" />
-        <div class="flex justify-center w-full pr-10">
-            <div class="category-tile__text">Genre</div>
-        </div>
+<a
+    href="./category.html"
+    class="bg-base-200 flex cursor-pointer items-center rounded-full shadow-sm transition-all duration-150 hover:scale-105"
+>
+    <img
+        class="h-12 w-12 flex-none rounded-full object-cover object-center shadow-sm md:h-16 md:w-16"
+        src="./assets/album-{{ [1,2,3,4,5,6,7,8,9,10,11] | random }}-cover.jpg"
+    />
+    <div class="flex w-full justify-center pr-6 md:pr-8">
+        <h3 class="text-md font-medium sm:text-lg">{{categoryName}}</h3>
     </div>
 </a>

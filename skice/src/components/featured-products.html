@@ -1,7 +1,7 @@
-<div class="w-full">
-    <div class="text-4xl font-bold mb-4">{{rowTitle}}</div>
+<section class="w-full">
+    <h2 class="mb-4 text-4xl font-bold">{{rowTitle}}</h2>
     <div
-        class="flex gap-6 w-full min-w-0 overflow-auto snap-x snap-mandatory no-scrollbar"
+        class="no-scrollbar flex w-full min-w-0 snap-x snap-mandatory gap-6 overflow-auto"
     >
         {% include "components/product-tile.html" %}
         <!--  -->
@@ -15,4 +15,4 @@
         <!--  -->
         {% include "components/product-tile.html" %}
     </div>
-</div>
+</section>

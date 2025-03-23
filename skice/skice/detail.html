@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="mytheme">
     <head>
         <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <title>Record Store</title>
+<link rel="icon" type="image/x-icon" href="./asssets/vinyl.svg" />
 
 <!-- Google fonts -->
 
@@ -39,16 +40,17 @@
 </div> -->
 
 <nav
-    class="sticky top-0 left-0 right-0 shadow-sm mb-8 z-10 flex flex-col pt-3 pb-4 px-2 sm:pl-10 sm:pr-6 bg-base-100 flex-wrap"
+    class="bg-base-100 sticky left-0 right-0 top-0 z-10 mb-8 flex flex-col flex-wrap px-2 pb-4 pt-3 shadow-sm sm:pl-10 sm:pr-6"
 >
     <div class="flex items-center justify-between">
         <div class="flex items-center">
             <!-- Logo -->
-            <a href="./index.html" class="flex-none font-bold text-lg">
+            <a href="./index.html" class="flex-none text-lg font-bold">
                 Record Store
             </a>
 
-            <label class="input w-[32rem] ml-10 hidden md:flex">
+            <!-- Desktop searchbar -->
+            <label class="input ml-10 hidden w-[32rem] md:flex">
                 <svg
                     class="h-[1em] opacity-50"
                     xmlns="http://www.w3.org/2000/svg"
@@ -85,7 +87,8 @@
         </div>
     </div>
 
-    <label class="input md:hidden w-full">
+    <!-- Mobile search bar -->
+    <label class="input w-full md:hidden">
         <svg
             class="h-[1em] opacity-50"
             xmlns="http://www.w3.org/2000/svg"
@@ -111,28 +114,28 @@
 </nav>
 
 
-        <main class="flex justify-center min-h-screen px-4">
+        <main class="flex min-h-screen justify-center px-4">
             <div
-                class="flex flex-col w-full max-w-6xl px-4 items-center sm:items-start gap-6"
+                class="flex w-full max-w-6xl flex-col items-center gap-6 px-4 sm:items-start"
             >
-                <div class="flex flex-col sm:flex-row w-full gap-6">
+                <div class="flex w-full flex-col gap-6 sm:flex-row">
                     <!-- product images -->
                     <div>
                         <!-- main product image -->
                         <img
-                            class="main_image object-cover flex-none square-image shadow-sm"
+                            class="main_image square-image flex-none object-cover shadow-sm"
                             src="./assets/album-3-cover.jpg"
                         />
 
-                        <div class="flex gap-4 flex-wrap">
+                        <div class="flex flex-wrap gap-4">
                             <!-- secondary image -->
                             <img
-                                class="secondary_image object-cover mt-4 shadow-sm flex-none"
+                                class="secondary_image mt-4 flex-none object-cover shadow-sm"
                                 src="./assets/album-3-front.jpg"
                             />
 
                             <img
-                                class="secondary_image object-cover mt-4 shadow-sm flex-none"
+                                class="secondary_image mt-4 flex-none object-cover shadow-sm"
                                 src="./assets/album-3-back.jpg"
                             />
                         </div>
@@ -171,15 +174,15 @@
                         </div>
 
                         <!-- product price button-->
-                        <div class="categories w-full flex justify-end">
+                        <div class="categories flex w-full justify-end">
                             <button
-                                class="buy-button hover:scale-105 cursor-pointer transition-all duration-150"
+                                class="buy-button cursor-pointer transition-all duration-150 hover:scale-105"
                             >
                                 100$
                             </button>
                         </div>
 
-                        <div class="w-full gap-6 flex flex-col">
+                        <div class="flex w-full flex-col gap-6">
                             <!-- featured products -->
                             <include
                                 src="src/components/featured-products.html"
@@ -188,57 +191,29 @@
                     </div>
                 </div>
                 <!-- featured products -->
-                <div class="w-full">
-    <div class="text-4xl font-bold mb-4"></div>
+                <section class="w-full">
+    <h2 class="mb-4 text-4xl font-bold"></h2>
     <div
-        class="flex gap-6 w-full min-w-0 overflow-auto snap-x snap-mandatory no-scrollbar"
+        class="no-scrollbar flex w-full min-w-0 snap-x snap-mandatory gap-6 overflow-auto"
     >
-        <div
-    class="w-[15rem] sm:w-[18rem] flex-none snap-center snap-always no-scrollbar"
+        <article
+    class="no-scrollbar w-[15rem] flex-none snap-center snap-always sm:w-[18rem]"
 >
     <a href="./detail.html">
         <img
-            class="w-full aspect-square object-cover object-center"
-            src="./assets/album-11-cover.jpg"
-        />
-    </a>
-
-    <div class="p-2">
-        <a href="./detail.html" class="font-bold text-xl"
-            >Lorem ipsum dolor sit
-        </a>
-        <div class="font-semibold text-md mb-2">Artist name</div>
-
-        <div class="flex justify-between w-full items-center">
-            <div class="">3,89€</div>
-            <button class="btn btn-primary">
-                <span class="material-symbols-outlined text-white">
-                    shopping_cart
-                </span>
-            </button>
-        </div>
-    </div>
-</div>
-
-        <!--  -->
-        <div
-    class="w-[15rem] sm:w-[18rem] flex-none snap-center snap-always no-scrollbar"
->
-    <a href="./detail.html">
-        <img
-            class="w-full aspect-square object-cover object-center"
+            class="aspect-square w-full object-cover object-center"
             src="./assets/album-2-cover.jpg"
         />
     </a>
 
     <div class="p-2">
-        <a href="./detail.html" class="font-bold text-xl"
-            >Lorem ipsum dolor sit
+        <a href="./detail.html" class="text-xl font-bold">
+            <h3>Lorem ipsum dolor sit</h3>
         </a>
-        <div class="font-semibold text-md mb-2">Artist name</div>
+        <h4 class="text-md mb-2">Artist name</h4>
 
-        <div class="flex justify-between w-full items-center">
-            <div class="">3,89€</div>
+        <div class="flex w-full items-center justify-between">
+            <p class="font-bold">3,89€</p>
             <button class="btn btn-primary">
                 <span class="material-symbols-outlined text-white">
                     shopping_cart
@@ -246,27 +221,83 @@
             </button>
         </div>
     </div>
-</div>
+</article>
 
         <!--  -->
-        <div
-    class="w-[15rem] sm:w-[18rem] flex-none snap-center snap-always no-scrollbar"
+        <article
+    class="no-scrollbar w-[15rem] flex-none snap-center snap-always sm:w-[18rem]"
 >
     <a href="./detail.html">
         <img
-            class="w-full aspect-square object-cover object-center"
+            class="aspect-square w-full object-cover object-center"
+            src="./assets/album-2-cover.jpg"
+        />
+    </a>
+
+    <div class="p-2">
+        <a href="./detail.html" class="text-xl font-bold">
+            <h3>Lorem ipsum dolor sit</h3>
+        </a>
+        <h4 class="text-md mb-2">Artist name</h4>
+
+        <div class="flex w-full items-center justify-between">
+            <p class="font-bold">3,89€</p>
+            <button class="btn btn-primary">
+                <span class="material-symbols-outlined text-white">
+                    shopping_cart
+                </span>
+            </button>
+        </div>
+    </div>
+</article>
+
+        <!--  -->
+        <article
+    class="no-scrollbar w-[15rem] flex-none snap-center snap-always sm:w-[18rem]"
+>
+    <a href="./detail.html">
+        <img
+            class="aspect-square w-full object-cover object-center"
+            src="./assets/album-5-cover.jpg"
+        />
+    </a>
+
+    <div class="p-2">
+        <a href="./detail.html" class="text-xl font-bold">
+            <h3>Lorem ipsum dolor sit</h3>
+        </a>
+        <h4 class="text-md mb-2">Artist name</h4>
+
+        <div class="flex w-full items-center justify-between">
+            <p class="font-bold">3,89€</p>
+            <button class="btn btn-primary">
+                <span class="material-symbols-outlined text-white">
+                    shopping_cart
+                </span>
+            </button>
+        </div>
+    </div>
+</article>
+
+        <!--  -->
+        <article
+    class="no-scrollbar w-[15rem] flex-none snap-center snap-always sm:w-[18rem]"
+>
+    <a href="./detail.html">
+        <img
+            class="aspect-square w-full object-cover object-center"
             src="./assets/album-10-cover.jpg"
         />
     </a>
 
     <div class="p-2">
-        <a href="./detail.html" class="font-bold text-xl"
-            >Lorem ipsum dolor sit
+        <a href="./detail.html" class="text-xl font-bold">
+            <h3>Lorem ipsum dolor sit</h3>
         </a>
-        <div class="font-semibold text-md mb-2">Artist name</div>
+        <h4 class="text-md mb-2">Artist name</h4>
 
-        <div class="flex justify-between w-full items-center">
-            <div class="">3,89€</div>
+        <div class="flex w-full items-center justify-between">
+            <p class="font-bold">3,89€</p>
             <button class="btn btn-primary">
                 <span class="material-symbols-outlined text-white">
                     shopping_cart
@@ -274,27 +305,27 @@
             </button>
         </div>
     </div>
-</div>
+</article>
 
         <!--  -->
-        <div
-    class="w-[15rem] sm:w-[18rem] flex-none snap-center snap-always no-scrollbar"
+        <article
+    class="no-scrollbar w-[15rem] flex-none snap-center snap-always sm:w-[18rem]"
 >
     <a href="./detail.html">
         <img
-            class="w-full aspect-square object-cover object-center"
+            class="aspect-square w-full object-cover object-center"
             src="./assets/album-8-cover.jpg"
         />
     </a>
 
     <div class="p-2">
-        <a href="./detail.html" class="font-bold text-xl"
-            >Lorem ipsum dolor sit
+        <a href="./detail.html" class="text-xl font-bold">
+            <h3>Lorem ipsum dolor sit</h3>
         </a>
-        <div class="font-semibold text-md mb-2">Artist name</div>
+        <h4 class="text-md mb-2">Artist name</h4>
 
-        <div class="flex justify-between w-full items-center">
-            <div class="">3,89€</div>
+        <div class="flex w-full items-center justify-between">
+            <p class="font-bold">3,89€</p>
             <button class="btn btn-primary">
                 <span class="material-symbols-outlined text-white">
                     shopping_cart
@@ -302,27 +333,27 @@
             </button>
         </div>
     </div>
-</div>
+</article>
 
         <!--  -->
-        <div
-    class="w-[15rem] sm:w-[18rem] flex-none snap-center snap-always no-scrollbar"
+        <article
+    class="no-scrollbar w-[15rem] flex-none snap-center snap-always sm:w-[18rem]"
 >
     <a href="./detail.html">
         <img
-            class="w-full aspect-square object-cover object-center"
-            src="./assets/album-8-cover.jpg"
+            class="aspect-square w-full object-cover object-center"
+            src="./assets/album-2-cover.jpg"
         />
     </a>
 
     <div class="p-2">
-        <a href="./detail.html" class="font-bold text-xl"
-            >Lorem ipsum dolor sit
+        <a href="./detail.html" class="text-xl font-bold">
+            <h3>Lorem ipsum dolor sit</h3>
         </a>
-        <div class="font-semibold text-md mb-2">Artist name</div>
+        <h4 class="text-md mb-2">Artist name</h4>
 
-        <div class="flex justify-between w-full items-center">
-            <div class="">3,89€</div>
+        <div class="flex w-full items-center justify-between">
+            <p class="font-bold">3,89€</p>
             <button class="btn btn-primary">
                 <span class="material-symbols-outlined text-white">
                     shopping_cart
@@ -330,44 +361,16 @@
             </button>
         </div>
     </div>
-</div>
-
-        <!--  -->
-        <div
-    class="w-[15rem] sm:w-[18rem] flex-none snap-center snap-always no-scrollbar"
->
-    <a href="./detail.html">
-        <img
-            class="w-full aspect-square object-cover object-center"
-            src="./assets/album-6-cover.jpg"
-        />
-    </a>
-
-    <div class="p-2">
-        <a href="./detail.html" class="font-bold text-xl"
-            >Lorem ipsum dolor sit
-        </a>
-        <div class="font-semibold text-md mb-2">Artist name</div>
-
-        <div class="flex justify-between w-full items-center">
-            <div class="">3,89€</div>
-            <button class="btn btn-primary">
-                <span class="material-symbols-outlined text-white">
-                    shopping_cart
-                </span>
-            </button>
-        </div>
-    </div>
-</div>
+</article>
 
     </div>
-</div>
+</section>
 
             </div>
         </main>
 
         <footer
-    class="footer sm:footer-horizontal bg-neutral text-neutral-content p-10 mt-14"
+    class="footer sm:footer-horizontal bg-neutral text-neutral-content mt-14 p-10"
 >
     <!-- TODO: add meaningful data -->
     <nav>

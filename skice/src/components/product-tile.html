@@ -1,21 +1,21 @@
-<div
-    class="w-[15rem] sm:w-[18rem] flex-none snap-center snap-always no-scrollbar"
+<article
+    class="no-scrollbar w-[15rem] flex-none snap-center snap-always sm:w-[18rem]"
 >
     <a href="./detail.html">
         <img
-            class="w-full aspect-square object-cover object-center"
+            class="aspect-square w-full object-cover object-center"
             src="./assets/album-{{ [1,2,3,4,5,6,7,8,9,10,11] | random }}-cover.jpg"
         />
     </a>
 
     <div class="p-2">
-        <a href="./detail.html" class="font-bold text-xl"
-            >Lorem ipsum dolor sit
+        <a href="./detail.html" class="text-xl font-bold">
+            <h3>Lorem ipsum dolor sit</h3>
         </a>
-        <div class="font-semibold text-md mb-2">Artist name</div>
+        <h4 class="text-md mb-2">Artist name</h4>
 
-        <div class="flex justify-between w-full items-center">
-            <div class="">3,89€</div>
+        <div class="flex w-full items-center justify-between">
+            <p class="font-bold">3,89€</p>
             <button class="btn btn-primary">
                 <span class="material-symbols-outlined text-white">
                     shopping_cart
@@ -23,4 +23,4 @@
             </button>
         </div>
     </div>
-</div>
+</article>

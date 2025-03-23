@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="mytheme">
     <head>
         {% include "components/document-head.html" %}
@@ -8,93 +8,94 @@
     <body>
         {% include "components/header.html" %}
 
-        <main class="flex justify-center min-h-screen">
-            <div class="flex flex-col w-full px-4 md:px-20 items-center">
-                <!-- Banner -->
+        <!-- Page layout -->
+        <main
+            class="flex min-h-screen w-full flex-col items-center px-4 md:px-20"
+        >
+            <!-- Banner -->
+            <figure
+                class="relative flex w-full max-w-[1600px] flex-none flex-col items-center"
+            >
+                <h2
+                    class="max-w-1/2 absolute left-2 top-2 text-4xl font-bold text-white sm:left-6 sm:top-6 sm:text-6xl lg:text-8xl"
+                >
+                    New album just out!
+                </h2>
+                <a
+                    href="./detail.html"
+                    class="btn btn-primary bottom-18 absolute left-2 sm:bottom-20 sm:left-6"
+                >
+                    More
+                </a>
+
                 <img
-                    class="object-cover flex-none w-full h-52 sm:h-72 shadow-sm"
-                    src="./assets/album-1-cover.jpg"
+                    class="h-52 w-full object-cover shadow-sm sm:h-64 lg:h-80"
+                    src="https://images.unsplash.com/photo-1559366682-b24d010f6d65?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 />
 
-                <!-- Dots for banner -->
-                <div class="flex gap-2 mt-4 mb-10">
-                    <span class="bg-base-300 rounded-full w-2 h-2"></span>
-                    <span class="bg-base-300 rounded-full w-2 h-2"></span>
-                    <span class="bg-base-300 rounded-full w-2 h-2"></span>
+                <!-- Stylish dots 💅 -->
+                <div class="mb-8 mt-4 flex gap-2">
+                    <span class="bg-base-300 h-2 w-2 rounded-full"></span>
+                    <span class="bg-base-300 h-2 w-2 rounded-full"></span>
+                    <span class="bg-base-300 h-2 w-2 rounded-full"></span>
                 </div>
+            </figure>
 
-                <!-- categories tiles -->
-                <div class="categories mb-10">
-                    {% include "components/category-tile.html" %}
-                    <!--  -->
-                    {% include "components/category-tile.html" %}
-                    <!--  -->
-                    {% include "components/category-tile.html" %}
-                    <!--  -->
-                    {% include "components/category-tile.html" %}
-                    <!--  -->
-                    {% include "components/category-tile.html" %}
-                    <!--  -->
-                    {% include "components/category-tile.html" %}
-                    <!--  -->
-                    {% include "components/category-tile.html" %}
-                </div>
+            <!-- Categories -->
+            <nav class="categories mb-10 max-w-[1600px]">
+                {% set categoryName = "Pop" %}
+                <!--  -->
+                {% include "components/category-tile.html" %}
+                <!--  -->
+                {% set categoryName = "Rock" %}
+                <!--  -->
+                {% include "components/category-tile.html" %}
+                <!--  -->
+                {% set categoryName = "Blues" %}
+                <!--  -->
+                {% include "components/category-tile.html" %}
+                <!--  -->
+                {% set categoryName = "Country" %}
+                <!--  -->
+                {% include "components/category-tile.html" %}
+                <!--  -->
+                {% set categoryName = "Metal" %}
+                <!--  -->
+                {% include "components/category-tile.html" %}
+                <!--  -->
+                {% set categoryName = "Indie" %}
+                <!--  -->
+                {% include "components/category-tile.html" %}
+                <!--  -->
+                {% set categoryName = "Hip-Hop" %}
+                <!--  -->
+                {% include "components/category-tile.html" %}
+                <!--  -->
+                {% set categoryName = "Classical" %}
+                <!--  -->
+                {% include "components/category-tile.html" %}
+                <!--  -->
+                {% set categoryName = "Punk" %}
+                <!--  -->
+                {% include "components/category-tile.html" %}
+            </nav>
 
-                <div class="w-full gap-6 flex flex-col">
-                    {% set rowTitle = "New arrivals" %}
-                    <!--  -->
-                    {% include "components/featured-products.html" %}
+            <!-- Featured products -->
+            <section class="flex w-full max-w-[1600px] flex-col gap-6">
+                {% set rowTitle = "New arrivals" %}
+                <!--  -->
+                {% include "components/featured-products.html" %}
 
-                    <!-- Random text -->
-                    <section>
-                        <h2 class="text-3xl font-semibold mt-6 mb-6">
-                            Did you know
-                        </h2>
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing
-                            elit. Praesentium, dicta architecto. Ipsa similique
-                            perspiciatis quibusdam laborum labore dolores fugiat
-                            inventore provident obcaecati voluptatem delectus
-                            expedita reiciendis, esse quo et accusamus!
-                        </p>
-                    </section>
+                <!--  -->
+                {% set rowTitle = "Best sellers" %}
+                <!--  -->
+                {% include "components/featured-products.html" %}
 
-                    {% set rowTitle = "Our classics" %}
-                    <!--  -->
-                    {% include "components/featured-products.html" %}
-
-                    <!-- Random text and image -->
-                    <div class="flex gap-4 mt-8 mb-6 flex-wrap sm:flex-nowrap">
-                        <section class="p-4">
-                            <h2 class="text-3xl font-semibold mb-4">
-                                Did you know some other thing
-                            </h2>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Vel quae repellat maiores
-                                perspiciatis illum deserunt quisquam qui
-                                assumenda voluptate voluptates, quaerat modi,
-                                accusamus cum mollitia ullam magni laudantium in
-                                pariatur. Lorem ipsum dolor sit amet
-                                consectetur, adipisicing elit. Dolores veniam ex
-                                id porro laborum, consequatur consectetur
-                                aliquam officia nihil, maxime nisi harum
-                                pariatur labore accusamus quidem quam autem
-                                repellendus earum?
-                            </p>
-                        </section>
-
-                        <img
-                            class="w-full sm:h-[20rem] sm:w-[20rem] lg:w-[25rem] lg:w-[30rem] h-64 object-cover flex-none"
-                            src="https://cdn.pixabay.com/photo/2016/10/17/16/35/concert-1748102_1280.jpg"
-                        />
-                    </div>
-
-                    {% set rowTitle = "Try some indie" %}
-                    <!--  -->
-                    {% include "components/featured-products.html" %}
-                </div>
-            </div>
+                <!--  -->
+                {% set rowTitle = "Try some indie" %}
+                <!--  -->
+                {% include "components/featured-products.html" %}
+            </section>
         </main>
 
         {% include "components/footer.html" %}

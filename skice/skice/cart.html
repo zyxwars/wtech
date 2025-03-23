@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="mytheme">
     <head>
         <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <title>Record Store</title>
+<link rel="icon" type="image/x-icon" href="./asssets/vinyl.svg" />
 
 <!-- Google fonts -->
 
@@ -39,16 +40,17 @@
 </div> -->
 
 <nav
-    class="sticky top-0 left-0 right-0 shadow-sm mb-8 z-10 flex flex-col pt-3 pb-4 px-2 sm:pl-10 sm:pr-6 bg-base-100 flex-wrap"
+    class="bg-base-100 sticky left-0 right-0 top-0 z-10 mb-8 flex flex-col flex-wrap px-2 pb-4 pt-3 shadow-sm sm:pl-10 sm:pr-6"
 >
     <div class="flex items-center justify-between">
         <div class="flex items-center">
             <!-- Logo -->
-            <a href="./index.html" class="flex-none font-bold text-lg">
+            <a href="./index.html" class="flex-none text-lg font-bold">
                 Record Store
             </a>
 
-            <label class="input w-[32rem] ml-10 hidden md:flex">
+            <!-- Desktop searchbar -->
+            <label class="input ml-10 hidden w-[32rem] md:flex">
                 <svg
                     class="h-[1em] opacity-50"
                     xmlns="http://www.w3.org/2000/svg"
@@ -85,7 +87,8 @@
         </div>
     </div>
 
-    <label class="input md:hidden w-full">
+    <!-- Mobile search bar -->
+    <label class="input w-full md:hidden">
         <svg
             class="h-[1em] opacity-50"
             xmlns="http://www.w3.org/2000/svg"
@@ -111,8 +114,8 @@
 </nav>
 
 
-        <main class="min-h-screen flex justify-center mb-12">
-            <div class="max-w-4xl px-4 w-full">
+        <main class="mb-12 flex min-h-screen justify-center">
+            <div class="w-full max-w-4xl px-4">
                 <div class="breadcrumbs text-sm">
                     <ul>
                         <li><a href="./index.html">Home</a></li>
@@ -120,8 +123,8 @@
                     </ul>
                 </div>
 
-                <div class="flex flex-col w-full items-center gap-4">
-                    <ul class="steps w-full mb-8">
+                <div class="flex w-full flex-col items-center gap-4">
+                    <ul class="steps mb-8 w-full">
                         <li class="step step-primary">Details</li>
                         <li class="step">Address</li>
                         <li class="step">Payment</li>
@@ -131,15 +134,39 @@
     <a href="./detail.html flex-none">
         <img
             class="h-[4rem] w-[4rem] flex-none object-cover object-center"
-            src="./assets/album-3-cover.jpg"
+            src="./assets/album-8-cover.jpg"
         />
     </a>
 
     <div class="sm:mr-8">
-        <a href="./detail.html" class="font-bold text-xl"
+        <a href="./detail.html" class="text-xl font-bold"
             >Lorem ipsum dolor sit
         </a>
-        <div class="font-semibold text-md mb-2">Artist name</div>
+        <div class="text-md mb-2 font-semibold">Artist name</div>
+    </div>
+
+    <input type="number" value="1" class="input max-w-14" />
+    <div class="">3,89€</div>
+
+    <button class="cursor-pointer">
+        <span class="material-symbols-outlined !text-[14px]"> close </span>
+    </button>
+</div>
+
+                    <!--  -->
+                    <div class="flex items-start gap-4">
+    <a href="./detail.html flex-none">
+        <img
+            class="h-[4rem] w-[4rem] flex-none object-cover object-center"
+            src="./assets/album-5-cover.jpg"
+        />
+    </a>
+
+    <div class="sm:mr-8">
+        <a href="./detail.html" class="text-xl font-bold"
+            >Lorem ipsum dolor sit
+        </a>
+        <div class="text-md mb-2 font-semibold">Artist name</div>
     </div>
 
     <input type="number" value="1" class="input max-w-14" />
@@ -160,10 +187,10 @@
     </a>
 
     <div class="sm:mr-8">
-        <a href="./detail.html" class="font-bold text-xl"
+        <a href="./detail.html" class="text-xl font-bold"
             >Lorem ipsum dolor sit
         </a>
-        <div class="font-semibold text-md mb-2">Artist name</div>
+        <div class="text-md mb-2 font-semibold">Artist name</div>
     </div>
 
     <input type="number" value="1" class="input max-w-14" />
@@ -179,15 +206,39 @@
     <a href="./detail.html flex-none">
         <img
             class="h-[4rem] w-[4rem] flex-none object-cover object-center"
-            src="./assets/album-2-cover.jpg"
+            src="./assets/album-10-cover.jpg"
         />
     </a>
 
     <div class="sm:mr-8">
-        <a href="./detail.html" class="font-bold text-xl"
+        <a href="./detail.html" class="text-xl font-bold"
             >Lorem ipsum dolor sit
         </a>
-        <div class="font-semibold text-md mb-2">Artist name</div>
+        <div class="text-md mb-2 font-semibold">Artist name</div>
+    </div>
+
+    <input type="number" value="1" class="input max-w-14" />
+    <div class="">3,89€</div>
+
+    <button class="cursor-pointer">
+        <span class="material-symbols-outlined !text-[14px]"> close </span>
+    </button>
+</div>
+
+                    <!--  -->
+                    <div class="flex items-start gap-4">
+    <a href="./detail.html flex-none">
+        <img
+            class="h-[4rem] w-[4rem] flex-none object-cover object-center"
+            src="./assets/album-5-cover.jpg"
+        />
+    </a>
+
+    <div class="sm:mr-8">
+        <a href="./detail.html" class="text-xl font-bold"
+            >Lorem ipsum dolor sit
+        </a>
+        <div class="text-md mb-2 font-semibold">Artist name</div>
     </div>
 
     <input type="number" value="1" class="input max-w-14" />
@@ -208,10 +259,10 @@
     </a>
 
     <div class="sm:mr-8">
-        <a href="./detail.html" class="font-bold text-xl"
+        <a href="./detail.html" class="text-xl font-bold"
             >Lorem ipsum dolor sit
         </a>
-        <div class="font-semibold text-md mb-2">Artist name</div>
+        <div class="text-md mb-2 font-semibold">Artist name</div>
     </div>
 
     <input type="number" value="1" class="input max-w-14" />
@@ -227,15 +278,15 @@
     <a href="./detail.html flex-none">
         <img
             class="h-[4rem] w-[4rem] flex-none object-cover object-center"
-            src="./assets/album-5-cover.jpg"
+            src="./assets/album-1-cover.jpg"
         />
     </a>
 
     <div class="sm:mr-8">
-        <a href="./detail.html" class="font-bold text-xl"
+        <a href="./detail.html" class="text-xl font-bold"
             >Lorem ipsum dolor sit
         </a>
-        <div class="font-semibold text-md mb-2">Artist name</div>
+        <div class="text-md mb-2 font-semibold">Artist name</div>
     </div>
 
     <input type="number" value="1" class="input max-w-14" />
@@ -251,159 +302,15 @@
     <a href="./detail.html flex-none">
         <img
             class="h-[4rem] w-[4rem] flex-none object-cover object-center"
-            src="./assets/album-9-cover.jpg"
+            src="./assets/album-11-cover.jpg"
         />
     </a>
 
     <div class="sm:mr-8">
-        <a href="./detail.html" class="font-bold text-xl"
+        <a href="./detail.html" class="text-xl font-bold"
             >Lorem ipsum dolor sit
         </a>
-        <div class="font-semibold text-md mb-2">Artist name</div>
-    </div>
-
-    <input type="number" value="1" class="input max-w-14" />
-    <div class="">3,89€</div>
-
-    <button class="cursor-pointer">
-        <span class="material-symbols-outlined !text-[14px]"> close </span>
-    </button>
-</div>
-
-                    <!--  -->
-                    <div class="flex items-start gap-4">
-    <a href="./detail.html flex-none">
-        <img
-            class="h-[4rem] w-[4rem] flex-none object-cover object-center"
-            src="./assets/album-8-cover.jpg"
-        />
-    </a>
-
-    <div class="sm:mr-8">
-        <a href="./detail.html" class="font-bold text-xl"
-            >Lorem ipsum dolor sit
-        </a>
-        <div class="font-semibold text-md mb-2">Artist name</div>
-    </div>
-
-    <input type="number" value="1" class="input max-w-14" />
-    <div class="">3,89€</div>
-
-    <button class="cursor-pointer">
-        <span class="material-symbols-outlined !text-[14px]"> close </span>
-    </button>
-</div>
-
-                    <!--  -->
-                    <div class="flex items-start gap-4">
-    <a href="./detail.html flex-none">
-        <img
-            class="h-[4rem] w-[4rem] flex-none object-cover object-center"
-            src="./assets/album-6-cover.jpg"
-        />
-    </a>
-
-    <div class="sm:mr-8">
-        <a href="./detail.html" class="font-bold text-xl"
-            >Lorem ipsum dolor sit
-        </a>
-        <div class="font-semibold text-md mb-2">Artist name</div>
-    </div>
-
-    <input type="number" value="1" class="input max-w-14" />
-    <div class="">3,89€</div>
-
-    <button class="cursor-pointer">
-        <span class="material-symbols-outlined !text-[14px]"> close </span>
-    </button>
-</div>
-
-                    <!--  -->
-                    <div class="flex items-start gap-4">
-    <a href="./detail.html flex-none">
-        <img
-            class="h-[4rem] w-[4rem] flex-none object-cover object-center"
-            src="./assets/album-3-cover.jpg"
-        />
-    </a>
-
-    <div class="sm:mr-8">
-        <a href="./detail.html" class="font-bold text-xl"
-            >Lorem ipsum dolor sit
-        </a>
-        <div class="font-semibold text-md mb-2">Artist name</div>
-    </div>
-
-    <input type="number" value="1" class="input max-w-14" />
-    <div class="">3,89€</div>
-
-    <button class="cursor-pointer">
-        <span class="material-symbols-outlined !text-[14px]"> close </span>
-    </button>
-</div>
-
-                    <!--  -->
-                    <div class="flex items-start gap-4">
-    <a href="./detail.html flex-none">
-        <img
-            class="h-[4rem] w-[4rem] flex-none object-cover object-center"
-            src="./assets/album-3-cover.jpg"
-        />
-    </a>
-
-    <div class="sm:mr-8">
-        <a href="./detail.html" class="font-bold text-xl"
-            >Lorem ipsum dolor sit
-        </a>
-        <div class="font-semibold text-md mb-2">Artist name</div>
-    </div>
-
-    <input type="number" value="1" class="input max-w-14" />
-    <div class="">3,89€</div>
-
-    <button class="cursor-pointer">
-        <span class="material-symbols-outlined !text-[14px]"> close </span>
-    </button>
-</div>
-
-                    <!--  -->
-                    <div class="flex items-start gap-4">
-    <a href="./detail.html flex-none">
-        <img
-            class="h-[4rem] w-[4rem] flex-none object-cover object-center"
-            src="./assets/album-3-cover.jpg"
-        />
-    </a>
-
-    <div class="sm:mr-8">
-        <a href="./detail.html" class="font-bold text-xl"
-            >Lorem ipsum dolor sit
-        </a>
-        <div class="font-semibold text-md mb-2">Artist name</div>
-    </div>
-
-    <input type="number" value="1" class="input max-w-14" />
-    <div class="">3,89€</div>
-
-    <button class="cursor-pointer">
-        <span class="material-symbols-outlined !text-[14px]"> close </span>
-    </button>
-</div>
-
-                    <!--  -->
-                    <div class="flex items-start gap-4">
-    <a href="./detail.html flex-none">
-        <img
-            class="h-[4rem] w-[4rem] flex-none object-cover object-center"
-            src="./assets/album-5-cover.jpg"
-        />
-    </a>
-
-    <div class="sm:mr-8">
-        <a href="./detail.html" class="font-bold text-xl"
-            >Lorem ipsum dolor sit
-        </a>
-        <div class="font-semibold text-md mb-2">Artist name</div>
+        <div class="text-md mb-2 font-semibold">Artist name</div>
     </div>
 
     <input type="number" value="1" class="input max-w-14" />
@@ -424,10 +331,106 @@
     </a>
 
     <div class="sm:mr-8">
-        <a href="./detail.html" class="font-bold text-xl"
+        <a href="./detail.html" class="text-xl font-bold"
             >Lorem ipsum dolor sit
         </a>
-        <div class="font-semibold text-md mb-2">Artist name</div>
+        <div class="text-md mb-2 font-semibold">Artist name</div>
+    </div>
+
+    <input type="number" value="1" class="input max-w-14" />
+    <div class="">3,89€</div>
+
+    <button class="cursor-pointer">
+        <span class="material-symbols-outlined !text-[14px]"> close </span>
+    </button>
+</div>
+
+                    <!--  -->
+                    <div class="flex items-start gap-4">
+    <a href="./detail.html flex-none">
+        <img
+            class="h-[4rem] w-[4rem] flex-none object-cover object-center"
+            src="./assets/album-11-cover.jpg"
+        />
+    </a>
+
+    <div class="sm:mr-8">
+        <a href="./detail.html" class="text-xl font-bold"
+            >Lorem ipsum dolor sit
+        </a>
+        <div class="text-md mb-2 font-semibold">Artist name</div>
+    </div>
+
+    <input type="number" value="1" class="input max-w-14" />
+    <div class="">3,89€</div>
+
+    <button class="cursor-pointer">
+        <span class="material-symbols-outlined !text-[14px]"> close </span>
+    </button>
+</div>
+
+                    <!--  -->
+                    <div class="flex items-start gap-4">
+    <a href="./detail.html flex-none">
+        <img
+            class="h-[4rem] w-[4rem] flex-none object-cover object-center"
+            src="./assets/album-2-cover.jpg"
+        />
+    </a>
+
+    <div class="sm:mr-8">
+        <a href="./detail.html" class="text-xl font-bold"
+            >Lorem ipsum dolor sit
+        </a>
+        <div class="text-md mb-2 font-semibold">Artist name</div>
+    </div>
+
+    <input type="number" value="1" class="input max-w-14" />
+    <div class="">3,89€</div>
+
+    <button class="cursor-pointer">
+        <span class="material-symbols-outlined !text-[14px]"> close </span>
+    </button>
+</div>
+
+                    <!--  -->
+                    <div class="flex items-start gap-4">
+    <a href="./detail.html flex-none">
+        <img
+            class="h-[4rem] w-[4rem] flex-none object-cover object-center"
+            src="./assets/album-8-cover.jpg"
+        />
+    </a>
+
+    <div class="sm:mr-8">
+        <a href="./detail.html" class="text-xl font-bold"
+            >Lorem ipsum dolor sit
+        </a>
+        <div class="text-md mb-2 font-semibold">Artist name</div>
+    </div>
+
+    <input type="number" value="1" class="input max-w-14" />
+    <div class="">3,89€</div>
+
+    <button class="cursor-pointer">
+        <span class="material-symbols-outlined !text-[14px]"> close </span>
+    </button>
+</div>
+
+                    <!--  -->
+                    <div class="flex items-start gap-4">
+    <a href="./detail.html flex-none">
+        <img
+            class="h-[4rem] w-[4rem] flex-none object-cover object-center"
+            src="./assets/album-8-cover.jpg"
+        />
+    </a>
+
+    <div class="sm:mr-8">
+        <a href="./detail.html" class="text-xl font-bold"
+            >Lorem ipsum dolor sit
+        </a>
+        <div class="text-md mb-2 font-semibold">Artist name</div>
     </div>
 
     <input type="number" value="1" class="input max-w-14" />
@@ -447,7 +450,7 @@
         </main>
 
         <footer
-    class="footer sm:footer-horizontal bg-neutral text-neutral-content p-10 mt-14"
+    class="footer sm:footer-horizontal bg-neutral text-neutral-content mt-14 p-10"
 >
     <!-- TODO: add meaningful data -->
     <nav>

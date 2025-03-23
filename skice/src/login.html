@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="mytheme">
     <head>
         {% include "components/document-head.html" %}
@@ -6,16 +6,16 @@
     <body>
         {% include "components/header.html" %}
 
-        <main class="flex justify-center items-start p-4">
+        <main class="flex items-start justify-center p-4">
             <form class="grid grid-flow-row gap-2">
-                <h1 class="font-bold text-2xl mb-2">Sign in</h1>
+                <h1 class="mb-2 text-2xl font-bold">Sign in</h1>
                 <input type="text" placeholder="Email" class="input" />
                 <input type="password" placeholder="Password" class="input" />
                 <button class="btn btn-primary mt-2" type="submit">
                     Sign in
                 </button>
 
-                <div class="justify-self-center mt-2">
+                <div class="mt-2 justify-self-center">
                     Don't have an account?
                     <a class="font-bold underline" href="./register.html"
                         >Sign up</a

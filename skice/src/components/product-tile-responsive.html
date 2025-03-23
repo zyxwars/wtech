@@ -1,18 +1,18 @@
 <div class="w-full">
     <a href="./detail.html">
         <img
-            class="w-full aspect-square object-cover object-center"
-            src="./assets/album-{{ [1,2,3,4,5,6,7,8,9,10,11] | random }}-cover.jpg"
+            class="aspect-square w-full object-cover object-center"
+            src="./assets/album-{{albumId}}-cover.jpg"
         />
     </a>
 
     <div class="p-2">
-        <a href="./detail.html" class="font-bold text-xl"
+        <a href="./detail.html" class="text-xl font-bold"
             >Lorem ipsum dolor sit
         </a>
         <div class="text-md mb-2">Artist name</div>
 
-        <div class="flex justify-between w-full items-center">
+        <div class="flex w-full items-center justify-between">
             <div class="">3,89€</div>
             <button class="btn btn-primary">
                 <span class="material-symbols-outlined text-white">

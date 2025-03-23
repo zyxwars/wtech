@@ -1,5 +1,5 @@
 <!-- Controls -->
-<div class="w-full flex justify-end gap-2 mb-4">
+<div class="mb-4 flex w-full justify-end gap-2">
     <select class="select select-primary max-w-42">
         <option>Recommended</option>
         <option>Price Lowest</option>
@@ -11,33 +11,57 @@
 
 <!-- Products -->
 <div class="products-grid mb-8">
-    {% include "components/product-tile-responsive.html" %}
+    {% set albumId = 1 %}
     <!--  -->
     {% include "components/product-tile-responsive.html" %}
     <!--  -->
-    {% include "components/product-tile-responsive.html" %}
+    {% set albumId = 2 %}
     <!--  -->
     {% include "components/product-tile-responsive.html" %}
     <!--  -->
-    {% include "components/product-tile-responsive.html" %}
+    {% set albumId = 3 %}
     <!--  -->
     {% include "components/product-tile-responsive.html" %}
     <!--  -->
-    {% include "components/product-tile-responsive.html" %}
+    {% set albumId = 4 %}
     <!--  -->
     {% include "components/product-tile-responsive.html" %}
     <!--  -->
-    {% include "components/product-tile-responsive.html" %}
+    {% set albumId = 5 %}
     <!--  -->
     {% include "components/product-tile-responsive.html" %}
     <!--  -->
+    {% set albumId = 6 %}
+    <!--  -->
     {% include "components/product-tile-responsive.html" %}
+    <!--  -->
+    {% set albumId = 7 %}
+    <!--  -->
+    {% include "components/product-tile-responsive.html" %}
+    <!--  -->
+    {% set albumId = 8 %}
+    <!--  -->
+    {% include "components/product-tile-responsive.html" %}
+    <!--  -->
+    {% set albumId = 9 %}
+    <!--  -->
+    {% include "components/product-tile-responsive.html" %}
+    <!--  -->
+    {% set albumId = 10 %}
+    <!--  -->
+    {% include "components/product-tile-responsive.html" %}
+    <!--  -->
+    {% set albumId = 11 %}
+    <!--  -->
+    {% include "components/product-tile-responsive.html" %}
+    <!--  -->
+    {% set albumId = 1 %}
     <!--  -->
     {% include "components/product-tile-responsive.html" %}
 </div>
 
 <!-- Pagination -->
-<div class="w-full flex justify-center">
+<div class="flex w-full justify-center">
     <div class="join">
         <button class="join-item btn">1</button>
         <button class="join-item btn">2</button>

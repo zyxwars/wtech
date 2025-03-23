@@ -11,5 +11,9 @@
     "description": "",
     "dependencies": {
         "nunjucks": "^3.2.4"
+    },
+    "devDependencies": {
+        "prettier": "^3.5.3",
+        "prettier-plugin-tailwindcss": "^0.6.11"
     }
 }

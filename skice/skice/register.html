@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="mytheme">
     <head>
         <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <title>Record Store</title>
+<link rel="icon" type="image/x-icon" href="./asssets/vinyl.svg" />
 
 <!-- Google fonts -->
 
@@ -37,16 +38,17 @@
 </div> -->
 
 <nav
-    class="sticky top-0 left-0 right-0 shadow-sm mb-8 z-10 flex flex-col pt-3 pb-4 px-2 sm:pl-10 sm:pr-6 bg-base-100 flex-wrap"
+    class="bg-base-100 sticky left-0 right-0 top-0 z-10 mb-8 flex flex-col flex-wrap px-2 pb-4 pt-3 shadow-sm sm:pl-10 sm:pr-6"
 >
     <div class="flex items-center justify-between">
         <div class="flex items-center">
             <!-- Logo -->
-            <a href="./index.html" class="flex-none font-bold text-lg">
+            <a href="./index.html" class="flex-none text-lg font-bold">
                 Record Store
             </a>
 
-            <label class="input w-[32rem] ml-10 hidden md:flex">
+            <!-- Desktop searchbar -->
+            <label class="input ml-10 hidden w-[32rem] md:flex">
                 <svg
                     class="h-[1em] opacity-50"
                     xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +85,8 @@
         </div>
     </div>
 
-    <label class="input md:hidden w-full">
+    <!-- Mobile search bar -->
+    <label class="input w-full md:hidden">
         <svg
             class="h-[1em] opacity-50"
             xmlns="http://www.w3.org/2000/svg"
@@ -109,9 +112,9 @@
 </nav>
 
 
-        <main class="flex justify-center items-start p-4">
-            <form class="grid grid-flow-row gap-2 max-w-[18rem]">
-                <h1 class="font-bold text-2xl mb-2">Sign up</h1>
+        <main class="flex items-start justify-center p-4">
+            <form class="grid max-w-[18rem] grid-flow-row gap-2">
+                <h1 class="mb-2 text-2xl font-bold">Sign up</h1>
                 <div class="flex gap-2">
                     <input type="text" placeholder="First Name" class="input" />
                     <input type="text" placeholder="Last Name" class="input" />
@@ -122,7 +125,7 @@
                     Sign up
                 </button>
 
-                <div class="justify-self-center mt-2">
+                <div class="mt-2 justify-self-center">
                     Already have an account?
                     <a class="font-bold underline" href="./login.html"
                         >Sign in</a

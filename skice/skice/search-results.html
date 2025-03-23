@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="mytheme">
     <head>
         <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <title>Record Store</title>
+<link rel="icon" type="image/x-icon" href="./asssets/vinyl.svg" />
 
 <!-- Google fonts -->
 
@@ -39,16 +40,17 @@
 </div> -->
 
 <nav
-    class="sticky top-0 left-0 right-0 shadow-sm mb-8 z-10 flex flex-col pt-3 pb-4 px-2 sm:pl-10 sm:pr-6 bg-base-100 flex-wrap"
+    class="bg-base-100 sticky left-0 right-0 top-0 z-10 mb-8 flex flex-col flex-wrap px-2 pb-4 pt-3 shadow-sm sm:pl-10 sm:pr-6"
 >
     <div class="flex items-center justify-between">
         <div class="flex items-center">
             <!-- Logo -->
-            <a href="./index.html" class="flex-none font-bold text-lg">
+            <a href="./index.html" class="flex-none text-lg font-bold">
                 Record Store
             </a>
 
-            <label class="input w-[32rem] ml-10 hidden md:flex">
+            <!-- Desktop searchbar -->
+            <label class="input ml-10 hidden w-[32rem] md:flex">
                 <svg
                     class="h-[1em] opacity-50"
                     xmlns="http://www.w3.org/2000/svg"
@@ -85,7 +87,8 @@
         </div>
     </div>
 
-    <label class="input md:hidden w-full">
+    <!-- Mobile search bar -->
+    <label class="input w-full md:hidden">
         <svg
             class="h-[1em] opacity-50"
             xmlns="http://www.w3.org/2000/svg"
@@ -116,8 +119,8 @@
             <div class="drawer-content">
                 <!-- Page content here -->
 
-                <main class="min-h-screen flex justify-center mb-12">
-                    <div class="px-4 sm:px-20 w-full">
+                <main class="mb-12 flex min-h-screen justify-center">
+                    <div class="w-full px-4 sm:px-20">
                         <div class="breadcrumbs text-sm">
                             <ul>
                                 <li><a href="./index.html">Home</a></li>
@@ -125,12 +128,12 @@
                             </ul>
                         </div>
 
-                        <h1 class="font-bold text-3xl">
+                        <h1 class="text-3xl font-bold">
                             Search results for: “Testing”
                         </h1>
 
                         <!-- Controls -->
-<div class="w-full flex justify-end gap-2 mb-4">
+<div class="mb-4 flex w-full justify-end gap-2">
     <select class="select select-primary max-w-42">
         <option>Recommended</option>
         <option>Price Lowest</option>
@@ -142,21 +145,23 @@
 
 <!-- Products -->
 <div class="products-grid mb-8">
+    
+    <!--  -->
     <div class="w-full">
     <a href="./detail.html">
         <img
-            class="w-full aspect-square object-cover object-center"
-            src="./assets/album-4-cover.jpg"
+            class="aspect-square w-full object-cover object-center"
+            src="./assets/album-1-cover.jpg"
         />
     </a>
 
     <div class="p-2">
-        <a href="./detail.html" class="font-bold text-xl"
+        <a href="./detail.html" class="text-xl font-bold"
             >Lorem ipsum dolor sit
         </a>
         <div class="text-md mb-2">Artist name</div>
 
-        <div class="flex justify-between w-full items-center">
+        <div class="flex w-full items-center justify-between">
             <div class="">3,89€</div>
             <button class="btn btn-primary">
                 <span class="material-symbols-outlined text-white">
@@ -168,21 +173,23 @@
 </div>
 
     <!--  -->
+    
+    <!--  -->
     <div class="w-full">
     <a href="./detail.html">
         <img
-            class="w-full aspect-square object-cover object-center"
-            src="./assets/album-8-cover.jpg"
+            class="aspect-square w-full object-cover object-center"
+            src="./assets/album-2-cover.jpg"
         />
     </a>
 
     <div class="p-2">
-        <a href="./detail.html" class="font-bold text-xl"
+        <a href="./detail.html" class="text-xl font-bold"
             >Lorem ipsum dolor sit
         </a>
         <div class="text-md mb-2">Artist name</div>
 
-        <div class="flex justify-between w-full items-center">
+        <div class="flex w-full items-center justify-between">
             <div class="">3,89€</div>
             <button class="btn btn-primary">
                 <span class="material-symbols-outlined text-white">
@@ -194,203 +201,23 @@
 </div>
 
     <!--  -->
-    <div class="w-full">
-    <a href="./detail.html">
-        <img
-            class="w-full aspect-square object-cover object-center"
-            src="./assets/album-6-cover.jpg"
-        />
-    </a>
-
-    <div class="p-2">
-        <a href="./detail.html" class="font-bold text-xl"
-            >Lorem ipsum dolor sit
-        </a>
-        <div class="text-md mb-2">Artist name</div>
-
-        <div class="flex justify-between w-full items-center">
-            <div class="">3,89€</div>
-            <button class="btn btn-primary">
-                <span class="material-symbols-outlined text-white">
-                    shopping_cart
-                </span>
-            </button>
-        </div>
-    </div>
-</div>
-
+    
     <!--  -->
     <div class="w-full">
     <a href="./detail.html">
         <img
-            class="w-full aspect-square object-cover object-center"
-            src="./assets/album-11-cover.jpg"
-        />
-    </a>
-
-    <div class="p-2">
-        <a href="./detail.html" class="font-bold text-xl"
-            >Lorem ipsum dolor sit
-        </a>
-        <div class="text-md mb-2">Artist name</div>
-
-        <div class="flex justify-between w-full items-center">
-            <div class="">3,89€</div>
-            <button class="btn btn-primary">
-                <span class="material-symbols-outlined text-white">
-                    shopping_cart
-                </span>
-            </button>
-        </div>
-    </div>
-</div>
-
-    <!--  -->
-    <div class="w-full">
-    <a href="./detail.html">
-        <img
-            class="w-full aspect-square object-cover object-center"
-            src="./assets/album-5-cover.jpg"
-        />
-    </a>
-
-    <div class="p-2">
-        <a href="./detail.html" class="font-bold text-xl"
-            >Lorem ipsum dolor sit
-        </a>
-        <div class="text-md mb-2">Artist name</div>
-
-        <div class="flex justify-between w-full items-center">
-            <div class="">3,89€</div>
-            <button class="btn btn-primary">
-                <span class="material-symbols-outlined text-white">
-                    shopping_cart
-                </span>
-            </button>
-        </div>
-    </div>
-</div>
-
-    <!--  -->
-    <div class="w-full">
-    <a href="./detail.html">
-        <img
-            class="w-full aspect-square object-cover object-center"
-            src="./assets/album-7-cover.jpg"
-        />
-    </a>
-
-    <div class="p-2">
-        <a href="./detail.html" class="font-bold text-xl"
-            >Lorem ipsum dolor sit
-        </a>
-        <div class="text-md mb-2">Artist name</div>
-
-        <div class="flex justify-between w-full items-center">
-            <div class="">3,89€</div>
-            <button class="btn btn-primary">
-                <span class="material-symbols-outlined text-white">
-                    shopping_cart
-                </span>
-            </button>
-        </div>
-    </div>
-</div>
-
-    <!--  -->
-    <div class="w-full">
-    <a href="./detail.html">
-        <img
-            class="w-full aspect-square object-cover object-center"
-            src="./assets/album-7-cover.jpg"
-        />
-    </a>
-
-    <div class="p-2">
-        <a href="./detail.html" class="font-bold text-xl"
-            >Lorem ipsum dolor sit
-        </a>
-        <div class="text-md mb-2">Artist name</div>
-
-        <div class="flex justify-between w-full items-center">
-            <div class="">3,89€</div>
-            <button class="btn btn-primary">
-                <span class="material-symbols-outlined text-white">
-                    shopping_cart
-                </span>
-            </button>
-        </div>
-    </div>
-</div>
-
-    <!--  -->
-    <div class="w-full">
-    <a href="./detail.html">
-        <img
-            class="w-full aspect-square object-cover object-center"
-            src="./assets/album-10-cover.jpg"
-        />
-    </a>
-
-    <div class="p-2">
-        <a href="./detail.html" class="font-bold text-xl"
-            >Lorem ipsum dolor sit
-        </a>
-        <div class="text-md mb-2">Artist name</div>
-
-        <div class="flex justify-between w-full items-center">
-            <div class="">3,89€</div>
-            <button class="btn btn-primary">
-                <span class="material-symbols-outlined text-white">
-                    shopping_cart
-                </span>
-            </button>
-        </div>
-    </div>
-</div>
-
-    <!--  -->
-    <div class="w-full">
-    <a href="./detail.html">
-        <img
-            class="w-full aspect-square object-cover object-center"
-            src="./assets/album-5-cover.jpg"
-        />
-    </a>
-
-    <div class="p-2">
-        <a href="./detail.html" class="font-bold text-xl"
-            >Lorem ipsum dolor sit
-        </a>
-        <div class="text-md mb-2">Artist name</div>
-
-        <div class="flex justify-between w-full items-center">
-            <div class="">3,89€</div>
-            <button class="btn btn-primary">
-                <span class="material-symbols-outlined text-white">
-                    shopping_cart
-                </span>
-            </button>
-        </div>
-    </div>
-</div>
-
-    <!--  -->
-    <div class="w-full">
-    <a href="./detail.html">
-        <img
-            class="w-full aspect-square object-cover object-center"
+            class="aspect-square w-full object-cover object-center"
             src="./assets/album-3-cover.jpg"
         />
     </a>
 
     <div class="p-2">
-        <a href="./detail.html" class="font-bold text-xl"
+        <a href="./detail.html" class="text-xl font-bold"
             >Lorem ipsum dolor sit
         </a>
         <div class="text-md mb-2">Artist name</div>
 
-        <div class="flex justify-between w-full items-center">
+        <div class="flex w-full items-center justify-between">
             <div class="">3,89€</div>
             <button class="btn btn-primary">
                 <span class="material-symbols-outlined text-white">
@@ -402,21 +229,23 @@
 </div>
 
     <!--  -->
+    
+    <!--  -->
     <div class="w-full">
     <a href="./detail.html">
         <img
-            class="w-full aspect-square object-cover object-center"
-            src="./assets/album-7-cover.jpg"
+            class="aspect-square w-full object-cover object-center"
+            src="./assets/album-4-cover.jpg"
         />
     </a>
 
     <div class="p-2">
-        <a href="./detail.html" class="font-bold text-xl"
+        <a href="./detail.html" class="text-xl font-bold"
             >Lorem ipsum dolor sit
         </a>
         <div class="text-md mb-2">Artist name</div>
 
-        <div class="flex justify-between w-full items-center">
+        <div class="flex w-full items-center justify-between">
             <div class="">3,89€</div>
             <button class="btn btn-primary">
                 <span class="material-symbols-outlined text-white">
@@ -428,21 +257,219 @@
 </div>
 
     <!--  -->
+    
+    <!--  -->
     <div class="w-full">
     <a href="./detail.html">
         <img
-            class="w-full aspect-square object-cover object-center"
+            class="aspect-square w-full object-cover object-center"
+            src="./assets/album-5-cover.jpg"
+        />
+    </a>
+
+    <div class="p-2">
+        <a href="./detail.html" class="text-xl font-bold"
+            >Lorem ipsum dolor sit
+        </a>
+        <div class="text-md mb-2">Artist name</div>
+
+        <div class="flex w-full items-center justify-between">
+            <div class="">3,89€</div>
+            <button class="btn btn-primary">
+                <span class="material-symbols-outlined text-white">
+                    shopping_cart
+                </span>
+            </button>
+        </div>
+    </div>
+</div>
+
+    <!--  -->
+    
+    <!--  -->
+    <div class="w-full">
+    <a href="./detail.html">
+        <img
+            class="aspect-square w-full object-cover object-center"
             src="./assets/album-6-cover.jpg"
         />
     </a>
 
     <div class="p-2">
-        <a href="./detail.html" class="font-bold text-xl"
+        <a href="./detail.html" class="text-xl font-bold"
             >Lorem ipsum dolor sit
         </a>
         <div class="text-md mb-2">Artist name</div>
 
-        <div class="flex justify-between w-full items-center">
+        <div class="flex w-full items-center justify-between">
+            <div class="">3,89€</div>
+            <button class="btn btn-primary">
+                <span class="material-symbols-outlined text-white">
+                    shopping_cart
+                </span>
+            </button>
+        </div>
+    </div>
+</div>
+
+    <!--  -->
+    
+    <!--  -->
+    <div class="w-full">
+    <a href="./detail.html">
+        <img
+            class="aspect-square w-full object-cover object-center"
+            src="./assets/album-7-cover.jpg"
+        />
+    </a>
+
+    <div class="p-2">
+        <a href="./detail.html" class="text-xl font-bold"
+            >Lorem ipsum dolor sit
+        </a>
+        <div class="text-md mb-2">Artist name</div>
+
+        <div class="flex w-full items-center justify-between">
+            <div class="">3,89€</div>
+            <button class="btn btn-primary">
+                <span class="material-symbols-outlined text-white">
+                    shopping_cart
+                </span>
+            </button>
+        </div>
+    </div>
+</div>
+
+    <!--  -->
+    
+    <!--  -->
+    <div class="w-full">
+    <a href="./detail.html">
+        <img
+            class="aspect-square w-full object-cover object-center"
+            src="./assets/album-8-cover.jpg"
+        />
+    </a>
+
+    <div class="p-2">
+        <a href="./detail.html" class="text-xl font-bold"
+            >Lorem ipsum dolor sit
+        </a>
+        <div class="text-md mb-2">Artist name</div>
+
+        <div class="flex w-full items-center justify-between">
+            <div class="">3,89€</div>
+            <button class="btn btn-primary">
+                <span class="material-symbols-outlined text-white">
+                    shopping_cart
+                </span>
+            </button>
+        </div>
+    </div>
+</div>
+
+    <!--  -->
+    
+    <!--  -->
+    <div class="w-full">
+    <a href="./detail.html">
+        <img
+            class="aspect-square w-full object-cover object-center"
+            src="./assets/album-9-cover.jpg"
+        />
+    </a>
+
+    <div class="p-2">
+        <a href="./detail.html" class="text-xl font-bold"
+            >Lorem ipsum dolor sit
+        </a>
+        <div class="text-md mb-2">Artist name</div>
+
+        <div class="flex w-full items-center justify-between">
+            <div class="">3,89€</div>
+            <button class="btn btn-primary">
+                <span class="material-symbols-outlined text-white">
+                    shopping_cart
+                </span>
+            </button>
+        </div>
+    </div>
+</div>
+
+    <!--  -->
+    
+    <!--  -->
+    <div class="w-full">
+    <a href="./detail.html">
+        <img
+            class="aspect-square w-full object-cover object-center"
+            src="./assets/album-10-cover.jpg"
+        />
+    </a>
+
+    <div class="p-2">
+        <a href="./detail.html" class="text-xl font-bold"
+            >Lorem ipsum dolor sit
+        </a>
+        <div class="text-md mb-2">Artist name</div>
+
+        <div class="flex w-full items-center justify-between">
+            <div class="">3,89€</div>
+            <button class="btn btn-primary">
+                <span class="material-symbols-outlined text-white">
+                    shopping_cart
+                </span>
+            </button>
+        </div>
+    </div>
+</div>
+
+    <!--  -->
+    
+    <!--  -->
+    <div class="w-full">
+    <a href="./detail.html">
+        <img
+            class="aspect-square w-full object-cover object-center"
+            src="./assets/album-11-cover.jpg"
+        />
+    </a>
+
+    <div class="p-2">
+        <a href="./detail.html" class="text-xl font-bold"
+            >Lorem ipsum dolor sit
+        </a>
+        <div class="text-md mb-2">Artist name</div>
+
+        <div class="flex w-full items-center justify-between">
+            <div class="">3,89€</div>
+            <button class="btn btn-primary">
+                <span class="material-symbols-outlined text-white">
+                    shopping_cart
+                </span>
+            </button>
+        </div>
+    </div>
+</div>
+
+    <!--  -->
+    
+    <!--  -->
+    <div class="w-full">
+    <a href="./detail.html">
+        <img
+            class="aspect-square w-full object-cover object-center"
+            src="./assets/album-1-cover.jpg"
+        />
+    </a>
+
+    <div class="p-2">
+        <a href="./detail.html" class="text-xl font-bold"
+            >Lorem ipsum dolor sit
+        </a>
+        <div class="text-md mb-2">Artist name</div>
+
+        <div class="flex w-full items-center justify-between">
             <div class="">3,89€</div>
             <button class="btn btn-primary">
                 <span class="material-symbols-outlined text-white">
@@ -456,7 +483,7 @@
 </div>
 
 <!-- Pagination -->
-<div class="w-full flex justify-center">
+<div class="flex w-full justify-center">
     <div class="join">
         <button class="join-item btn">1</button>
         <button class="join-item btn">2</button>
@@ -470,7 +497,7 @@
                 </main>
 
                 <footer
-    class="footer sm:footer-horizontal bg-neutral text-neutral-content p-10 mt-14"
+    class="footer sm:footer-horizontal bg-neutral text-neutral-content mt-14 p-10"
 >
     <!-- TODO: add meaningful data -->
     <nav>
@@ -507,27 +534,27 @@
                     class="menu bg-base-200 text-base-content min-h-full w-80 p-4"
                 >
                     <form>
-    <h2 class="font-bold text-lg">Price</h2>
+    <h2 class="text-lg font-bold">Price</h2>
     <div class="flex gap-2">
         <input type="number" placeholder="Start" class="input" />
         <input type="number" placeholder="End" class="input" />
     </div>
 
-    <h2 class="font-bold text-lg mt-4">Author</h2>
+    <h2 class="mt-4 text-lg font-bold">Author</h2>
     <select class="select">
         <option>Crimson</option>
         <option>Amber</option>
         <option>Velvet</option>
     </select>
 
-    <h2 class="font-bold text-lg mt-4">Language</h2>
+    <h2 class="mt-4 text-lg font-bold">Language</h2>
     <select class="select">
         <option>Slovak</option>
         <option>English</option>
         <option>Hungarian</option>
     </select>
 
-    <h2 class="font-bold text-lg mt-4">Release year</h2>
+    <h2 class="mt-4 text-lg font-bold">Release year</h2>
     <div class="flex gap-2">
         <input type="number" placeholder="Start" class="input" />
         <input type="number" placeholder="End" class="input" />
