@@ -3,9 +3,8 @@
 const carouselEls = document.querySelectorAll(".rs-carousel-scroll");
 
 function updateButtonVisibility(carouselEl, rightButtonEl, leftbuttonEl) {
-    console.log(carouselEl.scrollWidth, carouselEl.scrollLeft, carouselEl);
     if (
-        carouselEl.scrollLeft ===
+        carouselEl.scrollLeft + 1 >
         carouselEl.scrollWidth - carouselEl.clientWidth
     ) {
         rightButtonEl.style.visibility = "hidden";
