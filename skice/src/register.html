@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" data-theme="mytheme">
+    <head>
+        {% include "components/document-head.html" %}
+    </head>
+    <body>
+        {% include "components/header.html" %}
+
+        <main class="mt-8 flex items-start justify-center p-4">
+            <form class="grid max-w-[18rem] grid-flow-row gap-2">
+                <h1 class="mb-2 text-2xl font-bold">Sign up</h1>
+                <div class="flex gap-2">
+                    <input type="text" placeholder="First Name" class="input" />
+                    <input type="text" placeholder="Last Name" class="input" />
+                </div>
+                <input type="text" placeholder="Email" class="input" />
+                <input type="password" placeholder="Password" class="input" />
+                <button class="btn btn-primary mt-2" type="submit">
+                    Sign up
+                </button>
+
+                <div class="mt-2 justify-self-center">
+                    Already have an account?
+                    <a class="font-bold underline" href="./login.html"
+                        >Sign in</a
+                    >
+                </div>
+            </form>
+        </main>
+    </body>
+</html>

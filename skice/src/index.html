@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en" data-theme="mytheme">
+    <head>
+        {% include "components/document-head.html" %}
+
+        <link href="./index.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        {% include "components/header.html" %}
+
+        <!-- Page layout -->
+        <main class="flex min-h-screen justify-center">
+            <div
+                class="flex w-full max-w-[1600px] flex-col items-center px-4 lg:px-20"
+            >
+                <!-- Banner -->
+                <a href="./detail.html" class="my-6 w-full flex-none">
+                    <figure class="flexflex-col relative w-full items-center">
+                        <h2
+                            class="max-w-2/3 xl:max-w-1/2 absolute left-2 top-2 text-4xl font-bold text-white sm:left-6 sm:top-6 sm:text-6xl lg:text-8xl"
+                        >
+                            New album just out!
+                        </h2>
+                        <button
+                            class="btn btn-primary absolute bottom-2 left-2 sm:bottom-6 sm:left-6"
+                        >
+                            More
+                        </button>
+
+                        <img
+                            class="h-52 w-full object-cover object-center shadow-sm sm:h-64 lg:h-80"
+                            src="./assets/banner.avif"
+                        />
+                    </figure>
+                </a>
+
+                <!-- Categories -->
+                <nav class="categories mb-10">
+                    {% set categoryName = "Pop" %}
+                    <!--  -->
+                    {% set categoryImage = "album-11-cover.jpg" %}
+                    <!--  -->
+                    {% include "components/category-tile.html" %}
+
+                    <!--  -->
+                    {% set categoryName = "Rock" %}
+                    <!--  -->
+                    {% set categoryImage = "album-10-cover.jpg" %}
+                    <!--  -->
+                    {% include "components/category-tile.html" %}
+
+                    <!--  -->
+                    {% set categoryName = "Blues" %}
+                    <!--  -->
+                    {% set categoryImage = "album-5-cover.jpg" %}
+                    <!--  -->
+                    {% include "components/category-tile.html" %}
+
+                    <!--  -->
+                    {% set categoryName = "Country" %}
+                    <!--  -->
+                    {% set categoryImage = "album-4-cover.jpg" %}
+                    <!--  -->
+                    {% include "components/category-tile.html" %}
+
+                    <!--  -->
+                    {% set categoryName = "Metal" %}
+                    <!--  -->
+                    {% set categoryImage = "album-3-cover.jpg" %}
+                    <!--  -->
+                    {% include "components/category-tile.html" %}
+
+                    <!--  -->
+                    {% set categoryName = "Indie" %}
+                    <!--  -->
+                    {% set categoryImage = "album-6-cover.jpg" %}
+                    <!--  -->
+                    {% include "components/category-tile.html" %}
+
+                    <!--  -->
+                    {% set categoryName = "Hip-Hop" %}
+                    <!--  -->
+                    {% set categoryImage = "album-7-cover.jpg" %}
+                    <!--  -->
+                    {% include "components/category-tile.html" %}
+
+                    <!--  -->
+                    {% set categoryName = "Classical" %}
+                    <!--  -->
+                    {% set categoryImage = "album-1-cover.jpg" %}
+                    <!--  -->
+                    {% include "components/category-tile.html" %}
+
+                    <!--  -->
+                    {% set categoryName = "Punk" %}
+                    <!--  -->
+                    {% set categoryImage = "album-2-cover.jpg" %}
+                    <!--  -->
+                    {% include "components/category-tile.html" %}
+                </nav>
+
+                <!-- Featured products -->
+                <section class="flex w-full flex-col gap-6">
+                    {% set featuredProductsTitle = "New arrivals" %}
+                    <!--  -->
+                    {% set featuredAlbumIds = [1,2,3,4,5,6,7,8] %}
+                    <!--  -->
+                    {% include "components/featured-products.html" %}
+
+                    <!--  -->
+                    {% set featuredProductsTitle = "Best sellers" %}
+                    <!--  -->
+                    {% set featuredAlbumIds = [11,10,9,8,6,1,2] %}
+                    <!--  -->
+                    {% include "components/featured-products.html" %}
+
+                    <!--  -->
+                    {% set featuredProductsTitle = "Try some indie" %}
+                    <!--  -->
+                    {% set featuredAlbumIds = [4,3,5,7,11,1,2,6] %}
+                    <!--  -->
+                    {% include "components/featured-products.html" %}
+                </section>
+            </div>
+        </main>
+
+        {% include "components/footer.html" %}
+
+        <script src="./carousel.js"></script>
+    </body>
+</html>

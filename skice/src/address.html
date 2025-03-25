@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" data-theme="mytheme">
+    <head>
+        {% include "components/document-head.html" %}
+    </head>
+    <body>
+        {% include "components/header.html" %}
+
+        <main class="mb-12 mt-6 flex min-h-screen justify-center">
+            <div class="w-full max-w-4xl px-4">
+                <nav class="breadcrumbs pb-3 pt-4 text-sm sm:pt-4">
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li>Delivery Details</li>
+                    </ul>
+                </nav>
+
+                <div class="flex w-full flex-col items-center gap-4">
+                    <ul class="steps mb-8 w-full">
+                        <li class="step step-primary">Details</li>
+                        <li class="step step-primary">Address</li>
+                        <li class="step">Payment</li>
+                    </ul>
+                </div>
+
+                <div class="flex items-start justify-center p-4">
+                    <form class="grid max-w-[18rem] grid-flow-row gap-2">
+                        <h1 class="mb-2 text-2xl font-bold">Delivery Form</h1>
+                        <div class="flex gap-2">
+                            <input
+                                type="text"
+                                placeholder="First Name"
+                                class="input"
+                            />
+                            <input
+                                type="text"
+                                placeholder="Last Name"
+                                class="input"
+                            />
+                        </div>
+                        <input type="text" placeholder="Email" class="input" />
+
+                        <input
+                            type="text"
+                            placeholder="Country"
+                            class="input"
+                        />
+                        <input type="text" placeholder="City" class="input" />
+                        <div class="flex gap-2">
+                            <input
+                                type="text"
+                                placeholder="Street"
+                                class="input"
+                            />
+                            <input
+                                type="text"
+                                placeholder="Postal Code"
+                                class="input"
+                            />
+                        </div>
+
+                        <a
+                            class="btn btn-primary mt-2"
+                            type="submit"
+                            href="./payment.html"
+                            >Countinue to Payment</a
+                        >
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        {% include "components/footer.html" %}
+    </body>
+</html>

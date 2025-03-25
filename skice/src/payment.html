@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en" data-theme="mytheme">
+    <head>
+        {% include "components/document-head.html" %}
+    </head>
+    <body>
+        {% include "components/header.html" %}
+
+        <main class="mb-12 flex min-h-screen justify-center">
+            <div class="w-full max-w-4xl">
+                <nav class="breadcrumbs pb-3 pt-4 text-sm sm:pt-4">
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./address.html">Delivery Details</a></li>
+                        <li>Payment Details</li>
+                    </ul>
+                </nav>
+
+                <div class="flex w-full flex-col items-center gap-4">
+                    <ul class="steps mb-8 w-full">
+                        <li class="step step-primary">Details</li>
+                        <li class="step step-primary">Address</li>
+                        <li class="step step-primary">Payment</li>
+                    </ul>
+                </div>
+
+                <div class="flex items-start justify-center p-4">
+                    <form class="grid max-w-[18rem] grid-flow-row gap-2">
+                        <h1 class="mb-2 text-2xl font-bold">
+                            Payment Information
+                        </h1>
+
+                        <select class="select">
+                            <option disabled selected>
+                                Pick payment option
+                            </option>
+                            <option>Card</option>
+                            <option>Cash</option>
+                            <option>Apple Pay</option>
+                        </select>
+
+                        <input
+                            type="text"
+                            placeholder="Card Number"
+                            class="input"
+                        />
+                        <div class="flex gap-2">
+                            <input
+                                type="text"
+                                placeholder="Expiration Date"
+                                class="input"
+                            />
+                            <input
+                                type="text"
+                                placeholder="CVV"
+                                class="input"
+                            />
+                        </div>
+
+                        <button class="btn btn-primary mt-2" type="submit">
+                            Pay Now!
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        {% include "components/footer.html" %}
+    </body>
+</html>

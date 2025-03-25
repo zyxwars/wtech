@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" data-theme="mytheme">
+    <head>
+        {% include "components/document-head.html" %}
+
+        <link href="./category.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        {% include "components/header.html" %}
+
+        <!-- https://daisyui.com/components/drawer/ -->
+        <div class="drawer">
+            <input id="filter-drawer" type="checkbox" class="drawer-toggle" />
+
+            <div class="drawer-content w-full">
+                <!-- Page layout -->
+                <main class="flex min-h-screen justify-center">
+                    <div class="w-full max-w-[1600px] px-4 lg:px-20">
+                        <!-- Breadcrumbs -->
+                        <nav class="breadcrumbs pb-3 pt-4 text-sm sm:pt-4">
+                            <ul>
+                                <li><a href="./index.html">Home</a></li>
+                                <li>Category</li>
+                            </ul>
+                        </nav>
+
+                        <section class="mb-2">
+                            <h1 class="mb-2 text-4xl font-bold">Category</h1>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Laborum minima eos doloremque,
+                                dicta assumenda cum molestiae? Labore minima
+                                magnam quaerat tempora consequuntur impedit
+                                aperiam? Maxime praesentium excepturi ullam qui
+                                vel!
+                            </p>
+                        </section>
+
+                        {% include "components/products-grid.html" %}
+                    </div>
+                </main>
+
+                {% include "components/footer.html" %}
+            </div>
+
+            <div class="drawer-side z-20">
+                <label
+                    for="filter-drawer"
+                    aria-label="close sidebar"
+                    class="drawer-overlay"
+                ></label>
+
+                <div
+                    class="menu bg-base-200 text-base-content min-h-full w-80 p-4"
+                >
+                    {% include "components/filter.html" %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

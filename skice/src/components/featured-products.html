@@ -1,0 +1,25 @@
+<article class="relative w-full">
+    <h2 class="mb-4 text-4xl font-bold">{{featuredProductsTitle}}</h2>
+    <section
+        class="no-scrollbar rs-carousel-scroll flex w-full min-w-0 snap-x snap-mandatory gap-6 overflow-auto"
+    >
+        <!--  -->
+        {% for albumId in featuredAlbumIds %}
+        <!--  -->
+        {% include "components/product-tile.html" %}
+        <!--  -->
+        {% endfor %}
+
+        <button
+            class="btn btn-base-100 btn-circle rs-carousel-left top-2/5 absolute left-2"
+        >
+            <span class="material-symbols-outlined">chevron_left</span>
+        </button>
+
+        <button
+            class="btn btn-base-100 btn-circle rs-carousel-right top-2/5 absolute right-2"
+        >
+            <span class="material-symbols-outlined">chevron_right</span>
+        </button>
+    </section>
+</article>

@@ -1,0 +1,40 @@
+<article
+    class="no-scrollbar w-[15rem] flex-none snap-center snap-always sm:w-[18rem]"
+>
+    <a href="./detail.html">
+        <img
+            class="aspect-square w-full object-cover object-center"
+            src="./assets/album-{{albumId}}-cover.jpg"
+        />
+    </a>
+
+    <div class="p-2">
+        <a href="./detail.html" class="text-xl font-bold">
+            <h3>
+                {{ [ "Echoes of a Distant Tomorrow", "Neon Reverie", "Horizon",
+                "Whispers Beneath the Moonlit Sky", "Shattered Illusions",
+                "Frost", "The Melancholy of Forgotten Dreams", "VelvetMidnight",
+                "Ember", "Chronicles of the Endless Voyage","Electric Serenity",
+                "Flux", "Ballad of the Wandering Star", "Crimson Twilight",
+                "Pulse", "Fragments of a Vanished Symphony", "Celestial Mirage",
+                "Drift" ] | random }}
+            </h3>
+        </a>
+        <h4 class="text-md mb-2">
+            {{ [ "Midnight Apparition", "The Velvet Alchemists", "Echo Circuit",
+            "Scarlet Reverie", "Oblivion Choir", "Neon Solstice", "Celestial
+            Undertow", "Hollow Skyline", "Solaris Bloom", "Vermillion Ghosts",
+            "The Lucid Prophets", "Ember & Ash", "Spectral Rain", "The
+            Everfades", "Nocturne Veil" ] | random }}
+        </h4>
+
+        <div class="flex w-full items-center justify-between">
+            <p class="font-bold">15,99€</p>
+            <button class="btn btn-primary">
+                <span class="material-symbols-outlined text-white">
+                    shopping_cart
+                </span>
+            </button>
+        </div>
+    </div>
+</article>

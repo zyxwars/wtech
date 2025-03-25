@@ -1,0 +1,70 @@
+<!-- Controls -->
+<section class="mb-4 flex w-full justify-end gap-2">
+    <select class="select select-primary max-w-42">
+        <option>Recommended</option>
+        <option>Price Lowest</option>
+        <option>Price Highest</option>
+    </select>
+
+    <label for="filter-drawer" class="drawer-button btn btn-primary"
+        >Filter</label
+    >
+</section>
+
+<!-- Products -->
+<article class="products-grid mb-8">
+    {% set albumId = 1 %}
+    <!--  -->
+    {% include "components/product-tile-responsive.html" %}
+    <!--  -->
+    {% set albumId = 2 %}
+    <!--  -->
+    {% include "components/product-tile-responsive.html" %}
+    <!--  -->
+    {% set albumId = 3 %}
+    <!--  -->
+    {% include "components/product-tile-responsive.html" %}
+    <!--  -->
+    {% set albumId = 4 %}
+    <!--  -->
+    {% include "components/product-tile-responsive.html" %}
+    <!--  -->
+    {% set albumId = 5 %}
+    <!--  -->
+    {% include "components/product-tile-responsive.html" %}
+    <!--  -->
+    {% set albumId = 6 %}
+    <!--  -->
+    {% include "components/product-tile-responsive.html" %}
+    <!--  -->
+    {% set albumId = 7 %}
+    <!--  -->
+    {% include "components/product-tile-responsive.html" %}
+    <!--  -->
+    {% set albumId = 8 %}
+    <!--  -->
+    {% include "components/product-tile-responsive.html" %}
+    <!--  -->
+    {% set albumId = 9 %}
+    <!--  -->
+    {% include "components/product-tile-responsive.html" %}
+    <!--  -->
+    {% set albumId = 10 %}
+    <!--  -->
+    {% include "components/product-tile-responsive.html" %}
+    <!--  -->
+    {% set albumId = 11 %}
+    <!--  -->
+    {% include "components/product-tile-responsive.html" %}
+</article>
+
+<!-- https://daisyui.com/components/pagination/ -->
+<nav class="flex w-full justify-center">
+    <div class="join">
+        <button class="join-item btn">1</button>
+        <button class="join-item btn">2</button>
+        <button class="join-item btn btn-disabled">...</button>
+        <button class="join-item btn">99</button>
+        <button class="join-item btn">100</button>
+    </div>
+</nav>

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en" data-theme="mytheme">
+    <head>
+        {% include "components/document-head.html" %}
+
+        <link href="./detail.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        {% include "components/header.html" %}
+
+        <!-- Page layout -->
+        <main class="flex min-h-screen justify-center">
+            <div class="w-full max-w-[1600px] px-4 lg:px-20">
+                <nav class="breadcrumbs pb-3 pt-4 text-sm sm:pt-4">
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li>Detail</li>
+                    </ul>
+                </nav>
+
+                <article class="mb-8 flex w-full flex-col gap-6 sm:flex-row">
+                    <!-- product images -->
+                    <div>
+                        <!-- main product image -->
+                        <img
+                            class="rs-gallery aspect-square w-full cursor-pointer object-cover object-center shadow-sm sm:w-[40rem]"
+                            src="./assets/album-3-cover.jpg"
+                        />
+
+                        <div class="flex flex-wrap gap-4">
+                            <!-- secondary image -->
+                            <img
+                                class="secondary_image rs-gallery mt-4 flex-none cursor-pointer object-cover shadow-sm"
+                                src="./assets/album-3-front.jpg"
+                            />
+
+                            <img
+                                class="secondary_image rs-gallery mt-4 flex-none cursor-pointer object-cover shadow-sm"
+                                src="./assets/album-3-back.jpg"
+                            />
+                        </div>
+                    </div>
+
+                    <!-- Product detail -->
+                    <section class="flex flex-col items-start">
+                        <h1 class="mb-2 text-4xl font-bold sm:text-4xl">
+                            Chronicles of the Endless Voyage
+                        </h1>
+
+                        <p class="text-md mb-4">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Veritatis sequi, ex repellendus aliquam
+                            laborum voluptatum maxime unde maiores rem adipisci
+                            rerum nulla pariatur. Nemo id odit facilis quam
+                            aliquam ab.
+                        </p>
+
+                        <ul class="mb-8 sm:text-lg">
+                            <li>
+                                <span class="font-bold"> Category: </span>
+                                Indie
+                            </li>
+                            <li>
+                                <span class="font-bold"> Author: </span>
+                                Neon Solstice
+                            </li>
+                            <li>
+                                <span class="font-bold"> Release year: </span>
+                                2025
+                            </li>
+                        </ul>
+
+                        <!-- product price button-->
+                        <button
+                            class="buy-button cursor-pointer transition-all duration-150 hover:scale-105"
+                        >
+                            15,99$
+                        </button>
+                    </section>
+                </article>
+
+                {% set featuredProductsTitle = "You might also like" %}
+                <!--  -->
+                {% set featuredAlbumIds = [3,8,6,5,11,2,4,7] %}
+                <!--  -->
+                {% include "components/featured-products.html" %}
+            </div>
+        </main>
+
+        {% include "components/footer.html" %}
+
+        <div
+            class="rs-gallery-frame bg-base-100 fixed left-0 top-0 z-30 hidden h-screen w-screen items-center justify-center"
+        >
+            <img
+                class="gallery-frame-img aspect-square object-cover object-center"
+            />
+
+            <!-- This button doesn't actually do anything since the close is
+            triggered by clicking anywhere -->
+            <button class="btn btn-ghost btn-circle absolute right-4 top-4">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+
+        <script src="./detail-gallery.js"></script>
+        <script src="./carousel.js"></script>
+    </body>
+</html>
