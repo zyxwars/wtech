@@ -1,6 +1,7 @@
 ## Submission
 
-The submission files are located in <strong>./skice</strong>
+The html files are located in <strong>./dist</strong>
+The wireframes are located in <strong>./wireframes</strong>
 
 ### Credits
 
