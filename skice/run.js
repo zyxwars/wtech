@@ -3,7 +3,7 @@ import nunjucks from "nunjucks";
 import path from "path";
 
 function buildHtml(fileName) {
-    const out = nunjucks.render(fileName, { foo: "bar" });
+    const out = nunjucks.render(fileName);
     fs.writeFileSync(path.join("./skice", fileName), out, {});
 }
 
