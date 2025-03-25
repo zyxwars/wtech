@@ -59,22 +59,38 @@
 
         <main class="mt-8 flex items-start justify-center p-4">
             <div class="px-4 lg:px-20">
-               
-                    <input type="text" placeholder="Product Name" class="input mb-4" />
+
+                
+                    <fieldset class="fieldset">
+                        <legend class="fieldset-legend">Product Name</legend>
+                        <input type="text" class="input" placeholder="Product Name" />
+                    </fieldset>
                 
                     <textarea class="textarea mb-4" placeholder="Description"></textarea>
-                    <fieldset class="fieldset">
+
+                    <fieldset class="fieldset mb-4">
                         <legend class="fieldset-legend">Genres</legend>
                         <select class="select">
-                          <option disabled selected>Pick a genre</option>
-                          <option>Blues</option>
-                          <option>Pop</option>
-                          <option>Rock</option>
+                            <option disabled selected>Pick a genre</option>
+                            <option>Blues</option>
+                            <option>Pop</option>
+                            <option>Rock</option>
                         </select>
-                        <span class="fieldset-label">Optional</span>
-                      </fieldset>
-                    <input type="text" placeholder="Author" class="input mb-4" />
-                    <input type="text" placeholder="Release Year" class="input mb-4" />
+                    </fieldset>
+                    <fieldset class="fieldset mb-4">
+                        <legend class="fieldset-legend">Author</legend>
+                        <select class="select">
+                            <option disabled selected>Pick an author</option>
+                            <option>Makky Zbirka</option>
+                            <option>Karel Gott</option>
+                            <option>Matej Straka</option>
+                        </select>
+                    </fieldset>
+                    
+                    <fieldset class="fieldset">
+                        <legend class="fieldset-legend">Release Year</legend>
+                        <input type="text" class="input" placeholder="Release Year" />
+                    </fieldset>
             </div>
         </main>
     </body>
