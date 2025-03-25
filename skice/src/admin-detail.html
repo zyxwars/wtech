@@ -1,36 +1,7 @@
 <!doctype html>
 <html lang="en" data-theme="mytheme">
     <head>
-        <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-<title>Record Store</title>
-<link rel="icon" type="image/x-icon" href="./asssets/vinyl.svg" />
-
-<!-- Google fonts -->
-
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-    rel="stylesheet"
-/>
-<link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
-/>
-
-<!-- Global css -->
-<link href="./global.css" type="text/css" rel="stylesheet" />
-
-<!-- Daisy ui and tailwind-->
-<link
-    href="https://cdn.jsdelivr.net/npm/daisyui@5"
-    rel="stylesheet"
-    type="text/css"
-/>
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
+        {% include "components/document-head.html" %}
     </head>
     <body>
         <nav
@@ -150,33 +121,6 @@
                                 <button class="btn btn-ghost btn-xs">details</button>
                             </th>
                         </tr>
-                        <tr>
-                            <td>
-                                <div class="flex items-center gap-3">
-                                <div class="avatar">
-                                    <div class="mask mask-squircle h-12 w-12">
-                                    <img
-                                        src="./assets/album-4-cover.jpg"
-                                        alt="Image 4" />
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="font-bold">Record 4</div>
-                                </div>
-                                </div>
-                            </td>
-                            <td>
-                                Indie
-                            </td>
-                            <td>Artist 4</td>
-                            <td>1975</td>
-                            <td>12.40$</td>
-                            <th>
-                                <a href="./admin-detail.html">
-                                    <button class="btn btn-ghost btn-xs">details</button>
-                                </a>
-                            </th>
-                        </tr>
                     </tbody>
                     <!-- foot -->
                     <tfoot>
@@ -190,17 +134,6 @@
                         </tr>
                     </tfoot>
                 </table>
-
-                <!-- https://daisyui.com/components/pagination/ -->
-                <nav class="flex w-full justify-center">
-                    <div class="join">
-                        <button class="join-item btn">1</button>
-                        <button class="join-item btn">2</button>
-                        <button class="join-item btn btn-disabled">...</button>
-                        <button class="join-item btn">99</button>
-                        <button class="join-item btn">100</button>
-                    </div>
-                </nav>
             </div>
         </main>
     </body>
