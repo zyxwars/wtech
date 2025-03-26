@@ -32,7 +32,7 @@
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 
-        <link href="./detail.css" type="text/css" rel="stylesheet" />
+        <link href="./search-results.css" type="text/css" rel="stylesheet" />
     </head>
     <body>
         <nav
@@ -113,92 +113,107 @@
 </nav>
 
 
-        <!-- Page layout -->
-        <main class="flex min-h-screen justify-center">
-            <div class="w-full max-w-[1600px] px-4 lg:px-20">
-                <nav class="breadcrumbs pb-3 pt-4 text-sm sm:pt-4">
-                    <ul>
-                        <li><a href="./index.html">Home</a></li>
-                        <li>Detail</li>
-                    </ul>
-                </nav>
+        <!-- https://daisyui.com/components/drawer/ -->
+        <div class="drawer">
+            <input id="filter-drawer" type="checkbox" class="drawer-toggle" />
 
-                <article class="mb-8 flex w-full flex-col gap-6 sm:flex-row">
-                    <!-- product images -->
-                    <div>
-                        <!-- main product image -->
-                        <img
-                            class="rs-gallery aspect-square w-full cursor-pointer object-cover object-center shadow-sm sm:w-[40rem]"
-                            src="./assets/album-3-cover.jpg"
-                        />
-
-                        <div class="flex flex-wrap gap-4">
-                            <!-- secondary image -->
-                            <img
-                                class="secondary_image rs-gallery mt-4 flex-none cursor-pointer object-cover shadow-sm"
-                                src="./assets/album-3-front.jpg"
-                            />
-
-                            <img
-                                class="secondary_image rs-gallery mt-4 flex-none cursor-pointer object-cover shadow-sm"
-                                src="./assets/album-3-back.jpg"
-                            />
-                        </div>
-                    </div>
-
-                    <!-- Product detail -->
-                    <section class="flex flex-col items-start">
-                        <h1 class="mb-2 text-4xl font-bold sm:text-4xl">
-                            Chronicles of the Endless Voyage
+            <div class="drawer-content w-full">
+                <!-- Page layout -->
+                <main class="flex min-h-screen justify-center">
+                    <div class="w-full max-w-[1600px] px-4 lg:px-20">
+                        <!-- Breadcrumbs -->
+                        <nav class="breadcrumbs pb-3 pt-4 text-sm sm:pt-4">
+                            <ul>
+                                <li><a href="./index.html">Home</a></li>
+                                <li>Search</li>
+                            </ul>
+                        </nav>
+                        <h1 class="mb-2 text-3xl font-bold">
+                            Search results for: “Testing”
                         </h1>
 
-                        <p class="text-md mb-4">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Veritatis sequi, ex repellendus aliquam
-                            laborum voluptatum maxime unde maiores rem adipisci
-                            rerum nulla pariatur. Nemo id odit facilis quam
-                            aliquam ab.
-                        </p>
+                        <!-- Controls -->
+<section class="mb-4 flex w-full justify-end gap-2">
+    <select class="select select-primary max-w-42">
+        <option>Recommended</option>
+        <option>Price Lowest</option>
+        <option>Price Highest</option>
+    </select>
 
-                        <ul class="mb-8 sm:text-lg">
-                            <li>
-                                <span class="font-bold"> Category: </span>
-                                Indie
-                            </li>
-                            <li>
-                                <span class="font-bold"> Author: </span>
-                                Neon Solstice
-                            </li>
-                            <li>
-                                <span class="font-bold"> Release year: </span>
-                                2025
-                            </li>
-                        </ul>
-
-                        <!-- product price button-->
-                        <button
-                            class="buy-button cursor-pointer transition-all duration-150 hover:scale-105"
-                        >
-                            15,99$
-                        </button>
-                    </section>
-                </article>
-
-                
-                <!--  -->
-                
-                <!--  -->
-                <article class="relative w-full">
-    <h2 class="mb-4 text-4xl font-bold">You might also like</h2>
-    <section
-        class="no-scrollbar rs-carousel-scroll flex w-full min-w-0 snap-x snap-mandatory gap-6 overflow-auto"
+    <label for="filter-drawer" class="drawer-button btn btn-primary"
+        >Filter</label
     >
-        <!--  -->
-        
-        <!--  -->
-        <article
-    class="no-scrollbar w-[15rem] flex-none snap-center snap-always sm:w-[18rem]"
->
+</section>
+
+<!-- Products -->
+<article class="products-grid mb-8">
+    
+    <!--  -->
+    <article class="w-full">
+    <a href="./detail.html">
+        <img
+            class="aspect-square w-full object-cover object-center"
+            src="./assets/album-1-cover.jpg"
+        />
+    </a>
+
+    <div class="p-2">
+        <a href="./detail.html" class="text-xl font-bold">
+            <h3>
+                Celestial Mirage
+            </h3>
+        </a>
+        <h4 class="text-md mb-2">
+            Oblivion Choir
+        </h4>
+
+        <div class="flex w-full items-center justify-between">
+            <p class="font-bold">15,99€</p>
+            <button class="btn btn-primary">
+                <span class="material-symbols-outlined text-white">
+                    shopping_cart
+                </span>
+            </button>
+        </div>
+    </div>
+</article>
+
+    <!--  -->
+    
+    <!--  -->
+    <article class="w-full">
+    <a href="./detail.html">
+        <img
+            class="aspect-square w-full object-cover object-center"
+            src="./assets/album-2-cover.jpg"
+        />
+    </a>
+
+    <div class="p-2">
+        <a href="./detail.html" class="text-xl font-bold">
+            <h3>
+                Ballad of the Wandering Star
+            </h3>
+        </a>
+        <h4 class="text-md mb-2">
+            Vermillion Ghosts
+        </h4>
+
+        <div class="flex w-full items-center justify-between">
+            <p class="font-bold">15,99€</p>
+            <button class="btn btn-primary">
+                <span class="material-symbols-outlined text-white">
+                    shopping_cart
+                </span>
+            </button>
+        </div>
+    </div>
+</article>
+
+    <!--  -->
+    
+    <!--  -->
+    <article class="w-full">
     <a href="./detail.html">
         <img
             class="aspect-square w-full object-cover object-center"
@@ -209,7 +224,7 @@
     <div class="p-2">
         <a href="./detail.html" class="text-xl font-bold">
             <h3>
-                Whispers Beneath the Moonlit Sky
+                Pulse
             </h3>
         </a>
         <h4 class="text-md mb-2">
@@ -227,27 +242,25 @@
     </div>
 </article>
 
-        <!--  -->
-        
-        <!--  -->
-        <article
-    class="no-scrollbar w-[15rem] flex-none snap-center snap-always sm:w-[18rem]"
->
+    <!--  -->
+    
+    <!--  -->
+    <article class="w-full">
     <a href="./detail.html">
         <img
             class="aspect-square w-full object-cover object-center"
-            src="./assets/album-8-cover.jpg"
+            src="./assets/album-4-cover.jpg"
         />
     </a>
 
     <div class="p-2">
         <a href="./detail.html" class="text-xl font-bold">
             <h3>
-                Flux
+                Electric Serenity
             </h3>
         </a>
         <h4 class="text-md mb-2">
-            Midnight Apparition
+            Scarlet Reverie
         </h4>
 
         <div class="flex w-full items-center justify-between">
@@ -261,46 +274,10 @@
     </div>
 </article>
 
-        <!--  -->
-        
-        <!--  -->
-        <article
-    class="no-scrollbar w-[15rem] flex-none snap-center snap-always sm:w-[18rem]"
->
-    <a href="./detail.html">
-        <img
-            class="aspect-square w-full object-cover object-center"
-            src="./assets/album-6-cover.jpg"
-        />
-    </a>
-
-    <div class="p-2">
-        <a href="./detail.html" class="text-xl font-bold">
-            <h3>
-                Flux
-            </h3>
-        </a>
-        <h4 class="text-md mb-2">
-            Midnight Apparition
-        </h4>
-
-        <div class="flex w-full items-center justify-between">
-            <p class="font-bold">15,99€</p>
-            <button class="btn btn-primary">
-                <span class="material-symbols-outlined text-white">
-                    shopping_cart
-                </span>
-            </button>
-        </div>
-    </div>
-</article>
-
-        <!--  -->
-        
-        <!--  -->
-        <article
-    class="no-scrollbar w-[15rem] flex-none snap-center snap-always sm:w-[18rem]"
->
+    <!--  -->
+    
+    <!--  -->
+    <article class="w-full">
     <a href="./detail.html">
         <img
             class="aspect-square w-full object-cover object-center"
@@ -330,91 +307,21 @@
     </div>
 </article>
 
-        <!--  -->
-        
-        <!--  -->
-        <article
-    class="no-scrollbar w-[15rem] flex-none snap-center snap-always sm:w-[18rem]"
->
+    <!--  -->
+    
+    <!--  -->
+    <article class="w-full">
     <a href="./detail.html">
         <img
             class="aspect-square w-full object-cover object-center"
-            src="./assets/album-11-cover.jpg"
+            src="./assets/album-6-cover.jpg"
         />
     </a>
 
     <div class="p-2">
         <a href="./detail.html" class="text-xl font-bold">
             <h3>
-                Drift
-            </h3>
-        </a>
-        <h4 class="text-md mb-2">
-            Vermillion Ghosts
-        </h4>
-
-        <div class="flex w-full items-center justify-between">
-            <p class="font-bold">15,99€</p>
-            <button class="btn btn-primary">
-                <span class="material-symbols-outlined text-white">
-                    shopping_cart
-                </span>
-            </button>
-        </div>
-    </div>
-</article>
-
-        <!--  -->
-        
-        <!--  -->
-        <article
-    class="no-scrollbar w-[15rem] flex-none snap-center snap-always sm:w-[18rem]"
->
-    <a href="./detail.html">
-        <img
-            class="aspect-square w-full object-cover object-center"
-            src="./assets/album-2-cover.jpg"
-        />
-    </a>
-
-    <div class="p-2">
-        <a href="./detail.html" class="text-xl font-bold">
-            <h3>
-                Ballad of the Wandering Star
-            </h3>
-        </a>
-        <h4 class="text-md mb-2">
-            Hollow Skyline
-        </h4>
-
-        <div class="flex w-full items-center justify-between">
-            <p class="font-bold">15,99€</p>
-            <button class="btn btn-primary">
-                <span class="material-symbols-outlined text-white">
-                    shopping_cart
-                </span>
-            </button>
-        </div>
-    </div>
-</article>
-
-        <!--  -->
-        
-        <!--  -->
-        <article
-    class="no-scrollbar w-[15rem] flex-none snap-center snap-always sm:w-[18rem]"
->
-    <a href="./detail.html">
-        <img
-            class="aspect-square w-full object-cover object-center"
-            src="./assets/album-4-cover.jpg"
-        />
-    </a>
-
-    <div class="p-2">
-        <a href="./detail.html" class="text-xl font-bold">
-            <h3>
-                Chronicles of the Endless Voyage
+                Neon Reverie
             </h3>
         </a>
         <h4 class="text-md mb-2">
@@ -433,12 +340,10 @@
     </div>
 </article>
 
-        <!--  -->
-        
-        <!--  -->
-        <article
-    class="no-scrollbar w-[15rem] flex-none snap-center snap-always sm:w-[18rem]"
->
+    <!--  -->
+    
+    <!--  -->
+    <article class="w-full">
     <a href="./detail.html">
         <img
             class="aspect-square w-full object-cover object-center"
@@ -449,7 +354,39 @@
     <div class="p-2">
         <a href="./detail.html" class="text-xl font-bold">
             <h3>
-                Crimson Twilight
+                Celestial Mirage
+            </h3>
+        </a>
+        <h4 class="text-md mb-2">
+            Scarlet Reverie
+        </h4>
+
+        <div class="flex w-full items-center justify-between">
+            <p class="font-bold">15,99€</p>
+            <button class="btn btn-primary">
+                <span class="material-symbols-outlined text-white">
+                    shopping_cart
+                </span>
+            </button>
+        </div>
+    </div>
+</article>
+
+    <!--  -->
+    
+    <!--  -->
+    <article class="w-full">
+    <a href="./detail.html">
+        <img
+            class="aspect-square w-full object-cover object-center"
+            src="./assets/album-8-cover.jpg"
+        />
+    </a>
+
+    <div class="p-2">
+        <a href="./detail.html" class="text-xl font-bold">
+            <h3>
+                Pulse
             </h3>
         </a>
         <h4 class="text-md mb-2">
@@ -467,27 +404,119 @@
     </div>
 </article>
 
-        <!--  -->
-        
+    <!--  -->
+    
+    <!--  -->
+    <article class="w-full">
+    <a href="./detail.html">
+        <img
+            class="aspect-square w-full object-cover object-center"
+            src="./assets/album-9-cover.jpg"
+        />
+    </a>
 
-        <button
-            class="btn btn-base-100 btn-circle rs-carousel-left top-2/5 absolute left-2"
-        >
-            <span class="material-symbols-outlined">chevron_left</span>
-        </button>
+    <div class="p-2">
+        <a href="./detail.html" class="text-xl font-bold">
+            <h3>
+                The Melancholy of Forgotten Dreams
+            </h3>
+        </a>
+        <h4 class="text-md mb-2">
+            Midnight Apparition
+        </h4>
 
-        <button
-            class="btn btn-base-100 btn-circle rs-carousel-right top-2/5 absolute right-2"
-        >
-            <span class="material-symbols-outlined">chevron_right</span>
-        </button>
-    </section>
+        <div class="flex w-full items-center justify-between">
+            <p class="font-bold">15,99€</p>
+            <button class="btn btn-primary">
+                <span class="material-symbols-outlined text-white">
+                    shopping_cart
+                </span>
+            </button>
+        </div>
+    </div>
 </article>
 
-            </div>
-        </main>
+    <!--  -->
+    
+    <!--  -->
+    <article class="w-full">
+    <a href="./detail.html">
+        <img
+            class="aspect-square w-full object-cover object-center"
+            src="./assets/album-10-cover.jpg"
+        />
+    </a>
 
-        <!-- https://daisyui.com/components/footer/ -->
+    <div class="p-2">
+        <a href="./detail.html" class="text-xl font-bold">
+            <h3>
+                Shattered Illusions
+            </h3>
+        </a>
+        <h4 class="text-md mb-2">
+            Oblivion Choir
+        </h4>
+
+        <div class="flex w-full items-center justify-between">
+            <p class="font-bold">15,99€</p>
+            <button class="btn btn-primary">
+                <span class="material-symbols-outlined text-white">
+                    shopping_cart
+                </span>
+            </button>
+        </div>
+    </div>
+</article>
+
+    <!--  -->
+    
+    <!--  -->
+    <article class="w-full">
+    <a href="./detail.html">
+        <img
+            class="aspect-square w-full object-cover object-center"
+            src="./assets/album-11-cover.jpg"
+        />
+    </a>
+
+    <div class="p-2">
+        <a href="./detail.html" class="text-xl font-bold">
+            <h3>
+                VelvetMidnight
+            </h3>
+        </a>
+        <h4 class="text-md mb-2">
+            Solaris Bloom
+        </h4>
+
+        <div class="flex w-full items-center justify-between">
+            <p class="font-bold">15,99€</p>
+            <button class="btn btn-primary">
+                <span class="material-symbols-outlined text-white">
+                    shopping_cart
+                </span>
+            </button>
+        </div>
+    </div>
+</article>
+
+</article>
+
+<!-- https://daisyui.com/components/pagination/ -->
+<nav class="flex w-full justify-center">
+    <div class="join">
+        <button class="join-item btn">1</button>
+        <button class="join-item btn">2</button>
+        <button class="join-item btn btn-disabled">...</button>
+        <button class="join-item btn">99</button>
+        <button class="join-item btn">100</button>
+    </div>
+</nav>
+
+                    </div>
+                </main>
+
+                <!-- https://daisyui.com/components/footer/ -->
 <footer
     class="footer footer-horizontal footer-center bg-neutral text-neutral-content mt-10 p-10"
 >
@@ -496,22 +525,50 @@
     </aside>
 </footer>
 
+            </div>
 
-        <div
-            class="rs-gallery-frame bg-base-100 fixed left-0 top-0 z-30 hidden h-screen w-screen items-center justify-center"
-        >
-            <img
-                class="gallery-frame-img aspect-square object-cover object-center"
-            />
+            <div class="drawer-side z-20">
+                <label
+                    for="filter-drawer"
+                    aria-label="close sidebar"
+                    class="drawer-overlay"
+                ></label>
 
-            <!-- This button doesn't actually do anything since the close is
-            triggered by clicking anywhere -->
-            <button class="btn btn-ghost btn-circle absolute right-4 top-4">
-                <span class="material-symbols-outlined">close</span>
-            </button>
+                <div
+                    class="menu bg-base-200 text-base-content min-h-full w-80 p-4"
+                >
+                    <form>
+    <h2 class="text-lg font-bold">Price</h2>
+    <div class="flex gap-2">
+        <input type="number" placeholder="Start" class="input" />
+        <input type="number" placeholder="End" class="input" />
+    </div>
+
+    <h2 class="mt-4 text-lg font-bold">Author</h2>
+    <select class="select">
+        <option>Crimson</option>
+        <option>Amber</option>
+        <option>Velvet</option>
+    </select>
+
+    <h2 class="mt-4 text-lg font-bold">Language</h2>
+    <select class="select">
+        <option>Slovak</option>
+        <option>English</option>
+        <option>Hungarian</option>
+    </select>
+
+    <h2 class="mt-4 text-lg font-bold">Release year</h2>
+    <div class="flex gap-2">
+        <input type="number" placeholder="Start" class="input" />
+        <input type="number" placeholder="End" class="input" />
+    </div>
+
+    <button class="btn btn-primary mt-4" type="submit">Filter</button>
+</form>
+
+                </div>
+            </div>
         </div>
-
-        <script src="./detail-gallery.js"></script>
-        <script src="./carousel.js"></script>
     </body>
 </html>
