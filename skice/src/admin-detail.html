@@ -29,7 +29,7 @@
         </nav>
 
         <main class="mt-8 flex items-start justify-center p-4">
-            <div class="px-4 lg:px-20">
+            <div class="px-4 lg:px-20 max-w-96">
 
                 
                     <fieldset class="fieldset">
@@ -68,11 +68,33 @@
                         <input type="number" class="input" placeholder="Price$" />
                     </fieldset>
 
+                    <!-- product images -->
+                    <div class="flex">
+                        <!-- main product image -->
+                        <img
+                        class="rs-gallery aspect-square w-full cursor-pointer object-cover object-center shadow-sm"
+                        src="./assets/album-3-cover.jpg"
+                        />
+
+                        <div class="flex flex-wrap gap-4">
+                            <!-- secondary image -->
+                            <img
+                                class="secondary_image rs-gallery mt-4 w-full cursor-pointer object-cover shadow-sm"
+                                src="./assets/album-3-front.jpg"
+                            />
+
+                            <img
+                                class="secondary_image rs-gallery mt-4 w-full cursor-pointer object-cover shadow-sm"
+                                src="./assets/album-3-back.jpg"
+                            />
+                        </div>
+                    </div>
+
                     <fieldset class="fieldset">
                         <legend class="fieldset-legend">Pick an image file</legend>
                         <input type="file" class="file-input" />
                     </fieldset>
-                    
+
                     <div class="mt-16 mb-4">
                         <button class="btn btn-primary">Save changes</button>
                     </div>

@@ -58,19 +58,19 @@
         </nav>
 
         <main class="mt-8 flex items-start justify-center p-4">
-            <div class="px-4 lg:px-20">
+            <div class="px-4 lg:px-20 max-w-xl">
 
                 
                     <fieldset class="fieldset">
                         <legend class="fieldset-legend">Product name & description</legend>
-                        <input type="text" class="input" placeholder="Product Name" />
+                        <input type="text" class="input w-full" placeholder="Product Name" />
                     </fieldset>
                 
-                    <textarea class="textarea mb-4" placeholder="Description"></textarea>
+                    <textarea class="textarea mb-4 w-full" placeholder="Description"></textarea>
 
                     <fieldset class="fieldset mb-4">
                         <legend class="fieldset-legend">Genres</legend>
-                        <select class="select">
+                        <select class="select w-full">
                             <option disabled selected>Pick a genre</option>
                             <option>Blues</option>
                             <option>Pop</option>
@@ -79,7 +79,7 @@
                     </fieldset>
                     <fieldset class="fieldset mb-4">
                         <legend class="fieldset-legend">Author</legend>
-                        <select class="select">
+                        <select class="select w-full">
                             <option disabled selected>Pick an author</option>
                             <option>Makky Zbirka</option>
                             <option>Karel Gott</option>
@@ -89,19 +89,41 @@
                     
                     <fieldset class="fieldset mb-4">
                         <legend class="fieldset-legend">Release Year</legend>
-                        <input type="number" class="input" placeholder="Release Year" />
+                        <input type="number" class="input w-full" placeholder="Release Year" />
                     </fieldset>
 
                     <fieldset class="fieldset mb-4">
                         <legend class="fieldset-legend">Price</legend>
-                        <input type="number" class="input" placeholder="Price$" />
+                        <input type="number" class="input w-full" placeholder="Price$" />
                     </fieldset>
+
+                    <!-- product images -->
+                    <div class="flex">
+                        <!-- main product image -->
+                        <img
+                        class="rs-gallery aspect-square w-full cursor-pointer object-cover object-center shadow-sm"
+                        src="./assets/album-3-cover.jpg"
+                        />
+
+                        <div class="flex flex-wrap gap-4">
+                            <!-- secondary image -->
+                            <img
+                                class="secondary_image rs-gallery mt-4 w-full cursor-pointer object-cover shadow-sm"
+                                src="./assets/album-3-front.jpg"
+                            />
+
+                            <img
+                                class="secondary_image rs-gallery mt-4 w-full cursor-pointer object-cover shadow-sm"
+                                src="./assets/album-3-back.jpg"
+                            />
+                        </div>
+                    </div>
 
                     <fieldset class="fieldset">
                         <legend class="fieldset-legend">Pick an image file</legend>
-                        <input type="file" class="file-input" />
+                        <input type="file" class="file-input w-full" />
                     </fieldset>
-                    
+
                     <div class="mt-16 mb-4">
                         <button class="btn btn-primary">Save changes</button>
                     </div>
