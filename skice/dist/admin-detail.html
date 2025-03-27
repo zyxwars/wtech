@@ -98,11 +98,30 @@
                     </fieldset>
 
                     <!-- product images -->
-                    <div>
-                        <!-- main product image -->
-                        <div class="relative w-full">
+                
+                    <!-- main product image -->
+                    <div class="relative w-full">
+                        <img
+                        class="w-full h-full object-cover shadow-sm cursor-pointer"
+                        src="./assets/album-3-front.jpg"
+                        alt="Secondary image 1"
+                        />
+                        <button
+                        class="absolute top-2 right-2 flex h-7 w-7 items-center justify-center
+                                rounded-full bg-gray-700 text-white hover:bg-gray-800"
+                        aria-label="Remove secondary image 1"
+                        >
+                        X
+                        </button>
+                    </div>
+                    
+                    
+
+                    <!-- Secondary images in a flex container -->
+                    <div class="mt-4 flex gap-4 mb-4">
+                        <div class="relative w-30 h-30">
                             <img
-                            class="w-full h-full object-cover shadow-sm cursor-pointer"
+                            class="w-full object-cover shadow-sm cursor-pointer"
                             src="./assets/album-3-front.jpg"
                             alt="Secondary image 1"
                             />
@@ -114,49 +133,35 @@
                             X
                             </button>
                         </div>
-                        
-                        
-
-                        <!-- Secondary images in a flex container -->
-                        <div class="mt-4 flex gap-4 mb-4">
-                            <div class="relative w-30 h-30">
-                                <img
-                                class="w-full object-cover shadow-sm cursor-pointer"
-                                src="./assets/album-3-front.jpg"
-                                alt="Secondary image 1"
-                                />
-                                <button
-                                class="absolute top-2 right-2 flex h-7 w-7 items-center justify-center
-                                        rounded-full bg-gray-700 text-white hover:bg-gray-800"
-                                aria-label="Remove secondary image 1"
-                                >
-                                X
-                                </button>
-                            </div>
-                            <div class="relative w-30 h-30">
-                                <img
-                                class="w-full object-cover shadow-sm cursor-pointer"
-                                src="./assets/album-3-front.jpg"
-                                alt="Secondary image 1"
-                                />
-                                <button
-                                class="absolute top-2 right-2 flex h-7 w-7 items-center justify-center
-                                        rounded-full bg-gray-700 text-white hover:bg-gray-800"
-                                aria-label="Remove secondary image 1"
-                                >
-                                X
-                                </button>
-                            </div>
+                        <div class="relative w-30 h-30">
+                            <img
+                            class="w-full object-cover shadow-sm cursor-pointer"
+                            src="./assets/album-3-front.jpg"
+                            alt="Secondary image 1"
+                            />
+                            <button
+                            class="absolute top-2 right-2 flex h-7 w-7 items-center justify-center
+                                    rounded-full bg-gray-700 text-white hover:bg-gray-800"
+                            aria-label="Remove secondary image 1"
+                            >
+                            X
+                            </button>
+                        </div>
                     </div>
 
-                    <fieldset class="fieldset">
-                        <legend class="fieldset-legend">Pick an image file</legend>
-                        <input type="file" class="file-input w-full" />
-                    </fieldset>
+                <fieldset class="fieldset">
+                    <legend class="fieldset-legend">Pick an image file</legend>
+                    <input type="file" class="file-input w-full" />
+                </fieldset>
 
-                    <div class="mt-16 mb-4">
+                <div class="mt-16 mb-4">
+                    <a href="./admin.html">
                         <button class="btn btn-primary">Save changes</button>
-                    </div>
+                    </a>
+                    <a href="./admin.html">
+                        <button class="btn btn-secondary ml-4">Delete</button>
+                    </a>
+                </div>
             </div>
         </main>
     </body>
