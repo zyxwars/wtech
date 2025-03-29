@@ -76,9 +76,24 @@
 
         <!-- Action buttons -->
         <div class="text-base-content flex-none">
-            <a href="./login.html" class="btn btn-ghost btn-circle">
+            <!-- https://daisyui.com/components/dropdown/ -->
+            <button
+                class="btn btn-ghost btn-circle"
+                popovertarget="popover-user"
+                style="anchor-name: --anchor-user"
+            >
                 <span class="material-symbols-outlined">person</span>
-            </a>
+            </button>
+            <ul
+                class="dropdown menu rounded-box bg-base-100 dropdown-center w-52 shadow-sm"
+                popover
+                id="popover-user"
+                style="position-anchor: --anchor-user"
+            >
+                <li>
+                    <a href="./login.html">Logout</a>
+                </li>
+            </ul>
 
             <a href="./cart.html" class="btn btn-ghost btn-circle">
                 <span class="material-symbols-outlined">shopping_cart</span>
@@ -160,11 +175,11 @@
     <div class="p-2">
         <a href="./detail.html" class="text-xl font-bold">
             <h3>
-                Fragments of a Vanished Symphony
+                Shattered Illusions
             </h3>
         </a>
         <h4 class="text-md mb-2">
-            Echo Circuit
+            Solaris Bloom
         </h4>
 
         <div class="flex w-full items-center justify-between">
@@ -192,11 +207,12 @@
     <div class="p-2">
         <a href="./detail.html" class="text-xl font-bold">
             <h3>
-                Horizon
+                Neon Reverie
             </h3>
         </a>
         <h4 class="text-md mb-2">
-            Midnight Apparition
+            The
+            Everfades
         </h4>
 
         <div class="flex w-full items-center justify-between">
@@ -224,12 +240,11 @@
     <div class="p-2">
         <a href="./detail.html" class="text-xl font-bold">
             <h3>
-                Pulse
+                Drift
             </h3>
         </a>
         <h4 class="text-md mb-2">
-            Celestial
-            Undertow
+            The Lucid Prophets
         </h4>
 
         <div class="flex w-full items-center justify-between">
@@ -257,11 +272,11 @@
     <div class="p-2">
         <a href="./detail.html" class="text-xl font-bold">
             <h3>
-                Frost
+                Pulse
             </h3>
         </a>
         <h4 class="text-md mb-2">
-            Ember &amp; Ash
+            Neon Solstice
         </h4>
 
         <div class="flex w-full items-center justify-between">
@@ -289,7 +304,39 @@
     <div class="p-2">
         <a href="./detail.html" class="text-xl font-bold">
             <h3>
-                Shattered Illusions
+                Electric Serenity
+            </h3>
+        </a>
+        <h4 class="text-md mb-2">
+            Nocturne Veil
+        </h4>
+
+        <div class="flex w-full items-center justify-between">
+            <p class="font-bold">15,99€</p>
+            <button class="btn btn-primary">
+                <span class="material-symbols-outlined text-white">
+                    shopping_cart
+                </span>
+            </button>
+        </div>
+    </div>
+</article>
+
+    <!--  -->
+    
+    <!--  -->
+    <article class="w-full">
+    <a href="./detail.html">
+        <img
+            class="aspect-square w-full object-cover object-center"
+            src="./assets/album-6-cover.jpg"
+        />
+    </a>
+
+    <div class="p-2">
+        <a href="./detail.html" class="text-xl font-bold">
+            <h3>
+                Horizon
             </h3>
         </a>
         <h4 class="text-md mb-2">
@@ -314,7 +361,103 @@
     <a href="./detail.html">
         <img
             class="aspect-square w-full object-cover object-center"
-            src="./assets/album-6-cover.jpg"
+            src="./assets/album-7-cover.jpg"
+        />
+    </a>
+
+    <div class="p-2">
+        <a href="./detail.html" class="text-xl font-bold">
+            <h3>
+                Electric Serenity
+            </h3>
+        </a>
+        <h4 class="text-md mb-2">
+            Ember &amp; Ash
+        </h4>
+
+        <div class="flex w-full items-center justify-between">
+            <p class="font-bold">15,99€</p>
+            <button class="btn btn-primary">
+                <span class="material-symbols-outlined text-white">
+                    shopping_cart
+                </span>
+            </button>
+        </div>
+    </div>
+</article>
+
+    <!--  -->
+    
+    <!--  -->
+    <article class="w-full">
+    <a href="./detail.html">
+        <img
+            class="aspect-square w-full object-cover object-center"
+            src="./assets/album-8-cover.jpg"
+        />
+    </a>
+
+    <div class="p-2">
+        <a href="./detail.html" class="text-xl font-bold">
+            <h3>
+                Ballad of the Wandering Star
+            </h3>
+        </a>
+        <h4 class="text-md mb-2">
+            Midnight Apparition
+        </h4>
+
+        <div class="flex w-full items-center justify-between">
+            <p class="font-bold">15,99€</p>
+            <button class="btn btn-primary">
+                <span class="material-symbols-outlined text-white">
+                    shopping_cart
+                </span>
+            </button>
+        </div>
+    </div>
+</article>
+
+    <!--  -->
+    
+    <!--  -->
+    <article class="w-full">
+    <a href="./detail.html">
+        <img
+            class="aspect-square w-full object-cover object-center"
+            src="./assets/album-9-cover.jpg"
+        />
+    </a>
+
+    <div class="p-2">
+        <a href="./detail.html" class="text-xl font-bold">
+            <h3>
+                Neon Reverie
+            </h3>
+        </a>
+        <h4 class="text-md mb-2">
+            Spectral Rain
+        </h4>
+
+        <div class="flex w-full items-center justify-between">
+            <p class="font-bold">15,99€</p>
+            <button class="btn btn-primary">
+                <span class="material-symbols-outlined text-white">
+                    shopping_cart
+                </span>
+            </button>
+        </div>
+    </div>
+</article>
+
+    <!--  -->
+    
+    <!--  -->
+    <article class="w-full">
+    <a href="./detail.html">
+        <img
+            class="aspect-square w-full object-cover object-center"
+            src="./assets/album-10-cover.jpg"
         />
     </a>
 
@@ -346,135 +489,6 @@
     <a href="./detail.html">
         <img
             class="aspect-square w-full object-cover object-center"
-            src="./assets/album-7-cover.jpg"
-        />
-    </a>
-
-    <div class="p-2">
-        <a href="./detail.html" class="text-xl font-bold">
-            <h3>
-                Pulse
-            </h3>
-        </a>
-        <h4 class="text-md mb-2">
-            Hollow Skyline
-        </h4>
-
-        <div class="flex w-full items-center justify-between">
-            <p class="font-bold">15,99€</p>
-            <button class="btn btn-primary">
-                <span class="material-symbols-outlined text-white">
-                    shopping_cart
-                </span>
-            </button>
-        </div>
-    </div>
-</article>
-
-    <!--  -->
-    
-    <!--  -->
-    <article class="w-full">
-    <a href="./detail.html">
-        <img
-            class="aspect-square w-full object-cover object-center"
-            src="./assets/album-8-cover.jpg"
-        />
-    </a>
-
-    <div class="p-2">
-        <a href="./detail.html" class="text-xl font-bold">
-            <h3>
-                Fragments of a Vanished Symphony
-            </h3>
-        </a>
-        <h4 class="text-md mb-2">
-            Scarlet Reverie
-        </h4>
-
-        <div class="flex w-full items-center justify-between">
-            <p class="font-bold">15,99€</p>
-            <button class="btn btn-primary">
-                <span class="material-symbols-outlined text-white">
-                    shopping_cart
-                </span>
-            </button>
-        </div>
-    </div>
-</article>
-
-    <!--  -->
-    
-    <!--  -->
-    <article class="w-full">
-    <a href="./detail.html">
-        <img
-            class="aspect-square w-full object-cover object-center"
-            src="./assets/album-9-cover.jpg"
-        />
-    </a>
-
-    <div class="p-2">
-        <a href="./detail.html" class="text-xl font-bold">
-            <h3>
-                Pulse
-            </h3>
-        </a>
-        <h4 class="text-md mb-2">
-            Scarlet Reverie
-        </h4>
-
-        <div class="flex w-full items-center justify-between">
-            <p class="font-bold">15,99€</p>
-            <button class="btn btn-primary">
-                <span class="material-symbols-outlined text-white">
-                    shopping_cart
-                </span>
-            </button>
-        </div>
-    </div>
-</article>
-
-    <!--  -->
-    
-    <!--  -->
-    <article class="w-full">
-    <a href="./detail.html">
-        <img
-            class="aspect-square w-full object-cover object-center"
-            src="./assets/album-10-cover.jpg"
-        />
-    </a>
-
-    <div class="p-2">
-        <a href="./detail.html" class="text-xl font-bold">
-            <h3>
-                Ballad of the Wandering Star
-            </h3>
-        </a>
-        <h4 class="text-md mb-2">
-            Celestial
-            Undertow
-        </h4>
-
-        <div class="flex w-full items-center justify-between">
-            <p class="font-bold">15,99€</p>
-            <button class="btn btn-primary">
-                <span class="material-symbols-outlined text-white">
-                    shopping_cart
-                </span>
-            </button>
-        </div>
-    </div>
-</article>
-
-    <!--  -->
-    
-    <!--  -->
-    <article class="w-full">
-    <a href="./detail.html">
-        <img
-            class="aspect-square w-full object-cover object-center"
             src="./assets/album-11-cover.jpg"
         />
     </a>
@@ -486,7 +500,7 @@
             </h3>
         </a>
         <h4 class="text-md mb-2">
-            Solaris Bloom
+            Vermillion Ghosts
         </h4>
 
         <div class="flex w-full items-center justify-between">

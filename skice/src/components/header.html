@@ -39,9 +39,24 @@
 
         <!-- Action buttons -->
         <div class="text-base-content flex-none">
-            <a href="./login.html" class="btn btn-ghost btn-circle">
+            <!-- https://daisyui.com/components/dropdown/ -->
+            <button
+                class="btn btn-ghost btn-circle"
+                popovertarget="popover-user"
+                style="anchor-name: --anchor-user"
+            >
                 <span class="material-symbols-outlined">person</span>
-            </a>
+            </button>
+            <ul
+                class="dropdown menu rounded-box bg-base-100 dropdown-center w-52 shadow-sm"
+                popover
+                id="popover-user"
+                style="position-anchor: --anchor-user"
+            >
+                <li>
+                    <a href="./login.html">Logout</a>
+                </li>
+            </ul>
 
             <a href="./cart.html" class="btn btn-ghost btn-circle">
                 <span class="material-symbols-outlined">shopping_cart</span>
