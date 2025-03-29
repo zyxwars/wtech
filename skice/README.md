@@ -1,8 +1,9 @@
 ## Submission
 
-- Page components are located under `src`
-- The representation for each page is compiled into `dist`
-- The wireframes are located in `wireframes`
+- Page components are located under [`src`](./src/)
+- The representation for each page is compiled into [`dist`](./dist/)
+- The wireframes are located in [`wireframes`](./wireframes/)
+- The class diagram is in [`class_diagram.png`](./class_diagram.png) and the database erd is in [`physical_erd.png`](./physical_erd.png)
 
 - Some album names and authors are duplicated as a result of using [nunjucks random ](https://mozilla.github.io/nunjucks/templating.html#random) to populate the mock pages
 
