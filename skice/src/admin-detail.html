@@ -16,7 +16,6 @@
                     >
                         Record Store
                     </a>
-
                 </div>
 
                 <!-- Action buttons -->
@@ -29,76 +28,123 @@
         </nav>
 
         <main class="mt-8 flex items-start justify-center p-4">
-            <div class="px-4 lg:px-20 max-w-96">
+            <form class="max-w-xl px-4 lg:px-20">
+                <h2 class="mb-4 text-2xl font-bold">Update Product</h2>
 
-                
-                    <fieldset class="fieldset">
-                        <legend class="fieldset-legend">Product name & description</legend>
-                        <input type="text" class="input" placeholder="Product Name" />
-                    </fieldset>
-                
-                    <textarea class="textarea mb-4" placeholder="Description"></textarea>
+                <fieldset class="fieldset">
+                    <legend class="fieldset-legend">Album name</legend>
+                    <input
+                        type="text"
+                        class="input w-full"
+                        placeholder="Album name"
+                    />
+                </fieldset>
 
-                    <fieldset class="fieldset mb-4">
-                        <legend class="fieldset-legend">Genres</legend>
-                        <select class="select">
-                            <option disabled selected>Pick a genre</option>
-                            <option>Blues</option>
-                            <option>Pop</option>
-                            <option>Rock</option>
-                        </select>
-                    </fieldset>
-                    <fieldset class="fieldset mb-4">
-                        <legend class="fieldset-legend">Author</legend>
-                        <select class="select">
-                            <option disabled selected>Pick an author</option>
-                            <option>Makky Zbirka</option>
-                            <option>Karel Gott</option>
-                            <option>Matej Straka</option>
-                        </select>
-                    </fieldset>
-                    
-                    <fieldset class="fieldset mb-4">
-                        <legend class="fieldset-legend">Release Year</legend>
-                        <input type="number" class="input" placeholder="Release Year" />
-                    </fieldset>
+                <fieldset class="fieldset">
+                    <legend class="fieldset-legend">Author</legend>
+                    <input
+                        type="text"
+                        class="input w-full"
+                        placeholder="Author"
+                    />
+                </fieldset>
 
-                    <fieldset class="fieldset mb-4">
-                        <legend class="fieldset-legend">Price</legend>
-                        <input type="number" class="input" placeholder="Price$" />
-                    </fieldset>
+                <fieldset class="fieldset">
+                    <legend class="fieldset-legend">Description</legend>
+                    <textarea
+                        class="textarea w-full"
+                        placeholder="Description"
+                    ></textarea>
+                </fieldset>
 
-                    <!-- product images -->
-                    <div class="flex">
-                        <!-- main product image -->
+                <fieldset class="fieldset">
+                    <legend class="fieldset-legend">Genre</legend>
+                    <select class="select w-full">
+                        <option disabled selected>Pick a genre</option>
+                        <option>Blues</option>
+                        <option>Pop</option>
+                        <option>Rock</option>
+                    </select>
+                </fieldset>
+
+                <fieldset class="fieldset mb-4">
+                    <legend class="fieldset-legend">Release Year</legend>
+                    <input
+                        type="number"
+                        class="input w-full"
+                        placeholder="Release Year"
+                    />
+                </fieldset>
+
+                <fieldset class="fieldset mb-4">
+                    <legend class="fieldset-legend">Price</legend>
+                    <input
+                        type="number"
+                        class="input w-full"
+                        placeholder="Price"
+                    />
+                </fieldset>
+
+                <!-- product images -->
+
+                <!-- main product image -->
+                <div class="relative w-full">
+                    <img
+                        class="h-full w-full cursor-pointer object-cover shadow-sm"
+                        src="./assets/album-3-front.jpg"
+                        alt="Secondary image 1"
+                    />
+                    <button
+                        class="absolute right-2 top-2 flex h-7 w-7 items-center justify-center rounded-full bg-gray-700 text-white hover:bg-gray-800"
+                        aria-label="Remove secondary image 1"
+                    >
+                        X
+                    </button>
+                </div>
+
+                <!-- Secondary images in a flex container -->
+                <div class="mb-4 mt-4 flex gap-4">
+                    <div class="w-30 h-30 relative">
                         <img
-                        class="rs-gallery aspect-square w-full cursor-pointer object-cover object-center shadow-sm"
-                        src="./assets/album-3-cover.jpg"
+                            class="w-full cursor-pointer object-cover shadow-sm"
+                            src="./assets/album-3-front.jpg"
+                            alt="Secondary image 1"
                         />
-
-                        <div class="flex flex-wrap gap-4">
-                            <!-- secondary image -->
-                            <img
-                                class="secondary_image rs-gallery mt-4 w-full cursor-pointer object-cover shadow-sm"
-                                src="./assets/album-3-front.jpg"
-                            />
-
-                            <img
-                                class="secondary_image rs-gallery mt-4 w-full cursor-pointer object-cover shadow-sm"
-                                src="./assets/album-3-back.jpg"
-                            />
-                        </div>
+                        <button
+                            class="absolute right-2 top-2 flex h-7 w-7 items-center justify-center rounded-full bg-gray-700 text-white hover:bg-gray-800"
+                            aria-label="Remove secondary image 1"
+                        >
+                            X
+                        </button>
                     </div>
 
-                    <fieldset class="fieldset">
-                        <legend class="fieldset-legend">Pick an image file</legend>
-                        <input type="file" class="file-input" />
-                    </fieldset>
-
-                    <div class="mt-16 mb-4">
-                        <button class="btn btn-primary">Save changes</button>
+                    <div class="w-30 h-30 relative">
+                        <img
+                            class="w-full cursor-pointer object-cover shadow-sm"
+                            src="./assets/album-3-front.jpg"
+                            alt="Secondary image 1"
+                        />
+                        <button
+                            class="absolute right-2 top-2 flex h-7 w-7 items-center justify-center rounded-full bg-gray-700 text-white hover:bg-gray-800"
+                            aria-label="Remove secondary image 1"
+                        >
+                            X
+                        </button>
                     </div>
-            </div>
+                </div>
+
+                <fieldset class="fieldset">
+                    <legend class="fieldset-legend">Pick an image file</legend>
+                    <input type="file" class="file-input w-full" />
+                </fieldset>
+
+                <div class="mb-4 mt-16">
+                    <button class="btn btn-success" type="submit">Save</button>
+                    <button class="btn btn-error ml-4" type="submit">
+                        Cancel
+                    </button>
+                </div>
+            </form>
         </main>
     </body>
 </html>
