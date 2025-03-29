@@ -4,13 +4,13 @@ import path from "path";
 
 function buildHtml(fileName) {
     const out = nunjucks.render(fileName);
-    fs.writeFileSync(path.join("./skice", fileName), out, {});
+    fs.writeFileSync(path.join("./dist", fileName), out, {});
 }
 
-fs.rmSync("./skice", { recursive: true, force: true });
-fs.mkdirSync("skice/components", { recursive: true });
+fs.rmSync("./dist", { recursive: true, force: true });
+fs.mkdirSync("dist/components", { recursive: true });
 
-fs.cpSync("./src/assets/", "./skice/assets/", { recursive: true });
+fs.cpSync("./src/assets/", "./dist/assets/", { recursive: true });
 
 nunjucks.configure("./src", { autoescape: true });
 
@@ -29,7 +29,7 @@ fs.readdirSync("./src")
     .forEach((fileName) =>
         fs.copyFileSync(
             path.join("./src", fileName),
-            path.join("./skice", fileName),
+            path.join("./dist", fileName),
         ),
     );
 
@@ -38,6 +38,6 @@ fs.readdirSync("./src/components")
     .forEach((fileName) =>
         fs.copyFileSync(
             path.join("./src/components", fileName),
-            path.join("./skice/components", fileName),
+            path.join("./dist/components", fileName),
         ),
     );

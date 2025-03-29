@@ -1,25 +1,29 @@
 ## Submission
 
-The submission files are located in <strong>./skice</strong>
+- Page components are located under `src`
+- The representation for each page is compiled into `dist`
+- The wireframes are located in `wireframes`
+
+- Some album names and authors are duplicated as a result of using [nunjucks random ](https://mozilla.github.io/nunjucks/templating.html#random) to populate the mock pages
 
 ### Credits
 
 - Artwork
 
     - Album covers by id
-        <ol>
-        <li>https://unsplash.com/photos/a-painting-on-the-ceiling-of-a-building-1rBg5YSi00c</li>
-        <li> https://unsplash.com/photos/two-stars-in-the-middle-of-a-black-sky-fsH1KjbdjE8</li>
-        <li> https://unsplash.com/photos/grayscale-photo-of-woman-statue-dYogRY-vU2o</li>
-        <li> https://unsplash.com/photos/photo-of-orange-flower-2FdIvx7sy3U</li>
-        <li> https://unsplash.com/photos/blue-lemon-sliced-into-two-halves-5E5N49RWtbA</li>
-        <li> https://unsplash.com/photos/photography-of-tree-Jrl_UQcZqOc</li>
-        <li> https://unsplash.com/photos/silhouette-photo-of-person-standing-rMmibFe4czY</li>
-        <li> https://unsplash.com/photos/black-white-and-red-abstract-painting-WB9TRkyrlzk</li>
-        <li> https://unsplash.com/photos/gray-lion-statue-with-red-background-NWJOf03vXKQ</li>
-        <li> https://unsplash.com/photos/a-person-drowns-underwater-rX12B5uX7QM</li>
-        <li> https://unsplash.com/photos/a-close-up-of-a-shiny-surface-with-a-blue-sky-in-the-background-OHPdgstNFGs</li>
-        </ol>
+          <ol>
+          <li>https://unsplash.com/photos/a-painting-on-the-ceiling-of-a-building-1rBg5YSi00c</li>
+          <li> https://unsplash.com/photos/two-stars-in-the-middle-of-a-black-sky-fsH1KjbdjE8</li>
+          <li> https://unsplash.com/photos/grayscale-photo-of-woman-statue-dYogRY-vU2o</li>
+          <li> https://unsplash.com/photos/photo-of-orange-flower-2FdIvx7sy3U</li>
+          <li> https://unsplash.com/photos/blue-lemon-sliced-into-two-halves-5E5N49RWtbA</li>
+          <li> https://unsplash.com/photos/photography-of-tree-Jrl_UQcZqOc</li>
+          <li> https://unsplash.com/photos/silhouette-photo-of-person-standing-rMmibFe4czY</li>
+          <li> https://unsplash.com/photos/black-white-and-red-abstract-painting-WB9TRkyrlzk</li>
+          <li> https://unsplash.com/photos/gray-lion-statue-with-red-background-NWJOf03vXKQ</li>
+          <li> https://unsplash.com/photos/a-person-drowns-underwater-rX12B5uX7QM</li>
+          <li> https://unsplash.com/photos/a-close-up-of-a-shiny-surface-with-a-blue-sky-in-the-background-OHPdgstNFGs</li>
+          </ol>
 
     - Hero Banner
         - https://unsplash.com/photos/angel-statue-OGSbrFW_dos

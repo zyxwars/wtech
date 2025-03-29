@@ -50,6 +50,13 @@ body {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
+
 .no-scrollbar::-webkit-scrollbar {
     display: none;
+}
+
+/* Keep square at a reasonable width and height for all devices */
+.gallery-frame-img {
+    width: min(90vw, 60vh);
+    height: min(90vw, 60vh);
 }

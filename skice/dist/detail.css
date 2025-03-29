@@ -3,9 +3,6 @@
     align-items: center;
     border-radius: var(--radius-box);
 
-    /* Fallback color (optional) */
-    background-color: var(--surface-medium-color);
-
     color: whitesmoke;
     font-size: 1.25rem;
     font-weight: bold;
@@ -21,14 +18,8 @@
     );
 }
 
-.secondary_image {
+.secondary-image {
     width: 6rem;
     height: 6rem;
     justify-content: left;
-}
-
-/* Keep square at a reasonable width and height for all devices */
-.gallery-frame-img {
-    width: min(90vw, 60vh);
-    height: min(90vw, 60vh);
 }
