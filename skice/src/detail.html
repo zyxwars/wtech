@@ -11,6 +11,7 @@
         <!-- Page layout -->
         <main class="flex min-h-screen justify-center">
             <div class="w-full max-w-[1600px] px-4 lg:px-20">
+                <!-- https://daisyui.com/components/breadcrumbs/ -->
                 <nav class="breadcrumbs pb-3 pt-4 text-sm sm:pt-4">
                     <ul>
                         <li><a href="./index.html">Home</a></li>
@@ -30,12 +31,12 @@
                         <div class="flex flex-wrap gap-4">
                             <!-- secondary image -->
                             <img
-                                class="secondary_image rs-gallery mt-4 flex-none cursor-pointer object-cover shadow-sm"
+                                class="secondary-image rs-gallery mt-4 flex-none cursor-pointer object-cover shadow-sm"
                                 src="./assets/album-3-front.jpg"
                             />
 
                             <img
-                                class="secondary_image rs-gallery mt-4 flex-none cursor-pointer object-cover shadow-sm"
+                                class="secondary-image rs-gallery mt-4 flex-none cursor-pointer object-cover shadow-sm"
                                 src="./assets/album-3-back.jpg"
                             />
                         </div>
@@ -71,11 +72,19 @@
                         </ul>
 
                         <!-- product price button-->
-                        <button
-                            class="buy-button cursor-pointer transition-all duration-150 hover:scale-105"
-                        >
-                            15,99$
-                        </button>
+                        <div class="flex items-center gap-4">
+                            <button
+                                class="buy-buttoncursor-pointer transition-all duration-150 hover:scale-105"
+                            >
+                                15,99$
+                            </button>
+
+                            <input
+                                type="number"
+                                value="1"
+                                class="input h-full max-w-24"
+                            />
+                        </div>
                     </section>
                 </article>
 

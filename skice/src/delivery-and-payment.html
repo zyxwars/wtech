@@ -8,24 +8,29 @@
 
         <main class="mb-12 mt-6 flex min-h-screen justify-center">
             <div class="w-full max-w-4xl px-4">
+                <!-- https://daisyui.com/components/breadcrumbs/ -->
                 <nav class="breadcrumbs pb-3 pt-4 text-sm sm:pt-4">
                     <ul>
                         <li><a href="./index.html">Home</a></li>
-                        <li>Delivery Details</li>
+                        <li><a href="./cart.html">Details</a></li>
+                        <li>Delivery and Payment</li>
                     </ul>
                 </nav>
 
+                <!-- https://daisyui.com/components/steps/ -->
                 <div class="flex w-full flex-col items-center gap-4">
                     <ul class="steps mb-8 w-full">
                         <li class="step step-primary">Details</li>
-                        <li class="step step-primary">Address</li>
-                        <li class="step">Payment</li>
+                        <li class="step step-primary">Delivery and Payment</li>
+                        <li class="step">Order submitted</li>
                     </ul>
                 </div>
 
-                <div class="flex items-start justify-center p-4">
-                    <form class="grid max-w-[18rem] grid-flow-row gap-2">
-                        <h1 class="mb-2 text-2xl font-bold">Delivery Form</h1>
+                <div class="flex items-start justify-center">
+                    <form class="grid max-w-[20rem] grid-flow-row gap-2">
+                        <h1 class="mb-2 text-2xl font-bold">
+                            Address and Contact
+                        </h1>
                         <div class="flex gap-2">
                             <input
                                 type="text"
@@ -38,14 +43,23 @@
                                 class="input"
                             />
                         </div>
+
                         <input type="text" placeholder="Email" class="input" />
+
+                        <input
+                            type="text"
+                            placeholder="Phone Number"
+                            class="input"
+                        />
 
                         <input
                             type="text"
                             placeholder="Country"
                             class="input"
                         />
+
                         <input type="text" placeholder="City" class="input" />
+
                         <div class="flex gap-2">
                             <input
                                 type="text"
@@ -59,12 +73,30 @@
                             />
                         </div>
 
-                        <a
-                            class="btn btn-primary mt-2"
-                            type="submit"
-                            href="./payment.html"
-                            >Countinue to Payment</a
-                        >
+                        <h2 class="text-lg font-bold">Delivery</h2>
+                        <select class="select w-full">
+                            <option disabled selected>Delivery method</option>
+                            <option>Postal service</option>
+                            <option>Courier</option>
+                        </select>
+
+                        <h2 class="text-lg font-bold">Pay</h2>
+                        <select class="select w-full">
+                            <option disabled selected>Payment method</option>
+                            <option>Online</option>
+                            <option>Upon delivery</option>
+                        </select>
+
+                        <!-- This will be a regular button submit in the final
+                        version, using anchor to simulate navigation -->
+                        <div class="flex w-full justify-end">
+                            <a
+                                href="./confirmation.html"
+                                class="btn btn-primary mt-2"
+                            >
+                                Submit Order
+                            </a>
+                        </div>
                     </form>
                 </div>
             </div>
