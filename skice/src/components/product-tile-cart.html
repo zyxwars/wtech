@@ -1,37 +1,40 @@
-<article class="flex w-full items-start gap-4">
-    <img
-        class="h-[4rem] w-[4rem] flex-none object-cover object-center"
-        src="./assets/album-{{ [1,2,3,4,5,6,7,8,9,10,11] | random }}-cover.jpg"
-    />
+<article class="mb-2 flex w-full flex-wrap items-start gap-2 sm:flex-nowrap">
+    <div class="flex w-full gap-4">
+        <img
+            class="h-[4rem] w-[4rem] flex-none object-cover object-center"
+            src="./assets/album-{{ [1,2,3,4,5,6,7,8,9,10,11] | random }}-cover.jpg"
+        />
 
-    <div class="sm:mr-8">
-        <a href="./detail.html" class="text-xl font-semibold">
-            <h3>
-                {{ [ "Echoes of a Distant Tomorrow", "Neon Reverie", "Horizon",
-                "Whispers Beneath the Moonlit Sky", "Shattered Illusions",
-                "Frost", "The Melancholy of Forgotten Dreams", "VelvetMidnight",
-                "Ember", "Chronicles of the Endless Voyage","Electric Serenity",
-                "Flux", "Ballad of the Wandering Star", "Crimson Twilight",
-                "Pulse", "Fragments of a Vanished Symphony", "Celestial Mirage",
-                "Drift" ] | random }}
-            </h3>
-        </a>
-        <h4 class="text-md mb-2">
-            {{ [ "Midnight Apparition", "The Velvet Alchemists", "Echo Circuit",
-            "Scarlet Reverie", "Oblivion Choir", "Neon Solstice", "Celestial
-            Undertow", "Hollow Skyline", "Solaris Bloom", "Vermillion Ghosts",
-            "The Lucid Prophets", "Ember & Ash", "Spectral Rain", "The
-            Everfades", "Nocturne Veil" ] | random }}
-        </h4>
+        <div class="sm:mr-8">
+            <a href="./detail.html" class="text-xl font-semibold">
+                <h3>
+                    {{ [ "Echoes of a Distant Tomorrow", "Neon Reverie",
+                    "Horizon", "Whispers Beneath the Moonlit Sky", "Shattered
+                    Illusions", "Frost", "The Melancholy of Forgotten Dreams",
+                    "VelvetMidnight", "Ember", "Chronicles of the Endless
+                    Voyage","Electric Serenity", "Flux", "Ballad of the
+                    Wandering Star", "Crimson Twilight", "Pulse", "Fragments of
+                    a Vanished Symphony", "Celestial Mirage", "Drift" ] | random
+                    }}
+                </h3>
+            </a>
+            <h4 class="text-md mb-2">
+                {{ [ "Midnight Apparition", "The Velvet Alchemists", "Echo
+                Circuit", "Scarlet Reverie", "Oblivion Choir", "Neon Solstice",
+                "Celestial Undertow", "Hollow Skyline", "Solaris Bloom",
+                "Vermillion Ghosts", "The Lucid Prophets", "Ember & Ash",
+                "Spectral Rain", "The Everfades", "Nocturne Veil" ] | random }}
+            </h4>
+        </div>
     </div>
 
-    <div class="flex-grow"></div>
+    <div class="flex w-full items-start justify-between">
+        <input type="number" value="1" class="input max-w-14" />
 
-    <input type="number" value="1" class="input max-w-14" />
+        <p class="text-lg font-bold">15,89€</p>
 
-    <div class="text-lg font-bold">15,89€</div>
-
-    <button class="cursor-pointer">
-        <span class="material-symbols-outlined !text-[14px]"> close </span>
-    </button>
+        <button class="cursor-pointer">
+            <span class="material-symbols-outlined !text-[14px]"> close </span>
+        </button>
+    </div>
 </article>
