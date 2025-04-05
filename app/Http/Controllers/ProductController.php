@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class ProductController extends Controller
 {
@@ -12,7 +14,31 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        return view('products', [
+            'products' => Product::all()
+        ]);
+    }
+
+    public function category(string $category)
+    {
+        return view(
+            'products',
+            [
+                'products' => Product::whereHas('category', function ($q) use ($category) {
+                    $q->where('name', $category);
+                })->get()
+            ]
+        );
+    }
+
+    public function search(string $search)
+    {
+        return view(
+            'products',
+            [
+                'products' => Product::where('title', 'like', "%{$search}%")->get()
+            ]
+        );
     }
 
     /**
