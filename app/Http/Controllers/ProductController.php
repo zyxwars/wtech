@@ -12,21 +12,21 @@ class ProductController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
-        return view('products', [
-            'products' => Product::all()
-        ]);
-    }
+    public function index() {}
 
-    public function category(string $category)
+    public function category(string $categoryName)
     {
+        $category = Category::where('url_name', strtolower($categoryName))->firstOrFail();
+
         return view(
-            'products',
+            'category',
             [
-                'products' => Product::whereHas('category', function ($q) use ($category) {
-                    $q->where('name', $category);
-                })->get()
+                'products' => $category->products()->paginate(15),
+                'category' => $category,
+                'breadcrumbs' => [
+                    ['name' => 'Home', 'url' => '/'],
+                    ['name' => ucfirst($category->name)]
+                ]
             ]
         );
     }
@@ -34,10 +34,15 @@ class ProductController extends Controller
     public function search(string $search)
     {
         return view(
-            'products',
+            'search',
             [
-                'products' => Product::where('title', 'like', "%{$search}%")->get()
-            ]
+                'products' => Product::where('title', 'like', "%{$search}%")->paginate(15),
+                'search' => $search,
+                'breadcrumbs' => [
+                    ['name' => 'Home', 'url' => '/'],
+                    ['name' => 'Search results']
+                ],
+            ],
         );
     }
 

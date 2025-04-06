@@ -335,6 +335,8 @@ class DatabaseSeeder extends Seeder
         foreach ($categories as $name) {
             $category = new Category();
             $category->name = $name;
+            $category->url_name = strtolower($name);
+            $category->description = fake()->realText(300);
             $category->save();
         }
 
@@ -348,7 +350,7 @@ class DatabaseSeeder extends Seeder
         foreach ($albumTitles as $title) {
             $product = new Product();
             $product->title = $title;
-            $product->description = fake()->realText();
+            $product->description = fake()->realText(200);
             $product->release_year = random_int(1950, 2025);
             $product->price = random_int(1000, 4000);
 
