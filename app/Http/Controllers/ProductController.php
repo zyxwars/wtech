@@ -25,10 +25,10 @@ function applyFilters(Request $request, $products)
         $products = $products->where('price', '<=', $request->input('price_end') / 100);
     }
     if ($request->input('author')) {
-        $products = $products->where('price', $request->input('author'));
+        $products = $products->where('author', $request->input('author'));
     }
     if ($request->input('language')) {
-        $products = $products->where('price', $request->input('language'));
+        $products = $products->where('language', $request->input('language'));
     }
     if ($request->input('release_year_start')) {
         $products = $products->where('release_year', '>=', $request->input('release_year_start'));
