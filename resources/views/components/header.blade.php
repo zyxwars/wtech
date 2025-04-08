@@ -10,27 +10,31 @@
             </a>
 
             <!-- Desktop searchbar -->
-            <!-- https://daisyui.com/components/input/ -->
-            <label class="input ml-10 hidden w-[32rem] md:flex">
-                <svg
-                    class="h-[1em] opacity-50"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24">
-                    <g
-                        stroke-linejoin="round"
-                        stroke-linecap="round"
-                        stroke-width="2.5"
-                        fill="none"
-                        stroke="currentColor">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <path d="m21 21-4.3-4.3"></path>
-                    </g>
-                </svg>
-                <input
-                    type="search"
-                    class="grow"
-                    placeholder="The Blues Ain't Never Gonna Die" />
-            </label>
+            <form action="{{ route('search') }}" method="GET" class="hidden md:block w-[32rem]">
+                <!-- https://daisyui.com/components/input/ -->
+                <label class="input ml-10 w-full">
+                        <svg
+                            class="h-[1em] opacity-50"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24">
+                            <g
+                                stroke-linejoin="round"
+                                stroke-linecap="round"
+                                stroke-width="2.5"
+                                fill="none"
+                                stroke="currentColor">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.3-4.3"></path>
+                            </g>
+                        </svg>
+
+                        <input
+                            name='search'
+                            type="search"
+                            class="grow"
+                            placeholder="The Blues Ain't Never Gonna Die" />
+                </label>
+            </form>
         </div>
 
         <!-- Action buttons -->
@@ -48,7 +52,7 @@
                 id="popover-user"
                 style="position-anchor: --anchor-user">
                 <li>
-                    <a href="./login.html">Logout</a>
+                    <a href="TODO">Logout</a>
                 </li>
             </ul>
 
@@ -59,25 +63,28 @@
     </div>
 
     <!-- Mobile search bar -->
-    <!-- https://daisyui.com/components/input/ -->
-    <label class="input w-full md:hidden">
-        <svg
-            class="h-[1em] opacity-50"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24">
-            <g
-                stroke-linejoin="round"
-                stroke-linecap="round"
-                stroke-width="2.5"
-                fill="none"
-                stroke="currentColor">
-                <circle cx="11" cy="11" r="8"></circle>
-                <path d="m21 21-4.3-4.3"></path>
-            </g>
-        </svg>
-        <input
-            type="search"
-            class="grow"
-            placeholder="The Blues Ain't Never Gonna Die" />
-    </label>
+    <form action="{{ route('search') }}" method="GET" class="md:hidden w-full">
+        <!-- https://daisyui.com/components/input/ -->
+        <label class="input w-full">
+            <svg
+                class="h-[1em] opacity-50"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24">
+                <g
+                    stroke-linejoin="round"
+                    stroke-linecap="round"
+                    stroke-width="2.5"
+                    fill="none"
+                    stroke="currentColor">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.3-4.3"></path>
+                </g>
+            </svg>
+            <input
+                name='search'
+                type="search"
+                class="grow"
+                placeholder="The Blues Ain't Never Gonna Die" />
+        </label>
+    </form>
 </nav>

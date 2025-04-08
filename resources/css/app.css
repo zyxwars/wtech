@@ -70,14 +70,28 @@ body {
     height: min(90vw, 60vh);
 }
 
-.products-grid {
+.product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
     gap: 1rem;
 }
 
 @media (width >= 40rem) {
-    .products-grid {
+    .product-grid {
         grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    }
+}
+
+.category-grid {
+    width: 100%;
+    justify-content: center;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+}
+
+@media (width >= 40rem) {
+    .category-grid {
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     }
 }

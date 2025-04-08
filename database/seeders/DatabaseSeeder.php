@@ -335,7 +335,6 @@ class DatabaseSeeder extends Seeder
         foreach ($categories as $name) {
             $category = new Category();
             $category->name = $name;
-            $category->url_name = strtolower($name);
             $category->description = fake()->realText(300);
             $category->save();
         }
