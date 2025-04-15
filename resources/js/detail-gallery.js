@@ -1,16 +1,18 @@
-const galleryEls = document.querySelectorAll(".rs-gallery");
-const galleryFrameEl = document.querySelector(".rs-gallery-frame");
-galleryFrameEl.style.display = "none";
+// TODO:
 
-galleryFrameEl.addEventListener("click", () => {
-    galleryFrameEl.style.display = "none";
-    document.body.style.overflow = "auto";
-});
+// const galleryEls = document.querySelectorAll(".rs-gallery");
+// const galleryFrameEl = document.querySelector(".rs-gallery-frame");
+// galleryFrameEl.style.display = "none";
 
-for (const galleryEl of galleryEls) {
-    galleryEl.addEventListener("click", () => {
-        galleryFrameEl.querySelector("img").src = galleryEl.src;
-        galleryFrameEl.style.display = "flex";
-        document.body.style.overflow = "hidden";
-    });
-}
+// galleryFrameEl.addEventListener("click", () => {
+//     galleryFrameEl.style.display = "none";
+//     document.body.style.overflow = "auto";
+// });
+
+// for (const galleryEl of galleryEls) {
+//     galleryEl.addEventListener("click", () => {
+//         galleryFrameEl.querySelector("img").src = galleryEl.src;
+//         galleryFrameEl.style.display = "flex";
+//         document.body.style.overflow = "hidden";
+//     });
+// }

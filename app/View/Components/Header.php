@@ -8,19 +8,18 @@ use App\Models\Product;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 use Illuminate\View\Component;
 
-class ProductGrid extends Component
+class Header extends Component
 {
     /**
      * Create a new component instance.
      */
-    public function __construct(
-        public LengthAwarePaginator $products
-    ) {
+    public function __construct()
+    {
         //
-        Log::info("product grid");
     }
 
     /**
@@ -28,9 +27,8 @@ class ProductGrid extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.product-grid', [
-            'authors' => Author::orderBy("name")->get(),
-            'languages' => Language::orderBy("name")->get(),
+        return view('components.header', [
+            'user' => Auth::user()
         ]);
     }
 }
