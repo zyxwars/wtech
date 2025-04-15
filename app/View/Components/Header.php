@@ -23,12 +23,12 @@ class Header extends Component
     }
 
     /**
-     * Get the view / contents that represent the component.
+     * Get the view / contents that represent the component. xd
      */
     public function render(): View|Closure|string
     {
         return view('components.header', [
             'user' => Auth::user()
-        ]);
+        ]); 
     }
 }
