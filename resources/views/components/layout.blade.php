@@ -24,6 +24,7 @@
 <body>
     {{ $slot }}
 
+    {{-- Toast --}}
     <div class="toast transition-opacity duration-500 z-50">
         @if (session('success'))
             <div class="alert alert-success">
@@ -32,6 +33,16 @@
         @endif
     </div>
 
+    {{-- Fullscreen gallery frame --}}
+    <div
+        class="rs-gallery-frame bg-base-100 fixed left-0 top-0 z-30 hidden h-screen w-screen items-center justify-center">
+        <img class="gallery-frame-img aspect-square object-cover object-center" />
+
+        {{-- This button doesn't actually do anything since the close is triggered by clicking anywhere  --}}
+        <button class="btn btn-ghost btn-circle absolute right-4 top-4">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+    </div>
 </body>
 
 </html>
