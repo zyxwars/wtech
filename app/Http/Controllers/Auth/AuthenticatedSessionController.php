@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
+use App\Models\CartItem;
+use App\Models\Product;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -26,13 +28,30 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request): RedirectResponse
     {
-        Log::info("Login " . $request->input("email"));
+        Log::info("Authenticating " . $request->input("email"));
 
         $request->authenticate();
 
-        $request->session()->regenerate();
+        Log::info("Login " . $request->input("email"));
 
-        Log::info(Auth::check() ? "Login success" : "Login failed");
+        if (Auth::user()->cartItems()->with('product')->get()->count() == 0) {
+            // Migrate cart from session to database
+            Log::info("Migrating session cart " . $request->input("email"));
+
+            $productIds = $request->session()->get('cart.productIds', []);
+            $quantities = array_count_values($productIds);
+            $products = Product::whereIn('id', array_keys($quantities))->get()->all();
+
+            foreach ($products as $product) {
+                $cartItem = new CartItem();
+                $cartItem->user_id = Auth::user()->id;
+                $cartItem->product_id = $product->id;
+                $cartItem->quantity = $quantities[$product->id];
+                $cartItem->save();
+            }
+        }
+
+        $request->session()->regenerate();
 
         return redirect()->intended(route('home'));
     }

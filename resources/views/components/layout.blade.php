@@ -14,8 +14,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet" />
-    <link
-        rel="stylesheet"
+    <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
     <!-- Styles / Scripts -->
@@ -24,6 +23,15 @@
 
 <body>
     {{ $slot }}
+
+    <div class="toast transition-opacity duration-500 z-50">
+        @if (session('success'))
+            <div class="alert alert-success">
+                <span>{{ session('success') }}</span>
+            </div>
+        @endif
+    </div>
+
 </body>
 
 </html>

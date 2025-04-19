@@ -95,3 +95,23 @@ body {
         grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     }
 }
+
+.buy-button {
+    display: flex;
+    align-items: center;
+    border-radius: var(--radius-box);
+
+    color: whitesmoke;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+
+    /* Gradient using your color stops */
+    background: linear-gradient(
+        to right,
+        #ebd197 0%,
+        #b48811 50%,
+        #a2790d 75%,
+        #bb9b49 100%
+    );
+}

@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,12 +24,30 @@ Route::prefix('auth')->group(function () {
         ->name('logout');
 });
 
-// Products routes
+// Product routes
 
-Route::get('/', [ProductController::class, 'index'])->name('home');
+Route::get('/', [ProductController::class, 'home'])->name('home');
 
-Route::get('/category/{name}', [ProductController::class, 'category'])->name('category');
+Route::get('/category/{name}', [ProductController::class, 'category'])->name('product.category');
 
-Route::get('/search', [ProductController::class, 'search'])->name('search');
+Route::get('/search', [ProductController::class, 'search'])->name('product.search');
 
-Route::get('/product/{id}', [ProductController::class, 'show'])->name('product');
+Route::get('/product/{id}', [ProductController::class, 'show'])->name('product.show');
+
+// Cart routes
+
+Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+
+Route::post('/cart', [CartController::class, 'store'])->name('cart.store');
+
+Route::put('/cart/{productId}', [CartController::class, 'update'])->name('cart.update');
+
+Route::delete('/cart/{productId}', [CartController::class, 'destroy'])->name('cart.destroy');
+
+// Order routes
+
+Route::get('/delivery-and-payment', [OrderController::class, 'create'])->name('order.create');
+
+Route::post('/delivery-and-payment', [OrderController::class, 'store'])->name('order.store');
+
+Route::get('/order/{id}', [OrderController::class, 'show'])->name('order.show');
