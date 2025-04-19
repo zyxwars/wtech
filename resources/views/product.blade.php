@@ -55,10 +55,10 @@
                     </ul>
 
                     <!-- product price button-->
-                    <form class="flex items-center gap-4" action="{{ route('cart.update', $product->id) }}"
-                        method="POST">
+                    <form class="flex items-center gap-4" action="{{ route('cart.store') }}" method="POST">
                         @csrf
-                        @method('PUT')
+
+                        <input type="hidden" name="productId" value="{{ $product->id }}">
 
                         <button class="buy-button cursor-pointer transition-all duration-150 hover:scale-105"
                             type="submit">

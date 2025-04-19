@@ -22,7 +22,8 @@
 
                         <form method="POST" action="{{ route('cart.store') }}">
                             @csrf
-                            <input name="productId" type="hidden" value="{{ $product->id }}">
+
+                            <input type="hidden" name="productId" value="{{ $product->id }}">
 
                             <button class="btn btn-primary" type="submit">
                                 <span class="material-symbols-outlined text-white">

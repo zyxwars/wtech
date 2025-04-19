@@ -6,18 +6,18 @@ use App\Models\CartItem;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Log;
 
 class CartController extends Controller
 {
     public function index(Request $request)
     {
-        // Session storage fallback for guest user
-        if (!Auth::check()) {
-            $productIds = $request->session()->get('cart.products', []);
-
+        if (Auth::check()) {
+            // Logged in user
+            $cartItems = Auth::user()->cartItems()->with('product')->get()->all();
+        } else {
+            // Session storage fallback for guest user
+            $productIds = $request->session()->get('cart.productIds', []);
             $quantities = array_count_values($productIds);
-
             $products = Product::whereIn('id', array_keys($quantities))->get()->all();
 
             $cartItems = array_map(function ($product) use ($quantities) {
@@ -26,8 +26,6 @@ class CartController extends Controller
                     'quantity' => $quantities[$product->id],
                 ];
             }, $products);
-        } else {
-            $cartItems = Auth::user()->cartItems()->with('product')->get()->all();
         }
 
         return view("cart", [
@@ -43,40 +41,45 @@ class CartController extends Controller
     }
 
     /**
-     * Add product to cart
+     * Add quantity to cart
      */
     public function store(Request $request)
     {
-        $validated = $request->validate(['productId' => 'required|exists:products,id']);
+        $validated = $request->validate([
+            'productId' => 'required|exists:products,id',
+            'quantity' => 'numeric|integer|min:1'
+        ]);
         $productId = $validated['productId'];
+        $quantity = $validated['quantity'] ?? 1;
 
-        // Session storage fallback for guest user
-        if (!Auth::check()) {
-            $products = $request->session()->get("cart.products", []);
-            array_push($products, $validated['productId']);
-            $request->session()->put('cart.products', $products);
+        if (Auth::check()) {
+            // Logged in user
+            $user = Auth::user();
+            $cartItem = $user->cartItems()->where('product_id', $productId)->first();
 
-            return redirect()->back();
+            if ($cartItem) {
+                // Item already in cart
+                $cartItem->quantity += $quantity;
+                $cartItem->save();
+            } else {
+                // Item not in cart yet
+                $cartItem = new CartItem();
+                $cartItem->user_id = $user->id;
+                $cartItem->product_id = $productId;
+                $cartItem->quantity = $quantity;
+                $cartItem->save();
+            }
+        } else {
+            // Session storage fallback for guest user
+            $productIds = $request->session()->get("cart.productIds", []);
+            $newItems = array_fill(0, $quantity, $productId);
+            $productIds = array_merge($productIds, $newItems);
+
+            $request->session()->put('cart.productIds', $productIds);
         }
 
-        $user = Auth::user();
-        $cartItem = $user->cartItems()->where('product_id', $productId)->first();
 
-        // Item already in cart, add another one
-        if ($cartItem) {
-            $cartItem->quantity += 1;
-            $cartItem->save();
-
-            return redirect()->back();
-        }
-
-        $cartItem = new CartItem();
-        $cartItem->user_id = $user->id;
-        $cartItem->product_id = $productId;
-        $cartItem->quantity = 1;
-        $cartItem->save();
-
-        return redirect()->back();
+        return redirect()->back()->withSuccess("Product added to cart!");
     }
 
     /**
@@ -87,48 +90,32 @@ class CartController extends Controller
         $validated = $request->validate(['quantity' => 'required|numeric|integer|min:0']);
         $quantity = $validated['quantity'];
 
-        // Session storage fallback for guest user
-        if (!Auth::check()) {
-            $products = $request->session()->get("cart.products", []);
-            $products = array_filter($products, fn($id) => $id != $productId);
+        if (Auth::check()) {
+            // Logged in user
+            $user = Auth::user();
+            $cartItem = $user->cartItems()->where('product_id', $productId)->first();
 
-            if ($quantity == 0) {
-                $request->session()->put('cart.products', $products);
-
+            if (!$cartItem) {
                 return redirect()->back();
             }
 
+            if ($quantity == 0) {
+                $cartItem->delete();
+            } else {
+                $cartItem->quantity = $quantity;
+                $cartItem->save();
+            }
+        } else {
+            // Session storage fallback for guest user
+            $productIds = $request->session()->get("cart.productIds", []);
+            $productIds = array_filter($productIds, fn($id) => $id != $productId);
+
             $newItems = array_fill(0, $quantity, $productId);
-            $products = array_merge($products, $newItems);
+            $productIds = array_merge($productIds, $newItems);
 
-            $request->session()->put('cart.products', $products);
-
-            return redirect()->back();
+            $request->session()->put('cart.productIds', $productIds);
         }
 
-        $user = Auth::user();
-        $cartItem = $user->cartItems()->where('product_id', $productId)->first();
-
-        // Item not in cart yet
-        if (!$cartItem) {
-            if ($quantity == 0) return redirect()->back();
-
-            $cartItem = new CartItem();
-            $cartItem->user_id = $user->id;
-            $cartItem->product_id = $productId;
-            $cartItem->quantity = $quantity;
-            $cartItem->save();
-
-            return redirect()->back();
-        }
-
-        if ($quantity == 0) {
-            $cartItem->delete();
-            return redirect()->back();
-        }
-
-        $cartItem->quantity = $quantity;
-        $cartItem->save();
 
         return redirect()->back();
     }
@@ -138,20 +125,20 @@ class CartController extends Controller
      */
     public function destroy(Request $request, string $productId)
     {
-        // Session storage fallback for guest user
-        if (!Auth::check()) {
-            $products = $request->session()->get("cart.products", []);
-            $products = array_filter($products, fn($id) => $id != $productId);
-            $request->session()->put('cart.products', array_values($products));
+        if (Auth::check()) {
+            // Logged in user
+            $user = Auth::user();
+            $cartItem = $user->cartItems()->where('product_id', $productId)->first();
 
-            return redirect()->back();
+            if ($cartItem) {
+                $cartItem->delete();
+            }
+        } else {
+            // Session storage fallback for guest user
+            $productIds = $request->session()->get("cart.productIds", []);
+            $productIds = array_filter($productIds, fn($id) => $id != $productId);
+            $request->session()->put('cart.productIds', array_values($productIds));
         }
-
-        $user = Auth::user();
-        $cartItem = $user->cartItems()->where('product_id', $productId)->first();
-
-        if ($cartItem)
-            $cartItem->delete();
 
         return redirect()->back();
     }
