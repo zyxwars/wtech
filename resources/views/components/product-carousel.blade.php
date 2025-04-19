@@ -20,11 +20,16 @@
                     <div class="flex w-full items-center justify-between">
                         <p class="font-bold">{{ number_format($product->price / 100, 2) }} €</p>
 
-                        <button class="btn btn-primary">
-                            <span class="material-symbols-outlined text-white">
-                                shopping_cart
-                            </span>
-                        </button>
+                        <form method="POST" action="{{ route('cart.store') }}">
+                            @csrf
+                            <input name="productId" type="hidden" value="{{ $product->id }}">
+
+                            <button class="btn btn-primary" type="submit">
+                                <span class="material-symbols-outlined text-white">
+                                    shopping_cart
+                                </span>
+                            </button>
+                        </form>
                     </div>
                 </div>
             </article>

@@ -26,7 +26,7 @@ return new class extends Migration
 
             $table->foreignId('delivery_method_id')->constrained();
             $table->foreignId('payment_method_id')->constrained();
-            $table->foreignId('user_id')->constrained();
+            $table->foreignId('user_id')->nullable()->constrained();
         });
     }
 

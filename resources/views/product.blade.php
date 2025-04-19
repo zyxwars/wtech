@@ -55,14 +55,19 @@
                     </ul>
 
                     <!-- product price button-->
-                    <div class="flex items-center gap-4">
-                        <button class="buy-button cursor-pointer transition-all duration-150 hover:scale-105">
+                    <form class="flex items-center gap-4" action="{{ route('cart.update', $product->id) }}"
+                        method="POST">
+                        @csrf
+                        @method('PUT')
+
+                        <button class="buy-button cursor-pointer transition-all duration-150 hover:scale-105"
+                            type="submit">
                             {{ number_format($product->price / 100, 2) }} €
                         </button>
 
-                        {{-- TODO: --}}
-                        <input type="number" value="1" class="input max-w-24 sm:h-full" />
-                    </div>
+                        <input name="quantity" type="number" value="1" min="1"
+                            class="input max-w-24 sm:h-full" />
+                    </form>
                 </section>
             </article>
 

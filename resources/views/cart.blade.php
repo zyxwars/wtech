@@ -15,27 +15,38 @@
                 </ul>
 
                 <!-- Product list -->
-                @foreach ($products as $product)
+                @foreach ($cartItems as $cartItem)
                     <article class="mb-2 flex w-full flex-wrap items-start gap-2 sm:flex-nowrap">
                         <div class="flex w-full gap-4">
                             <img class="h-[4rem] w-[4rem] flex-none object-cover object-center" src="/placeholder.png" />
 
                             <div class="sm:mr-8">
-                                <a href="{{ route('product.show', $product->id) }}" class="text-xl font-semibold">
-                                    <h3>{{ $product->title }}</h3>
+                                <a href="{{ route('product.show', $cartItem['product']->id) }}"
+                                    class="text-xl font-semibold">
+                                    <h3>{{ $cartItem['product']->title }}</h3>
                                 </a>
-                                <h4 class="text-md mb-2"> {{ $product->author->name }}</h4>
+                                <h4 class="text-md mb-2"> {{ $cartItem['product']->author->name }}</h4>
                             </div>
                         </div>
 
                         <div class="flex w-full items-start justify-between">
-                            <input type="number" value="1" class="input max-w-14" />
+                            <form method="POST" action="{{ route('cart.update', $cartItem['product']->id) }}">
+                                @method('PUT')
+                                @csrf
 
-                            <p class="text-lg font-bold">{{ number_format($product->price / 100, 2) }} €</p>
+                                <input name="quantity" min="0" type="number" value="{{ $cartItem['quantity'] }}"
+                                    onchange="this.form.submit()" class="input max-w-14" />
+                            </form>
 
-                            <button class="cursor-pointer">
-                                <span class="material-symbols-outlined !text-[14px]"> close </span>
-                            </button>
+                            <p class="text-lg font-bold">{{ number_format($cartItem['product']->price / 100, 2) }} €</p>
+
+                            <form method="POST" action="{{ route('cart.destroy', $cartItem['product']->id) }}">
+                                @method('DELETE')
+                                @csrf
+                                <button class="cursor-pointer" type="submit">
+                                    <span class="material-symbols-outlined !text-[14px]"> close </span>
+                                </button>
+                            </form>
                         </div>
                     </article>
                 @endforeach
@@ -43,7 +54,7 @@
                 <section class="flex w-full items-center justify-end gap-8">
                     <h3 class="flex gap-2 text-xl">
                         <span class="font-bold">Total:</span>
-                        {{ $total }}
+                        {{ number_format($total / 100, 2) }} €
                     </h3>
 
                     <a href="{{ route('order.create') }}" class='btn btn-primary'>
