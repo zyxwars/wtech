@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
+            $table->integer('total');
             $table->string("first_name");
             $table->string('last_name');
             $table->string('email');
@@ -27,6 +28,8 @@ return new class extends Migration
             $table->foreignId('delivery_method_id')->constrained();
             $table->foreignId('payment_method_id')->constrained();
             $table->foreignId('user_id')->nullable()->constrained();
+            // Used to allow access to order submitted view for guest users
+            $table->string('session_id');
         });
     }
 

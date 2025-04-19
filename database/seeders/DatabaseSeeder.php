@@ -4,7 +4,9 @@ namespace Database\Seeders;
 
 use App\Models\Author;
 use App\Models\Category;
+use App\Models\DeliveryMethod;
 use App\Models\Language;
+use App\Models\PaymentMethod;
 use App\Models\Product;
 use App\Models\User;
 use Illuminate\Database\Seeder;
@@ -321,6 +323,28 @@ class DatabaseSeeder extends Seeder
             'Mosh Pit Benediction'
         ];
 
+        $deliveryMethods = [
+            'Standard Post',
+            'Courier Service',
+            'Express Delivery',
+        ];
+
+        $paymentMethods = [
+            'Card Online',
+            'Upon Delivery',
+            'Bank Transfer',
+        ];
+        foreach ($deliveryMethods as $name) {
+            $deliveryMethod = new DeliveryMethod();
+            $deliveryMethod->name = $name;
+            $deliveryMethod->save();
+        }
+
+        foreach ($paymentMethods as $name) {
+            $paymentMethod = new PaymentMethod();
+            $paymentMethod->name = $name;
+            $paymentMethod->save();
+        }
 
         foreach ($languages as $name) {
             $language = new Language();

@@ -92,7 +92,8 @@
                 <option value="">All</option>
                 @foreach ($languages as $language)
                     <option value="{{ $language }}" {{ request('language') == "$language" ? 'selected' : '' }}>
-                        {{ $language->name }}</option>
+                        {{ $language->name }}
+                    </option>
                 @endforeach
             </select>
 

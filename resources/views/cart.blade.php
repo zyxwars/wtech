@@ -57,7 +57,8 @@
                         {{ number_format($total / 100, 2) }} €
                     </h3>
 
-                    <a href="{{ route('order.create') }}" class='btn btn-primary'>
+                    <a href="{{ route('order.create') }}" class='btn btn-primary'
+                        {{ count($cartItems) > 0 ? '' : 'disabled' }}>
                         Checkout
                     </a>
                 </section>

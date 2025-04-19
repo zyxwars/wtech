@@ -8,17 +8,17 @@
 
             <h1 class=" mb-2 text-2xl font-bold">Sign up</h1>
 
-            <input class="input" placeholder="Email" type="email" name="email" :value="old('email')" required
+            <input class="input" placeholder="Email" type="email" name="email" value="{{ old('email') }}" required
                 autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+            <x-input-error :messages="$errors->get('email')" />
 
             <input class="input" type="password" placeholder="Password" name="password" required
                 autocomplete="new-password" / />
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
+            <x-input-error :messages="$errors->get('password')" />
 
             <input class="input" type="password" placeholder="Password Confirmation" name="password_confirmation"
                 required autocomplete="new-password" / />
-            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
+            <x-input-error :messages="$errors->get('password_confirmation')" />
 
 
             <button class="btn btn-primary mt-2" type="submit">
