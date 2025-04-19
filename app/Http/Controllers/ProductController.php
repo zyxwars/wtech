@@ -43,10 +43,7 @@ function applyFilters(Request $request, $products)
 
 class ProductController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+    public function home()
     {
         return view(
             'home',
@@ -58,7 +55,7 @@ class ProductController extends Controller
                     'content_url' => '/',
                 ],
                 'categories' => Category::all(),
-                'featuredProducts' => [
+                'featuredRows' => [
                     // TODO: use select products
                     ['title' => 'New Arrivals', 'products' => Product::all()->take(10)],
                     ['title' => 'Best sellers', 'products' => Product::all()->take(10)],
@@ -67,8 +64,6 @@ class ProductController extends Controller
             ]
         );
     }
-
-
 
     public function category(Request $request, string $name)
     {
@@ -80,12 +75,12 @@ class ProductController extends Controller
         return view(
             'category',
             [
-                'products' => $products->paginate(15)->withQueryString(),
-                'category' => $category,
                 'breadcrumbs' => [
                     ['name' => 'Home', 'url' => route("home")],
                     ['name' => ucfirst($category->name)]
-                ]
+                ],
+                'products' => $products->paginate(15)->withQueryString(),
+                'category' => $category,
             ]
         );
     }
@@ -100,12 +95,12 @@ class ProductController extends Controller
         return view(
             'search',
             [
-                'products' => $products->paginate(15)->withQueryString(),
-                'search' => $search,
                 'breadcrumbs' => [
                     ['name' => 'Home', 'url' => route("home")],
                     ['name' => 'Search results']
                 ],
+                'products' => $products->paginate(15)->withQueryString(),
+                'search' => $search,
             ],
         );
     }
@@ -131,8 +126,19 @@ class ProductController extends Controller
      */
     public function show(string $id)
     {
-        //
-        return view('product', ['product' => Product::find($id)]);
+        $product = Product::with(['author', 'category', 'language', 'images'])->find($id);
+        return view(
+            'product',
+            [
+                'breadcrumbs' => [
+                    ['name' => 'Home', 'url' => route("home")],
+                    ['name' => $product->title]
+                ],
+                'product' => $product,
+                'featuredRow' => ['title' => 'You might also like', 'products' => Product::all()->take(10)],
+            ]
+
+        );
     }
 
     /**

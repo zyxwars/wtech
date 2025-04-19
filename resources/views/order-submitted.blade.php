@@ -1,0 +1,42 @@
+<x-layout>
+    <x-header></x-header>
+
+    <!-- Page layout -->
+    <main class="mb-12 flex min-h-screen justify-center">
+        <div class="w-full max-w-4xl px-4">
+            <!-- https://daisyui.com/components/breadcrumbs/ -->
+            <nav class="breadcrumbs pb-3 pt-4 text-sm sm:pt-4">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li>Order Submitted</li>
+                </ul>
+            </nav>
+
+            <div class="flex w-full flex-col items-center gap-4">
+                <h1 class="mb-4 text-3xl font-bold sm:mb-8">
+                    Order {{ $order->id }} Submitted
+                </h1>
+
+                {{-- TODO: --}}
+                {{-- {% include "components/product-tile-confirmation.html" %} --}}
+
+                <h3 class="flex w-full justify-between text-lg">
+                    <span class="font-bold">Delivery method:</span>
+                    Courier
+                </h3>
+
+                <h3 class="flex w-full justify-between text-lg">
+                    <span class="font-bold">Payment method:</span>
+                    Payment upon delivery
+                </h3>
+
+                <h3 class="flex w-full justify-between text-lg">
+                    <span class="font-bold">Total:</span>
+                    15,89€
+                </h3>
+            </div>
+        </div>
+    </main>
+
+    <x-footer></x-footer>
+</x-layout>
