@@ -1,5 +1,5 @@
 <nav
-    class="bg-base-100 sticky left-0 right-0 top-0 z-10 flex flex-col flex-wrap px-2 pb-4 pt-3 shadow-sm sm:pl-10 sm:pr-6">
+    class="bg-base-200 sticky left-0 right-0 top-0 z-10 flex flex-col flex-wrap px-3 pb-3 pt-2 sm:pt-3 gap-1 sm:gap-0 shadow-sm sm:pl-10 sm:pr-6">
     <div class="flex items-center justify-between">
         <div class="flex items-center">
             <!-- Logo -->
