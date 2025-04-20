@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
+use App\Http\Middleware\StripQueryParams;
 use Illuminate\Support\Facades\Route;
 
 // Auth routes
@@ -28,11 +29,11 @@ Route::prefix('auth')->group(function () {
 
 Route::get('/', [ProductController::class, 'home'])->name('home');
 
-Route::get('/category/{name}', [ProductController::class, 'category'])->name('product.category');
+Route::get('/category/{name}', [ProductController::class, 'category'])->name('product.category')->middleware(StripQueryParams::class);
 
-Route::get('/search', [ProductController::class, 'search'])->name('product.search');
+Route::get('/search', [ProductController::class, 'search'])->name('product.search')->middleware(StripQueryParams::class);
 
-Route::get('/product/{id}', [ProductController::class, 'show'])->name('product.show');
+Route::get('/product/{id}', [ProductController::class, 'show'])->name('product.show')->middleware(StripQueryParams::class);
 
 // Cart routes
 

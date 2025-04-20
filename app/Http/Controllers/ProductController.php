@@ -19,16 +19,16 @@ function applyFilters(Request $request, $products)
     }
 
     if ($request->input('price_start')) {
-        $products = $products->where('price', '>=', $request->input('price_start') / 100);
+        $products = $products->where('price', '>=', $request->input('price_start') * 100);
     }
     if ($request->input('price_end')) {
-        $products = $products->where('price', '<=', $request->input('price_end') / 100);
+        $products = $products->where('price', '<=', $request->input('price_end') * 100);
     }
-    if ($request->input('author')) {
-        $products = $products->where('author', $request->input('author'));
+    if ($request->input('authorId')) {
+        $products = $products->where('author_id', $request->input('authorId'));
     }
-    if ($request->input('language')) {
-        $products = $products->where('language', $request->input('language'));
+    if ($request->input('languageId')) {
+        $products = $products->where('language_id', $request->input('languageId'));
     }
     if ($request->input('release_year_start')) {
         $products = $products->where('release_year', '>=', $request->input('release_year_start'));
@@ -45,8 +45,6 @@ class ProductController extends Controller
 {
     public function home()
     {
-
-
         return view(
             'home',
             [

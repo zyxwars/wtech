@@ -12,6 +12,15 @@
                 {{-- Controls --}}
                 <!-- https://daisyui.com/components/select/ -->
                 <form action method="GET" class="mb-4 flex w-full justify-end gap-2">
+                    <input type="hidden" name="search" value="{{ request('search') }}">
+                    <input type="hidden" name="order" value="{{ request('order') }}">
+                    <input type="hidden" name="price_start" value="{{ request('price_start') }}">
+                    <input type="hidden" name="price_end" value="{{ request('price_end') }}">
+                    <input type="hidden" name="authorId" value="{{ request('authorId') }}">
+                    <input type="hidden" name="languageId" value="{{ request('languageId') }}">
+                    <input type="hidden" name="release_year_start" value="{{ request('release_year_start') }}">
+                    <input type="hidden" name="release_year_end" value="{{ request('release_year_end') }}">
+
                     <select class="select select-primary max-w-42" onchange="this.form.submit()" name="order">
                         <option value="default">Recommended</option>
                         <option value="price_asc" {{ request('order') == 'price_asc' ? 'selected' : '' }}>Price
@@ -70,6 +79,9 @@
     <form action method="GET" class="drawer-side z-20">
         <label for="filter-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
 
+        <input type="hidden" name="search" value="{{ request('search') }}">
+        <input type="hidden" name="order" value="{{ request('order') }}">
+
         <div class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
             <h2 class="text-lg font-bold">Price</h2>
             <div class="flex gap-2">
@@ -80,19 +92,20 @@
             </div>
 
             <h2 class="mt-4 text-lg font-bold">Author</h2>
-            <select name="author" class="select">
+            <select name="authorId" class="select">
                 <option value="">All</option>
                 @foreach ($authors as $author)
-                    <option value="{{ $author }}" {{ request('author') == "$author" ? 'selected' : '' }}>
+                    <option value="{{ $author->id }}" {{ request('authorId') == "$author->id" ? 'selected' : '' }}>
                         {{ $author->name }}</option>
                 @endforeach
             </select>
 
             <h2 class="mt-4 text-lg font-bold">Language</h2>
-            <select name="language" class="select">
+            <select name="languageId" class="select">
                 <option value="">All</option>
                 @foreach ($languages as $language)
-                    <option value="{{ $language }}" {{ request('language') == "$language" ? 'selected' : '' }}>
+                    <option value="{{ $language->id }}"
+                        {{ request('languageId') == "$language->id" ? 'selected' : '' }}>
                         {{ $language->name }}
                     </option>
                 @endforeach
