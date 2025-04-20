@@ -18,7 +18,8 @@
                 @foreach ($cartItems as $cartItem)
                     <article class="mb-2 flex w-full flex-wrap items-start gap-2 sm:flex-nowrap">
                         <div class="flex w-full gap-4">
-                            <img class="h-[4rem] w-[4rem] flex-none object-cover object-center" src="/placeholder.png" />
+                            <img class="h-[4rem] w-[4rem] flex-none object-cover object-center"
+                                src="{{ $cartItem['product']->primaryImage ? $cartItem['product']->primaryImage->uri : '/placeholder.png' }}" />
 
                             <div class="sm:mr-8">
                                 <a href="{{ route('product.show', $cartItem['product']->id) }}"

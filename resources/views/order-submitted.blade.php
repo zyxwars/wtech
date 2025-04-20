@@ -21,7 +21,8 @@
                 @foreach ($order->orderItems as $orderItem)
                     <article class="mb-2 flex w-full flex-wrap items-start gap-2 sm:flex-nowrap">
                         <div class="flex w-full gap-4">
-                            <img class="h-[4rem] w-[4rem] flex-none object-cover object-center" src="/placeholder.png" />
+                            <img class="h-[4rem] w-[4rem] flex-none object-cover object-center"
+                                src="{{ $orderItem->product->primaryImage ? $orderItem->product->primaryImage->uri : '/placeholder.png' }}" />
 
                             <div class="sm:mr-8">
                                 <a href="{{ route('product.show', $orderItem->product->id) }}"

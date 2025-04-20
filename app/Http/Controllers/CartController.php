@@ -13,7 +13,7 @@ class CartController extends Controller
     {
         if (Auth::check()) {
             // Logged in user
-            $cartItems = Auth::user()->cartItems()->with('product')->get()->all();
+            $cartItems = Auth::user()->cartItems()->with(['product.author', 'product.primaryImage'])->get()->all();
         } else {
             // Session storage fallback for guest user
             $productIds = $request->session()->get('cart.productIds', []);

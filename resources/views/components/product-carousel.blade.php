@@ -8,7 +8,8 @@
         @foreach ($products as $product)
             <article class="no-scrollbar w-[15rem] flex-none snap-center snap-always sm:w-[18rem]">
                 <a href="{{ route('product.show', $product->id) }}">
-                    <img class="aspect-square w-full object-cover object-center" src="/placeholder.png" />
+                    <img class="aspect-square w-full object-cover object-center"
+                        src="{{ $product->primaryImage ? $product->primaryImage->uri : '/placeholder.png' }}" />
                 </a>
 
                 <div class="p-2">

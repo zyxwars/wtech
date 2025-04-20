@@ -124,7 +124,7 @@ class OrderController extends Controller
     public function show(string $id)
     {
 
-        $order = Order::where('id', $id)->with(['orderItems.product.author', 'deliveryMethod', 'paymentMethod'])->first();
+        $order = Order::where('id', $id)->with(['orderItems.product.author', 'orderItems.product.primaryImage', 'deliveryMethod', 'paymentMethod'])->first();
 
         if (!$order) {
             abort(404);
