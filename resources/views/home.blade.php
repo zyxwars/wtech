@@ -27,7 +27,7 @@
                     <a href="{{ route('product.category', $category->name) }}"
                         class="bg-base-200 flex cursor-pointer items-center rounded-full shadow-sm transition-all duration-150 hover:scale-105">
                         <img class="h-12 w-12 flex-none rounded-full object-cover object-center shadow-sm md:h-16 md:w-16"
-                            src="/placeholder.png" />
+                            src="{{ $category->image_uri }}" />
                         <div class="flex w-full justify-center pr-6 md:pr-8">
                             <h3 class="text-md font-medium sm:text-lg">{{ $category->name }}</h3>
                         </div>

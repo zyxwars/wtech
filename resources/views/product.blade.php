@@ -13,15 +13,14 @@
                 <div>
                     <!-- main product image -->
                     <img class="rs-gallery aspect-square w-full cursor-pointer object-cover object-center shadow-sm sm:w-[40rem]"
-                        src="/placeholder.png" />
+                        src="{{ $product->primaryImage ? $product->primaryImage->uri : '/placeholder.png' }}" />
 
                     <div class="flex flex-wrap gap-4">
-                        <!-- secondary image -->
-                        <img class="aspect-square w-24 rs-gallery mt-4 flex-none cursor-pointer object-cover shadow-sm"
-                            src="/placeholder.png" />
-
-                        <img class="aspect-square w-24 rs-gallery mt-4 flex-none cursor-pointer object-cover shadow-sm"
-                            src="/placeholder.png" />
+                        @foreach ($product->secondaryImages as $secondaryImage)
+                            <!-- secondary image -->
+                            <img class="aspect-square w-24 rs-gallery mt-4 flex-none cursor-pointer object-cover shadow-sm"
+                                src="{{ $secondaryImage->uri }}" />
+                        @endforeach
                     </div>
                 </div>
 

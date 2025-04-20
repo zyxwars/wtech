@@ -8,6 +8,7 @@ use App\Models\DeliveryMethod;
 use App\Models\Language;
 use App\Models\PaymentMethod;
 use App\Models\Product;
+use App\Models\ProductImage;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -31,15 +32,15 @@ class DatabaseSeeder extends Seeder
         ];
 
         $categories = [
-            'Pop',
-            'Rock',
-            'Blues',
-            'Country',
-            'Metal',
-            'Indie',
-            'Hip-Hop',
-            'Classical',
-            'Punk'
+            ['name' => 'Pop', 'imageUri' => 'category-images/pop.png'],
+            ['name' => 'Rock', 'imageUri' => 'category-images/rock.png'],
+            ['name' => 'Blues', 'imageUri' => 'category-images/blues.png'],
+            ['name' => 'Country', 'imageUri' => 'category-images/country.png'],
+            ['name' => 'Metal', 'imageUri' => 'category-images/metal.png'],
+            ['name' => 'Indie', 'imageUri' => 'category-images/indie.png'],
+            ['name' => 'Hip-Hop', 'imageUri' => 'category-images/hip-hop.png'],
+            ['name' => 'Classical', 'imageUri' => 'category-images/classical.png'],
+            ['name' => 'Punk', 'imageUri' => 'category-images/punk.png'],
         ];
 
         // ChatGPT generated albums to seed the database with
@@ -334,6 +335,7 @@ class DatabaseSeeder extends Seeder
             'Upon Delivery',
             'Bank Transfer',
         ];
+
         foreach ($deliveryMethods as $name) {
             $deliveryMethod = new DeliveryMethod();
             $deliveryMethod->name = $name;
@@ -352,9 +354,10 @@ class DatabaseSeeder extends Seeder
             $language->save();
         }
 
-        foreach ($categories as $name) {
+        foreach ($categories as $categoryData) {
             $category = new Category();
-            $category->name = $name;
+            $category->name = $categoryData['name'];
+            $category->image_uri = $categoryData['imageUri'];
             $category->description = fake()->realText(300);
             $category->save();
         }
@@ -379,6 +382,18 @@ class DatabaseSeeder extends Seeder
             $product->author()->associate(array_rand($authors) + 1);
 
             $product->save();
+
+            $primaryImage = new ProductImage();
+            $primaryImage->uri = "/storage/product-images/default.png";
+            $primaryImage->is_primary = true;
+            $primaryImage->product_id = $product->id;
+            $primaryImage->save();
+
+            $secondaryImage1 = new ProductImage();
+            $secondaryImage1->uri = "/storage/product-images/default-back.png";
+            $secondaryImage1->is_primary = false;
+            $secondaryImage1->product_id = $product->id;
+            $secondaryImage1->save();
         }
     }
 }

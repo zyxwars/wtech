@@ -45,21 +45,23 @@ class ProductController extends Controller
 {
     public function home()
     {
+
+
         return view(
             'home',
             [
                 'banner' => [
                     'text' => 'New album just out!',
-                    'image_url' => "/placeholder.png",
+                    'image_url' => "/banner.png",
                     // TODO: route to product
-                    'content_url' => '/',
+                    'content_url' => route('product.show', 1),
                 ],
                 'categories' => Category::all(),
                 'featuredRows' => [
                     // TODO: use select products
-                    ['title' => 'New Arrivals', 'products' => Product::all()->take(10)],
-                    ['title' => 'Best sellers', 'products' => Product::all()->take(10)],
-                    ['title' => 'Try some indie', 'products' => Product::all()->take(10)]
+                    ['title' => 'New Arrivals', 'products' => Product::with(['author', 'category', 'language', 'primaryImage'])->take(10)->get()],
+                    ['title' => 'Best sellers', 'products' => Product::with(['author', 'category', 'language', 'primaryImage'])->take(10)->get()],
+                    ['title' => 'Try some indie', 'products' => Product::with(['author', 'category', 'language', 'primaryImage'])->take(10)->get()]
                 ]
             ]
         );
@@ -68,7 +70,7 @@ class ProductController extends Controller
     public function category(Request $request, string $name)
     {
         $category = Category::where('name', $name)->firstOrFail();
-        $products = $category->products();
+        $products = $category->products()->with(['author', 'category', 'language', 'primaryImage']);
 
         $products = applyFilters($request, $products);
 
@@ -88,7 +90,7 @@ class ProductController extends Controller
     public function search(Request $request)
     {
         $search = $request->input('search');
-        $products = Product::where('title', 'like', "%{$search}%");
+        $products = Product::where('title', 'like', "%{$search}%")->with(['author', 'category', 'language', 'primaryImage']);
 
         $products = applyFilters($request, $products);
 
@@ -126,7 +128,7 @@ class ProductController extends Controller
      */
     public function show(string $id)
     {
-        $product = Product::with(['author', 'category', 'language', 'images'])->find($id);
+        $product = Product::with(['author', 'category', 'language', 'primaryImage', 'secondaryImages'])->find($id);
         return view(
             'product',
             [
