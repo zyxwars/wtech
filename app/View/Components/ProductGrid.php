@@ -20,7 +20,6 @@ class ProductGrid extends Component
         public LengthAwarePaginator $products
     ) {
         //
-        Log::info("product grid");
     }
 
     /**

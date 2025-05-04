@@ -1,4 +1,5 @@
 import "./bootstrap";
 
 import "./carousel";
-import "./detail-gallery";
+import "./gallery";
+import "./toast";

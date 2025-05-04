@@ -19,16 +19,16 @@ function applyFilters(Request $request, $products)
     }
 
     if ($request->input('price_start')) {
-        $products = $products->where('price', '>=', $request->input('price_start') / 100);
+        $products = $products->where('price', '>=', $request->input('price_start') * 100);
     }
     if ($request->input('price_end')) {
-        $products = $products->where('price', '<=', $request->input('price_end') / 100);
+        $products = $products->where('price', '<=', $request->input('price_end') * 100);
     }
-    if ($request->input('author')) {
-        $products = $products->where('author', $request->input('author'));
+    if ($request->input('authorId')) {
+        $products = $products->where('author_id', $request->input('authorId'));
     }
-    if ($request->input('language')) {
-        $products = $products->where('language', $request->input('language'));
+    if ($request->input('languageId')) {
+        $products = $products->where('language_id', $request->input('languageId'));
     }
     if ($request->input('release_year_start')) {
         $products = $products->where('release_year', '>=', $request->input('release_year_start'));
@@ -43,49 +43,44 @@ function applyFilters(Request $request, $products)
 
 class ProductController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+    public function home()
     {
         return view(
             'home',
             [
                 'banner' => [
                     'text' => 'New album just out!',
-                    'image_url' => "/placeholder.png",
+                    'image_url' => "/banner.png",
                     // TODO: route to product
-                    'content_url' => '/',
+                    'content_url' => route('product.show', 1),
                 ],
                 'categories' => Category::all(),
-                'featuredProducts' => [
+                'featuredRows' => [
                     // TODO: use select products
-                    ['title' => 'New Arrivals', 'products' => Product::all()->take(10)],
-                    ['title' => 'Best sellers', 'products' => Product::all()->take(10)],
-                    ['title' => 'Try some indie', 'products' => Product::all()->take(10)]
+                    ['title' => 'New Arrivals', 'products' => Product::with(['author', 'category', 'language', 'primaryImage'])->take(10)->get()],
+                    ['title' => 'Best sellers', 'products' => Product::with(['author', 'category', 'language', 'primaryImage'])->take(10)->get()],
+                    ['title' => 'Try some indie', 'products' => Product::with(['author', 'category', 'language', 'primaryImage'])->take(10)->get()]
                 ]
             ]
         );
     }
 
-
-
     public function category(Request $request, string $name)
     {
         $category = Category::where('name', $name)->firstOrFail();
-        $products = $category->products();
+        $products = $category->products()->with(['author', 'category', 'language', 'primaryImage']);
 
         $products = applyFilters($request, $products);
 
         return view(
             'category',
             [
-                'products' => $products->paginate(15)->withQueryString(),
-                'category' => $category,
                 'breadcrumbs' => [
                     ['name' => 'Home', 'url' => route("home")],
                     ['name' => ucfirst($category->name)]
-                ]
+                ],
+                'products' => $products->paginate(15)->withQueryString(),
+                'category' => $category,
             ]
         );
     }
@@ -93,19 +88,19 @@ class ProductController extends Controller
     public function search(Request $request)
     {
         $search = $request->input('search');
-        $products = Product::where('title', 'like', "%{$search}%");
+        $products = Product::where('title', 'like', "%{$search}%")->with(['author', 'category', 'language', 'primaryImage']);
 
         $products = applyFilters($request, $products);
 
         return view(
             'search',
             [
-                'products' => $products->paginate(15)->withQueryString(),
-                'search' => $search,
                 'breadcrumbs' => [
                     ['name' => 'Home', 'url' => route("home")],
                     ['name' => 'Search results']
                 ],
+                'products' => $products->paginate(15)->withQueryString(),
+                'search' => $search,
             ],
         );
     }
@@ -131,8 +126,19 @@ class ProductController extends Controller
      */
     public function show(string $id)
     {
-        //
-        return view('product', ['product' => Product::find($id)]);
+        $product = Product::with(['author', 'category', 'language', 'primaryImage', 'secondaryImages'])->find($id);
+        return view(
+            'product',
+            [
+                'breadcrumbs' => [
+                    ['name' => 'Home', 'url' => route("home")],
+                    ['name' => $product->title]
+                ],
+                'product' => $product,
+                'featuredRow' => ['title' => 'You might also like', 'products' => Product::all()->take(10)],
+            ]
+
+        );
     }
 
     /**

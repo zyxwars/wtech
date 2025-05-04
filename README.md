@@ -1,13 +1,15 @@
 Record store
-- Author
-- Genre
-- Language
-- Cover color
+
+-   Author
+-   Genre
+-   Language
+-   Cover color
 
 ## Todo
 
 ### Issues
-- https://github.com/zyxwars/wtech/issues
+
+-   https://github.com/zyxwars/wtech/issues
 
 ### Requirements
 

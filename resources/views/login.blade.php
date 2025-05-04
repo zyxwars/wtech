@@ -9,15 +9,14 @@
 
             <h1 class="mb-2 text-2xl font-bold">Sign in</h1>
 
-            <input placeholder="Email" class="input" type="email" name="email" :value="old('email')" required
+            <input placeholder="Email" class="input" type="email" name="email" value="{{ old('email') }}" required
                 autofocus autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+            <x-input-error :messages="$errors->get('email')" />
 
             <input class='input' type="password" name='password' placeholder="Password" required
                 autocomplete="current-password" />
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
+            <x-input-error :messages="$errors->get('password')" />
 
-            <!-- TODO: change styling -->
             <div class="block mt-4">
                 <label for="remember_me" class="inline-flex items-center">
                     <input id="remember_me" type="checkbox"

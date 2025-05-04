@@ -1,5 +1,3 @@
-// Reusable carousel
-
 const carouselEls = document.querySelectorAll(".rs-carousel-scroll");
 
 function updateButtonVisibility(carouselEl, rightButtonEl, leftbuttonEl) {
