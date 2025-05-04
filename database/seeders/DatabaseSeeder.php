@@ -383,14 +383,16 @@ class DatabaseSeeder extends Seeder
 
             $product->save();
 
+            $img_number = random_int(0, 19);
+
             $primaryImage = new ProductImage();
-            $primaryImage->uri = "/storage/product-images/default.png";
+            $primaryImage->uri = "/storage/product-images/" . $img_number . ".png";
             $primaryImage->is_primary = true;
             $primaryImage->product_id = $product->id;
             $primaryImage->save();
 
             $secondaryImage1 = new ProductImage();
-            $secondaryImage1->uri = "/storage/product-images/default-back.png";
+            $secondaryImage1->uri = "/storage/product-images/" . $img_number . "-cover.png";
             $secondaryImage1->is_primary = false;
             $secondaryImage1->product_id = $product->id;
             $secondaryImage1->save();
