@@ -7,6 +7,7 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Middleware\StripQueryParams;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\DashboardController;
 
 // Auth routes
 
@@ -52,3 +53,12 @@ Route::get('/delivery-and-payment', [OrderController::class, 'create'])->name('o
 Route::post('/delivery-and-payment', [OrderController::class, 'store'])->name('order.store');
 
 Route::get('/order/{id}', [OrderController::class, 'show'])->name('order.show');
+
+// Admin routes
+Route::middleware(['auth','is_admin'])
+    ->prefix('admin')
+    ->name('admin.')
+    ->group(function () {
+        Route::get('/', [DashboardController::class, 'index'])
+            ->name('dashboard');
+    });
