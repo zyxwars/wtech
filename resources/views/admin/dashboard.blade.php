@@ -33,7 +33,7 @@
             <td class="flex items-center gap-3">
               <img src="{{ $product->primaryImage ? $product->primaryImage->uri : '/placeholder.png' }}"
                    class="mask mask-squircle h-12 w-12" alt="">
-              <span class="font-bold">{{ $product->name }}</span>
+              <span class="font-bold">{{ $product->title }}</span>
             </td>
             <td>{{ $product->category->name }}</td>
             <td>{{ $product->author->name }}</td>
