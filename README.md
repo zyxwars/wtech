@@ -10,6 +10,23 @@
 
 ### [Credits](./docs/DOCS.md#credits)
 
+### Building docs
+
+```sh
+# Disable implicit figures for desired image positioning
+cd docs && pandoc -f markdown-implicit_figures -o Dokumentácia.pdf DOCS.md
+```
+
+### Regenerating images
+
+> [!NOTE]
+> Make sure to update credits in docs after adding new images
+
+```sh
+# Outputs vinyl and cover images to ./product-images
+python3 img_gen.py
+```
+
 ## Todo
 
 ### Issues

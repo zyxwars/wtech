@@ -102,22 +102,19 @@ Pre neprihláseného zákazníka sa obsah košíka ukladá do session. Pre prihl
 
 ### Detail produktu
 
-<img src="./detail.png" alt="detail" width="100%"/>
-<img src="./detail-image.png" alt="detail image" width="50%"/>
+![Detail produktu](./detail.png)
 
 ### Prihlásenie
 
-<img src="./login.png" alt="login" width="100%"/>
-
-<img src="./login-failed.png" alt="login failed" width="50%"/>
+![Prihlásenie](./login.png)
 
 ### Homepage
 
-<img src="./home.png" alt="home" width="100%"/>
+![Homepage](./home.png)
 
 ### Nákupný košík s vloženým produktom
 
-<img src="./cart.png" alt="cart" width="100%"/>
+![Nákupný košík s vloženým produktom](./cart.png)
 
 ## Návod na spustenie (development mode)
 
@@ -204,49 +201,49 @@ TODO: update product image sources
 
 ### Product images
 
--   https://images.unsplash.com/photo-1547157233-48f320d15108?q=80&w=3924&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
--   https://images.unsplash.com/photo-1723203331194-47d46a577c7d?q=80&w=3024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
--   https://images.unsplash.com/photo-1734779205618-30ee0220f56f?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDJ8Ym84alFLVGFFMFl8fGVufDB8fHx8fA%3D%3D
--   https://images.unsplash.com/photo-1743191771058-d06e793dda2d?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDN8Ym84alFLVGFFMFl8fGVufDB8fHx8fA%3D%3D
--   https://images.unsplash.com/photo-1744058588832-5a0cf779b215?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDh8Ym84alFLVGFFMFl8fGVufDB8fHx8fA%3D%3D
--   https://images.unsplash.com/photo-1743014379226-a3189c8f4a84?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDZ8Ym84alFLVGFFMFl8fGVufDB8fHx8fA%3D%3D
--   https://images.unsplash.com/photo-1744132116976-0a68511b70f6?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDIyfGJvOGpRS1RhRTBZfHxlbnwwfHx8fHw%3D
--   https://images.unsplash.com/photo-1732692699579-592f37bf4cdf?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDIzfGJvOGpRS1RhRTBZfHxlbnwwfHx8fHw%3D
--   https://images.unsplash.com/photo-1744023018283-b1bbb84dd0df?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDI3fGJvOGpRS1RhRTBZfHxlbnwwfHx8fHw%3D
--   https://images.unsplash.com/photo-1743710426934-89887ca897d8?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDMzfGJvOGpRS1RhRTBZfHxlbnwwfHx8fHw%3D
--   https://images.unsplash.com/photo-1742599968125-a790a680a605?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDQ4fGJvOGpRS1RhRTBZfHxlbnwwfHx8fHw%3D
--   https://images.unsplash.com/photo-1744726666136-7b923572a561?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDJ8cVBZc0R6dkpPWWN8fGVufDB8fHx8fA%3D%3D
--   https://images.unsplash.com/photo-1744035522988-08bf64003759?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDd8cVBZc0R6dkpPWWN8fGVufDB8fHx8fA%3D%3D
--   https://images.unsplash.com/photo-1744219792921-a74da6141822?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDV8cVBZc0R6dkpPWWN8fGVufDB8fHx8fA%3D%3D
--   https://images.unsplash.com/photo-1741888181508-851b1283ed8e?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE2fHFQWXNEenZKT1ljfHxlbnwwfHx8fHw%3D
--   https://images.unsplash.com/photo-1736561609156-8e503d619ba9?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE4fHFQWXNEenZKT1ljfHxlbnwwfHx8fHw%3D
--   https://images.unsplash.com/photo-1678811116814-26372fcfef1b?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDIyfHFQWXNEenZKT1ljfHxlbnwwfHx8fHw%3D
--   https://images.unsplash.com/photo-1719293846622-4101792a255d?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDI2fHFQWXNEenZKT1ljfHxlbnwwfHx8fHw%3D
--   https://images.unsplash.com/photo-1633668803757-40926829820b?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDM5fHFQWXNEenZKT1ljfHxlbnwwfHx8fHw%3D
--   https://images.unsplash.com/photo-1743449661678-c22cd73b338a?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDM3fHFQWXNEenZKT1ljfHxlbnwwfHx8fHw%3D
--   https://images.unsplash.com/photo-1500964757637-c85e8a162699?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y292ZXJ8ZW58MHx8MHx8fDI%3D
--   https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y292ZXJ8ZW58MHx8MHx8fDI%3D
--   https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y292ZXJ8ZW58MHx8MHx8fDI%3D
--   https://images.unsplash.com/photo-1438762398043-ac196c2fa1e7?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y292ZXJ8ZW58MHx8MHx8fDI%3D
--   https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGNvdmVyfGVufDB8fDB8fHwy
--   https://images.unsplash.com/photo-1487088678257-3a541e6e3922?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNvdmVyfGVufDB8fDB8fHwy
--   https://images.unsplash.com/photo-1558376939-7d6cb3025d5c?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNvdmVyfGVufDB8fDB8fHwy
--   https://images.unsplash.com/photo-1509978778156-518eea30166b?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fGNvdmVyfGVufDB8fDB8fHwy
--   https://images.unsplash.com/photo-1454817481404-7e84c1b73b4a?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fGNvdmVyfGVufDB8fDB8fHwy
--   https://images.unsplash.com/photo-1563089145-599997674d42?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGNvdmVyfGVufDB8fDB8fHwy
--   https://images.unsplash.com/photo-1470790376778-a9fbc86d70e2?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fGNvdmVyfGVufDB8fDB8fHwy
--   https://images.unsplash.com/photo-1523867574998-1a336b6ded04?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fGNvdmVyfGVufDB8fDB8fHwy
--   https://images.unsplash.com/photo-1520262494112-9fe481d36ec3?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fGNvdmVyfGVufDB8fDB8fHwy
--   https://images.unsplash.com/photo-1505274664176-44ccaa7969a8?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGNvdmVyfGVufDB8fDB8fHwy
--   https://images.unsplash.com/photo-1590310051055-1079d8f48c89?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fGNvdmVyfGVufDB8fDB8fHwy
--   https://images.unsplash.com/photo-1489549132488-d00b7eee80f1?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fGNvdmVyfGVufDB8fDB8fHwy
--   https://images.unsplash.com/photo-1516900448138-898720b936c7?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzZ8fGNvdmVyfGVufDB8fDB8fHwy
--   https://images.unsplash.com/photo-1494830723470-a8f5b3918a99?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzd8fGNvdmVyfGVufDB8fDB8fHwy
--   https://images.unsplash.com/photo-1538113300105-e51e4560b4aa?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDF8fGNvdmVyfGVufDB8fDB8fHwy
--   https://images.unsplash.com/photo-1615578731118-37d932b83555?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTF8fGNvdmVyfGVufDB8fDB8fHwy
--   https://images.unsplash.com/photo-1525226456211-24affe06d7dc?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDV8fGNvdmVyfGVufDB8fDB8fHwy
--   https://images.unsplash.com/photo-1610189808557-9051febb2cb8?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Njl8fGNvdmVyfGVufDB8fDB8fHwy
--   https://images.unsplash.com/photo-1535157412991-2ef801c1748b?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Njd8fGNvdmVyfGVufDB8fDB8fHwy
--   https://images.unsplash.com/photo-1663042092427-fde6ca201ed0?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODB8fGNvdmVyfGVufDB8fDB8fHwy
--   https://images.unsplash.com/photo-1589689342466-81889bcd7e67?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODF8fGNvdmVyfGVufDB8fDB8fHwy
--   https://images.unsplash.com/photo-1654647382270-83a08c49e75b?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTV8fGNvdmVyfGVufDB8fDB8fHwy
+-   0.png, 0-cover.png https://images.unsplash.com/photo-1547157233-48f320d15108?w=600
+-   1.png, 1-cover.png https://images.unsplash.com/photo-1723203331194-47d46a577c7d?w=600
+-   2.png, 2-cover.png https://images.unsplash.com/photo-1734779205618-30ee0220f56f?w=600
+-   3.png, 3-cover.png https://images.unsplash.com/photo-1743191771058-d06e793dda2d?w=600
+-   4.png, 4-cover.png https://images.unsplash.com/photo-1744058588832-5a0cf779b215?w=600
+-   5.png, 5-cover.png https://images.unsplash.com/photo-1743014379226-a3189c8f4a84?w=600
+-   6.png, 6-cover.png https://images.unsplash.com/photo-1744132116976-0a68511b70f6?w=600
+-   7.png, 7-cover.png https://images.unsplash.com/photo-1732692699579-592f37bf4cdf?w=600
+-   8.png, 8-cover.png https://images.unsplash.com/photo-1744023018283-b1bbb84dd0df?w=600
+-   9.png, 9-cover.png https://images.unsplash.com/photo-1743710426934-89887ca897d8?w=600
+-   10.png, 10-cover.png https://images.unsplash.com/photo-1742599968125-a790a680a605?w=600
+-   11.png, 11-cover.png https://images.unsplash.com/photo-1744726666136-7b923572a561?w=600
+-   12.png, 12-cover.png https://images.unsplash.com/photo-1744035522988-08bf64003759?w=600
+-   13.png, 13-cover.png https://images.unsplash.com/photo-1744219792921-a74da6141822?w=600
+-   14.png, 14-cover.png https://images.unsplash.com/photo-1741888181508-851b1283ed8e?w=600
+-   15.png, 15-cover.png https://images.unsplash.com/photo-1736561609156-8e503d619ba9?w=600
+-   16.png, 16-cover.png https://images.unsplash.com/photo-1678811116814-26372fcfef1b?w=600
+-   17.png, 17-cover.png https://images.unsplash.com/photo-1719293846622-4101792a255d?w=600
+-   18.png, 18-cover.png https://images.unsplash.com/photo-1633668803757-40926829820b?w=600
+-   19.png, 19-cover.png https://images.unsplash.com/photo-1743449661678-c22cd73b338a?w=600
+-   20.png, 20-cover.png https://images.unsplash.com/photo-1500964757637-c85e8a162699?w=600
+-   21.png, 21-cover.png https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=600
+-   22.png, 22-cover.png https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=600
+-   23.png, 23-cover.png https://images.unsplash.com/photo-1438762398043-ac196c2fa1e7?w=600
+-   24.png, 24-cover.png https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?w=600
+-   25.png, 25-cover.png https://images.unsplash.com/photo-1487088678257-3a541e6e3922?w=600
+-   26.png, 26-cover.png https://images.unsplash.com/photo-1558376939-7d6cb3025d5c?w=600
+-   27.png, 27-cover.png https://images.unsplash.com/photo-1509978778156-518eea30166b?w=600
+-   28.png, 28-cover.png https://images.unsplash.com/photo-1454817481404-7e84c1b73b4a?w=600
+-   29.png, 29-cover.png https://images.unsplash.com/photo-1563089145-599997674d42?w=600
+-   30.png, 30-cover.png https://images.unsplash.com/photo-1470790376778-a9fbc86d70e2?w=600
+-   31.png, 31-cover.png https://images.unsplash.com/photo-1523867574998-1a336b6ded04?w=600
+-   32.png, 32-cover.png https://images.unsplash.com/photo-1520262494112-9fe481d36ec3?w=600
+-   33.png, 33-cover.png https://images.unsplash.com/photo-1505274664176-44ccaa7969a8?w=600
+-   34.png, 34-cover.png https://images.unsplash.com/photo-1590310051055-1079d8f48c89?w=600
+-   35.png, 35-cover.png https://images.unsplash.com/photo-1489549132488-d00b7eee80f1?w=600
+-   36.png, 36-cover.png https://images.unsplash.com/photo-1516900448138-898720b936c7?w=600
+-   37.png, 37-cover.png https://images.unsplash.com/photo-1494830723470-a8f5b3918a99?w=600
+-   38.png, 38-cover.png https://images.unsplash.com/photo-1538113300105-e51e4560b4aa?w=600
+-   39.png, 39-cover.png https://images.unsplash.com/photo-1615578731118-37d932b83555?w=600
+-   40.png, 40-cover.png https://images.unsplash.com/photo-1525226456211-24affe06d7dc?w=600
+-   41.png, 41-cover.png https://images.unsplash.com/photo-1610189808557-9051febb2cb8?w=600
+-   42.png, 42-cover.png https://images.unsplash.com/photo-1535157412991-2ef801c1748b?w=600
+-   43.png, 43-cover.png https://images.unsplash.com/photo-1663042092427-fde6ca201ed0?w=600
+-   44.png, 44-cover.png https://images.unsplash.com/photo-1589689342466-81889bcd7e67?w=600
+-   45.png, 45-cover.png https://images.unsplash.com/photo-1654647382270-83a08c49e75b?w=600
