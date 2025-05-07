@@ -55,10 +55,4 @@ Route::post('/delivery-and-payment', [OrderController::class, 'store'])->name('o
 Route::get('/order/{id}', [OrderController::class, 'show'])->name('order.show');
 
 // Admin routes
-Route::middleware(['auth','is_admin'])
-    ->prefix('admin')
-    ->name('admin.')
-    ->group(function () {
-        Route::get('/', [DashboardController::class, 'index'])
-            ->name('dashboard');
-    });
+Route::get('/admin', [DashboardController::class, 'index'])->name('admin.dashboard');
