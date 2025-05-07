@@ -52,6 +52,7 @@
             <input
                 type="number"
                 class="input w-full"
+                min="0"
                 placeholder="{{ $product->release_year }}"
             />
         </fieldset>
@@ -61,6 +62,7 @@
             <input
                 type="number"
                 class="input w-full"
+                min="0"
                 placeholder="{{ $product->price }}"
             />
         </fieldset>
@@ -71,12 +73,12 @@
         <div class="relative w-full">
             <img
                 class="h-full w-full cursor-pointer object-cover shadow-sm"
-                src="./assets/album-3-front.jpg"
-                alt="Secondary image 1"
+                src="{{ $product->primaryImage ? $product->primaryImage->uri : '/placeholder.png' }}"
+                alt="Main image"
             />
             <button
                 class="absolute right-2 top-2 flex h-7 w-7 items-center justify-center rounded-full bg-gray-700 text-white hover:bg-gray-800"
-                aria-label="Remove secondary image 1"
+                aria-label="Remove main image"
             >
                 X
             </button>
@@ -84,33 +86,21 @@
 
         <!-- Secondary images in a flex container -->
         <div class="mb-4 mt-4 flex gap-4">
-            <div class="w-30 h-30 relative">
-                <img
-                    class="w-full cursor-pointer object-cover shadow-sm"
-                    src="./assets/album-3-front.jpg"
-                    alt="Secondary image 1"
-                />
-                <button
-                    class="absolute right-2 top-2 flex h-7 w-7 items-center justify-center rounded-full bg-gray-700 text-white hover:bg-gray-800"
-                    aria-label="Remove secondary image 1"
-                >
-                    X
-                </button>
-            </div>
-
-            <div class="w-30 h-30 relative">
-                <img
-                    class="w-full cursor-pointer object-cover shadow-sm"
-                    src="./assets/album-3-front.jpg"
-                    alt="Secondary image 1"
-                />
-                <button
-                    class="absolute right-2 top-2 flex h-7 w-7 items-center justify-center rounded-full bg-gray-700 text-white hover:bg-gray-800"
-                    aria-label="Remove secondary image 1"
-                >
-                    X
-                </button>
-            </div>
+            @foreach ($product->secondaryImages as $secondaryImage)
+                <div class="w-30 h-30 relative">
+                    <img
+                        class="w-full cursor-pointer object-cover shadow-sm"
+                        src="{{ $secondaryImage->uri }}"
+                        alt="Secondary image 1"
+                    />
+                    <button
+                        class="absolute right-2 top-2 flex h-7 w-7 items-center justify-center rounded-full bg-gray-700 text-white hover:bg-gray-800"
+                        aria-label="Remove secondary image 1"
+                    >
+                        X
+                    </button>
+                </div>
+            @endforeach
         </div>
 
         <fieldset class="fieldset">
