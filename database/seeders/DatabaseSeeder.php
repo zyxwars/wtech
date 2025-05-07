@@ -11,7 +11,9 @@ use App\Models\Product;
 use App\Models\ProductImage;
 use App\Models\User;
 use Illuminate\Database\Seeder;
-
+use Illuminate\Http\File;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Storage;
 
 class DatabaseSeeder extends Seeder
 {
@@ -20,6 +22,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+
+
         User::factory()->create([
             'email' => 'test@example.com',
         ]);
@@ -368,7 +372,6 @@ class DatabaseSeeder extends Seeder
             $author->save();
         }
 
-        // TODO: Add images
         foreach ($albumTitles as $title) {
             $product = new Product();
             $product->title = $title;
@@ -376,23 +379,27 @@ class DatabaseSeeder extends Seeder
             $product->release_year = random_int(1950, 2025);
             $product->price = random_int(1000, 4000);
 
-            // Add one to each array index to match row id in database
+            // Convert array_index to record id by adding +1
             $product->language()->associate(array_rand($languages) + 1);
             $product->category()->associate(array_rand($categories) + 1);
             $product->author()->associate(array_rand($authors) + 1);
 
             $product->save();
 
-            $img_number = random_int(0, 19);
+            // Images can be duplicate, but need to exist as a copy for each record
+            $img_number = random_int(0, 45);
+            Storage::disk('public')->putFile("product-images", new File("./product-images/" . $img_number . "-cover.png"));
 
+            $primaryImageUri = Storage::disk('public')->putFile("product-images", new File("./product-images/" . $img_number . ".png"));
             $primaryImage = new ProductImage();
-            $primaryImage->uri = "/storage/product-images/" . $img_number . ".png";
+            $primaryImage->uri = "/storage/" . $primaryImageUri;
             $primaryImage->is_primary = true;
             $primaryImage->product_id = $product->id;
             $primaryImage->save();
 
+            $secondaryImageUri = Storage::disk('public')->putFile("product-images", new File("./product-images/" . $img_number . "-cover.png"));
             $secondaryImage1 = new ProductImage();
-            $secondaryImage1->uri = "/storage/product-images/" . $img_number . "-cover.png";
+            $secondaryImage1->uri = "/storage/" . $secondaryImageUri;
             $secondaryImage1->is_primary = false;
             $secondaryImage1->product_id = $product->id;
             $secondaryImage1->save();
