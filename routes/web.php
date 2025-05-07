@@ -56,3 +56,4 @@ Route::get('/order/{id}', [OrderController::class, 'show'])->name('order.show');
 
 // Admin routes
 Route::get('/admin', [DashboardController::class, 'index'])->name('admin.dashboard');
+Route::get('/admin/edit/{product}', [ProductController::class, 'edit'])->name('admin.edit');
