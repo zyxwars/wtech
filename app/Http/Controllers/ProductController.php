@@ -146,7 +146,9 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        //
+        $product->load('author', 'category');
+        $categories = Category::all(); // Get all categories
+        return view('admin.edit', compact('product', 'categories'));
     }
 
     /**

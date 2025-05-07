@@ -41,7 +41,7 @@
             <td>${{ number_format($product->price,2) }}</td>
             <td>
               
-              <a href="/"><!-- route('admin.products.edit',$product) -->
+              <a href="{{ route('admin.edit',$product->id)  }}">
                 <span class="material-symbols-outlined">edit_square</span>
               </a>
             </td>
