@@ -4,7 +4,7 @@
 
 @section('content')
   <div class="mb-4 mt-16 flex items-center justify-between">
-    <a href="{{ route('admin.products.create') }}">
+    <a href="/"><!-- route('admin.products.create')  -->
       <button class="btn btn-primary">+ Add product</button>
     </a>
 
@@ -31,7 +31,7 @@
         @foreach($products as $product)
           <tr>
             <td class="flex items-center gap-3">
-              <img src="{{ asset('storage/'.$product->image_path) }}"
+              <img src="{{ $product->primaryImage ? $product->primaryImage->uri : '/placeholder.png' }}"
                    class="mask mask-squircle h-12 w-12" alt="">
               <span class="font-bold">{{ $product->name }}</span>
             </td>
@@ -40,12 +40,13 @@
             <td>{{ $product->release_year }}</td>
             <td>${{ number_format($product->price,2) }}</td>
             <td>
-              <a href="{{ route('admin.products.edit',$product) }}">
+              
+              <a href="/"><!-- route('admin.products.edit',$product) -->
                 <span class="material-symbols-outlined">edit_square</span>
               </a>
             </td>
             <td>
-              <form action="{{ route('admin.products.delete',$product) }}" method="POST">
+              <form action="/" method="POST"> <!-- route('admin.products.delete',$product)  -->
                 @csrf @method('DELETE')
                 <button class="btn btn-ghost btn-xs">
                   <span class="material-symbols-outlined">delete</span>

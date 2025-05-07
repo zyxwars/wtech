@@ -33,11 +33,12 @@ class AuthenticatedSessionController extends Controller
         $request->authenticate();
         
         Log::info("Login " . $request->input("email"));
-        
+        //dd(Auth::user());
         // Check if the user is an admin
         if(Auth::user()->is_admin) {
             // If the user is an admin, redirect to the admin dashboard
             $request->session()->regenerate();
+            //dd('is admin');
             return redirect()->route('admin.dashboard');
         }
         
