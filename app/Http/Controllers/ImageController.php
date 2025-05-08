@@ -9,7 +9,7 @@ class ImageController extends Controller
 {
     public function destroy(Request $request, string $imageId)
     {   
-        dd('here');
+        //dd('here');
         $productId = $request->input('product_id');
         
         // Check if the image belongs to the product
@@ -23,7 +23,7 @@ class ImageController extends Controller
         
         // Delete the image from db
         $deleteImage->delete();
-        dd($deleteImage);
+        //dd($deleteImage);
         // Redirect back with a success message
         return redirect()->back()->with('success', 'Image deleted successfully.');
     }

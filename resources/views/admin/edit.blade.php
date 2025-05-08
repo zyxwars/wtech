@@ -88,24 +88,28 @@
         </div>
     </form>
     <div class="relative w-full">
-        <img
-            class="h-full w-full cursor-pointer object-cover shadow-sm"
-            src="{{ $product->primaryImage ? $product->primaryImage->uri : '/placeholder.png' }}"
-            alt="Main image"
-        />
-        <form method="POST" action="{{ route('admin.images.destroy', $product->primaryImage->id) }}">
-            @method('DELETE')
-            @csrf 
+        @if ($product->primaryImage)
+            <img
+                class="h-full w-full cursor-pointer object-cover shadow-sm"
+                src="{{ $product->primaryImage->uri }}"
+                alt="Main image"
+            />
             
-            <input type="hidden" name="product_id" value="{{ $product->id }}" />
-            <button
-                type="submit"
-                class="absolute right-2 top-2 flex h-7 w-7 items-center justify-center rounded-full bg-gray-700 text-white hover:bg-gray-800"
-                aria-label="Remove main image"
-            >
-                X
-            </button>
-        </form>
+            <form method="POST" action="{{ route('admin.images.destroy', $product->primaryImage->id) }}">
+                @method('DELETE')
+                @csrf 
+                
+                <input type="hidden" name="product_id" value="{{ $product->id }}" />
+                <button
+                    type="submit"
+                    class="absolute right-2 top-2 flex h-7 w-7 items-center justify-center rounded-full bg-gray-700 text-white hover:bg-gray-800"
+                    aria-label="Remove main image"
+                >
+                    X
+                </button>
+            </form>
+        @endif
+        
     </div>
 
     <!-- Secondary images in a flex container -->
