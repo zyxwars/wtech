@@ -29,11 +29,19 @@ class AuthenticatedSessionController extends Controller
     public function store(LoginRequest $request): RedirectResponse
     {
         Log::info("Authenticating " . $request->input("email"));
-
+        
         $request->authenticate();
-
+        
         Log::info("Login " . $request->input("email"));
-
+        //dd(Auth::user());
+        // Check if the user is an admin
+        if(Auth::user()->is_admin) {
+            // If the user is an admin, redirect to the admin dashboard
+            $request->session()->regenerate();
+            //dd('is admin');
+            return redirect()->route('admin.dashboard');
+        }
+        
         if (Auth::user()->cartItems()->with('product')->get()->count() == 0) {
             // Migrate cart from session to database
             Log::info("Migrating session cart " . $request->input("email"));
@@ -52,7 +60,6 @@ class AuthenticatedSessionController extends Controller
         }
 
         $request->session()->regenerate();
-
         return redirect()->intended(route('home'));
     }
 
