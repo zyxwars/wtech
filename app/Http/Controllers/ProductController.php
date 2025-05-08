@@ -157,19 +157,21 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        
+        //dd($product);
         $validated = $request->validate([
-            'title' => 'nullable|string|max:255',
-            'author' => 'nullable|string|max:255',
+            'title' => 'nullable|string|max:255', // Allow nullable fields
+            'author_id' => 'nullable|string|max:255',
             'description' => 'nullable|string',
             'category_id' => 'nullable|exists:categories,id',
             'release_year' => 'nullable|integer|min:0',
-            'price' => 'nullable|integer|min:0',]);
-        dd($validated);
-        
+            'price' => 'nullable|integer|min:0'
+        ]);
+        //dd($validated);
+    
         // Update only the fields that are filled
-        $product->fill(array_filter($validated)); // Keep existing values for empty fields
+        $product->fill(array_filter($validated)); // Retain existing values for empty fields
         $product->save();
+    
 
         return redirect()->route('admin.dashboard');
     }

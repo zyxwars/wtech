@@ -9,6 +9,16 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Product extends Model
 {
+    protected $fillable = [
+        'title',
+        'description',
+        'price',
+        'author_id',
+        'category_id',
+        'language_id',
+        'release_year'
+    ];
+
     //    https://laravel.com/docs/12.x/eloquent-relationships#one-to-many
     public function primaryImage(): HasOne
     {

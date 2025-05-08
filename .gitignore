@@ -22,3 +22,8 @@ yarn-error.log
 /.vscode
 /.zed
 .venv
+product-images/*.png
+product-images/*-cover.png
+product-images/0-cover.png
+product-images/0-cover.png
+product-images/0.png

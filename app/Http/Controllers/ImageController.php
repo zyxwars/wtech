@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Models\ProductImage;
 
@@ -27,4 +28,28 @@ class ImageController extends Controller
         // Redirect back with a success message
         return redirect()->back()->with('success', 'Image deleted successfully.');
     }
+
+    public function upload(Request $request, Product $product)
+    {
+        // Validate the request
+        $request->validate([
+            'images.*' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+
+         // Handle each uploaded image
+        if ($request->hasFile('images')) {
+            foreach ($request->file('images') as $image) {
+                dd($image);
+                $path = $image->store('storage/app/public/product-images', 'public'); // Save the file to storage
+                ProductImage::create([
+                    'uri' => '/storage/' . $path, // Save the file path
+                    'is_primary' => false, // Mark as secondary image
+                    'product_id' => $product->id, // Associate with the product
+                ]);
+            }
+        }
+
+        return redirect()->back()->withSuccess("Images added!");
+    }
+    
 }
