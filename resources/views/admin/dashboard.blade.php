@@ -47,7 +47,8 @@
             </td>
             <td>
               <form action="/" method="POST"> <!-- route('admin.products.delete',$product)  -->
-                @csrf @method('DELETE')
+                @csrf 
+                @method('DELETE')
                 <button class="btn btn-ghost btn-xs">
                   <span class="material-symbols-outlined">delete</span>
                 </button>

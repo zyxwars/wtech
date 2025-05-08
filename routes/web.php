@@ -8,6 +8,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Middleware\StripQueryParams;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\ImageController;
 
 // Auth routes
 
@@ -57,3 +58,5 @@ Route::get('/order/{id}', [OrderController::class, 'show'])->name('order.show');
 // Admin routes
 Route::get('/admin', [DashboardController::class, 'index'])->name('admin.dashboard');
 Route::get('/admin/edit/{product}', [ProductController::class, 'edit'])->name('admin.edit');
+Route::delete('/admin/images/{imageId}', [ImageController::class, 'destroy'])->name('admin.images.destroy');
+Route::put('/admin/edit/{product}', [ProductController::class, 'update'])->name('admin.update');
