@@ -159,7 +159,7 @@ class ProductController extends Controller
     {
         //dd($product);
         $validated = $request->validate([
-            'title' => 'nullable|string|max:255', // Allow nullable fields
+            'title' => 'nullable|string|max:255', 
             'author_id' => 'nullable|string|max:255',
             'description' => 'nullable|string',
             'category_id' => 'nullable|exists:categories,id',
@@ -167,9 +167,24 @@ class ProductController extends Controller
             'price' => 'nullable|integer|min:0'
         ]);
         //dd($validated);
-    
+        
+        // Handle author update
+        if(!empty($validated['author_id'])) {
+            $authorName = $validated['author_id'];
+            // Check if the author already exists
+            $author = \App\Models\Author::where('name', $authorName)->first();
+
+            if (!$author) {
+                // Create a new author if target author doesn't exist
+                $author = \App\Models\Author::create(['name' => $authorName]);
+            }
+
+            // Assign the author to the product
+            //dd($author);
+            $validated['author_id'] = $author->id; 
+        }    
         // Update only the fields that are filled
-        $product->fill(array_filter($validated)); // Retain existing values for empty fields
+        $product->fill(array_filter($validated));
         $product->save();
     
 

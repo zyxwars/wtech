@@ -36,7 +36,10 @@ class ImageController extends Controller
             'images.*' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
         
-
+        $primaryFlag = false;
+        if(!$product->primaryImage){
+            $primaryFlag = true;
+        }
         // Handle each uploaded image
         if ($request->hasFile('images')) {
             
@@ -46,10 +49,10 @@ class ImageController extends Controller
                 //dd($path);
                 ProductImage::create([
                     'uri' => '/storage/' . $path, // Save the file path
-                    'is_primary' => false, // Mark as secondary image
+                    'is_primary' => $primaryFlag, // Mark as secondary image
                     'product_id' => $product->id, // Associate with the product
                 ]);
-                
+                $primaryFlag = false;
             }
         }
 
