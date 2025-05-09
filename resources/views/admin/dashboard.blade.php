@@ -38,19 +38,18 @@
             <td>{{ $product->category->name }}</td>
             <td>{{ $product->author->name }}</td>
             <td>{{ $product->release_year }}</td>
-            <td>${{ number_format($product->price,2) }}</td>
+            <td>{{ number_format($product->price / 100,2) }}€</td>
             <td>
-              
               <a href="{{ route('admin.edit',$product->id)  }}">
                 <span class="material-symbols-outlined">edit_square</span>
               </a>
             </td>
             <td>
-              <form action="/" method="POST"> <!-- route('admin.products.delete',$product)  -->
+              <form action="{{ route('admin.destroy',$product) }}" method="POST">
                 @csrf 
                 @method('DELETE')
                 <button class="btn btn-ghost btn-xs">
-                  <span class="material-symbols-outlined">delete</span>
+                  <span class="material-symbols-outlined" type="submit">delete</span>
                 </button>
               </form>
             </td>

@@ -61,3 +61,4 @@ Route::get('/admin/edit/{product}', [ProductController::class, 'edit'])->name('a
 Route::delete('/admin/images/{imageId}', [ImageController::class, 'destroy'])->name('admin.images.destroy');
 Route::put('/admin/edit/{product}', [ProductController::class, 'update'])->name('admin.update');
 Route::post('/admin/images/{product}', [ImageController::class, 'upload'])->name('admin.images.upload');
+Route::delete('/admin/{product}', [ProductController::class, 'destroy'])->name('admin.destroy');

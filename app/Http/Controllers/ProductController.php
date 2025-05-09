@@ -6,6 +6,7 @@ use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Storage;
 
 function applyFilters(Request $request, $products)
 {
@@ -196,6 +197,27 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        //
+        //dd($product);
+        if($product->primaryImage){
+            //delete the primary image from storage
+            if(\Illuminate\Support\Facades\Storage::exists(str_replace('/storage/', '', $product->primaryImage->uri))){
+                \Illuminate\Support\Facades\Storage::delete(str_replace('/storage/', '', $product->primaryImage->uri));
+                dd('if');
+            }
+            // delete the primary image from db
+            $product->primaryImage->delete();
+        }
+        foreach($product->secondaryImages as $image){
+            //delete the secondary image from storage
+            if(\Illuminate\Support\Facades\Storage::exists(str_replace('/storage/', '', $image->uri))){
+                \Illuminate\Support\Facades\Storage::delete(str_replace('/storage/', '', $image->uri));
+            }
+            // delete the secondary image from db
+            $image->delete();
+        }
+
+        //delete the product
+        $product->delete();
+        return redirect()->route('admin.dashboard');
     }
 }
