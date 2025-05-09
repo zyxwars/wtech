@@ -111,7 +111,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        $categories = Category::all(); // Get all categories
+        return view('admin.create', compact('categories'));
     }
 
     /**
@@ -119,7 +120,35 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'title' => 'nullable|string|max:255', 
+            'author_id' => 'nullable|string|max:255',
+            'description' => 'nullable|string',
+            'category_id' => 'nullable|exists:categories,id',
+            'release_year' => 'nullable|integer|min:0',
+            'price' => 'nullable|integer|min:0'
+        ]);
+        //dd($validated);
+        
+        // Handle author
+        if(!empty($validated['author_id'])) {
+            $authorName = $validated['author_id'];
+            // Check if the author already exists
+            $author = \App\Models\Author::where('name', $authorName)->first();
+
+            if (!$author) {
+                // Create a new author if target author doesn't exist
+                $author = \App\Models\Author::create(['name' => $authorName]);
+            }
+
+            // Assign the author to the product
+            //dd($author);
+            $validated['author_id'] = $author->id; 
+        }    
+        // Update only the fields that are filled
+        Product::create($validated);
+
+        return redirect()->route('admin.dashboard');
     }
 
     /**
