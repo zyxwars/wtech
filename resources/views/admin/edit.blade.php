@@ -77,7 +77,7 @@
             <div class="mb-4 mt-16">
                 <button class="btn btn-success" type="submit" form="update_form">Save changes</button>
                 <button class="btn btn-error ml-4" type="submit">
-                    Discard changes
+                    <a href="/admin"> Discard changes </a>
                 </button>
             </div>
         </form> 
@@ -140,6 +140,7 @@
         
             <form id="upload_images_form" method="POST" action="{{ route('admin.images.upload', $product->id) }}" enctype="multipart/form-data">
                 @csrf
+                <input type="hidden" name="product_id" value="{{ $product->id }}" />
                 <fieldset class="fieldset">
                     <legend class="fieldset-legend">Pick an image file</legend>
                     <input type="file" class="file-input w-full" name="images[]" multiple/>

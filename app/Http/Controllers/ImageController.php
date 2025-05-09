@@ -35,20 +35,25 @@ class ImageController extends Controller
         $request->validate([
             'images.*' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
+        
 
-         // Handle each uploaded image
+        // Handle each uploaded image
         if ($request->hasFile('images')) {
+            
             foreach ($request->file('images') as $image) {
-                dd($image);
-                $path = $image->store('storage/app/public/product-images', 'public'); // Save the file to storage
+                //dd($product->id);
+                $path = $image->store('product-images', 'public'); // Save the file to storage
+                //dd($path);
                 ProductImage::create([
                     'uri' => '/storage/' . $path, // Save the file path
                     'is_primary' => false, // Mark as secondary image
                     'product_id' => $product->id, // Associate with the product
                 ]);
+                
             }
         }
 
+        //dd('end');
         return redirect()->back()->withSuccess("Images added!");
     }
     

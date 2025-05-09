@@ -60,4 +60,4 @@ Route::get('/admin', [DashboardController::class, 'index'])->name('admin.dashboa
 Route::get('/admin/edit/{product}', [ProductController::class, 'edit'])->name('admin.edit');
 Route::delete('/admin/images/{imageId}', [ImageController::class, 'destroy'])->name('admin.images.destroy');
 Route::put('/admin/edit/{product}', [ProductController::class, 'update'])->name('admin.update');
-Route::post('/admin/images/{productId}', [ImageController::class, 'upload'])->name('admin.images.upload');
+Route::post('/admin/images/{product}', [ImageController::class, 'upload'])->name('admin.images.upload');
