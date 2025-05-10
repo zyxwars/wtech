@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Models\ProductImage;
+use Illuminate\Support\Facades\Storage;
 
 class ImageController extends Controller
 {
@@ -20,6 +21,16 @@ class ImageController extends Controller
         
         if (!$deleteImage) {
             return redirect()->back()->with('error', 'Image not found or does not belong to the product.');
+        }
+        // Delete the image file from storage
+        if ($deleteImage->uri) {
+            
+            $imagePath = str_replace('/storage/', '', $deleteImage->uri);
+            if (Storage::disk('public')->exists($imagePath)) {
+                //dd($imagePath);
+                Storage::disk('public')->delete($imagePath);
+                
+            }
         }
         
         // Delete the image from db
