@@ -252,18 +252,22 @@ class ProductController extends Controller
     {
         //dd($product);
         if($product->primaryImage){
+            //dd($product->primaryImage);
             //delete the primary image from storage
-            if(\Illuminate\Support\Facades\Storage::exists(str_replace('/storage/', '', $product->primaryImage->uri))){
-                \Illuminate\Support\Facades\Storage::delete(str_replace('/storage/', '', $product->primaryImage->uri));
-                dd('if');
+            $imagePath = str_replace('/storage/', '', $product->primaryImage->uri);
+            if(Storage::disk('public')->exists($imagePath)){
+                Storage::disk('public')->delete($imagePath);
+                
             }
             // delete the primary image from db
             $product->primaryImage->delete();
         }
         foreach($product->secondaryImages as $image){
             //delete the secondary image from storage
-            if(\Illuminate\Support\Facades\Storage::exists(str_replace('/storage/', '', $image->uri))){
-                \Illuminate\Support\Facades\Storage::delete(str_replace('/storage/', '', $image->uri));
+            $imagePath = str_replace('/storage/', '', $image->uri);
+            if(Storage::disk('public')->exists($imagePath)){
+                //dd($imagePath);
+                Storage::disk('public')->delete($imagePath);
             }
             // delete the secondary image from db
             $image->delete();
