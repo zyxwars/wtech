@@ -199,9 +199,10 @@ class ProductController extends Controller
     public function edit(Product $product)
     {
         //dd($product->primaryImage);
-        $product->load('author', 'category');
+        $product->load('author', 'category', 'language');
         $categories = Category::all(); // Get all categories
-        return view('admin.edit', compact('product', 'categories'));
+        $languages = \App\Models\Language::all(); // Get all languages
+        return view('admin.edit', compact('product', 'categories', 'languages'));
     }
 
     /**
@@ -216,7 +217,8 @@ class ProductController extends Controller
             'description' => 'nullable|string',
             'category_id' => 'nullable|exists:categories,id',
             'release_year' => 'nullable|integer|min:0',
-            'price' => 'nullable|integer|min:0'
+            'price' => 'nullable|integer|min:0',
+            'language_id' => 'nullable|exists:languages,id'
         ]);
         //dd($validated);
         

@@ -52,6 +52,18 @@
                 </select>
             </fieldset>
 
+            <fieldset class="fieldset">
+                <legend class="fieldset-legend">Language</legend>
+                <select class="select w-full" name="language_id">
+                    <option disabled selected>{{ $product->language->name  }}</option>
+                    @foreach($languages as $language)
+                    <option value="{{ $language->id }}" {{ $product->language->id == $language->id ? 'selected' : '' }}>
+                        {{ $language->name }}
+                    </option>
+                    @endforeach
+                </select>
+            </fieldset>
+
             <fieldset class="fieldset mb-4">
                 <legend class="fieldset-legend">Release Year</legend>
                 <input
