@@ -32,7 +32,7 @@
 
                         <div class="flex w-full items-start justify-between">
                             <form method="POST" action="{{ route('cart.update', $cartItem['product']->id) }}">
-                                @method('PUT')
+                                @method('PATCH')
                                 @csrf
 
                                 <input name="quantity" min="0" type="number" value="{{ $cartItem['quantity'] }}"

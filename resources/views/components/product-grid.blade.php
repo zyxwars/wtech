@@ -1,4 +1,3 @@
-{{-- TODO: is wrapping the whole component in a form okay?  --}}
 <!-- https://daisyui.com/components/drawer/ -->
 <div class="drawer">
     <input id="filter-drawer" type="checkbox" class="drawer-toggle" />

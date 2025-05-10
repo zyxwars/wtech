@@ -51,12 +51,10 @@ class ProductController extends Controller
                 'banner' => [
                     'text' => 'New album just out!',
                     'image_url' => "/banner.png",
-                    // TODO: route to product
                     'content_url' => route('product.show', 1),
                 ],
                 'categories' => Category::all(),
                 'featuredRows' => [
-                    // TODO: use select products
                     ['title' => 'New Arrivals', 'products' => Product::with(['author', 'category', 'language', 'primaryImage'])->orderBy('created_at', 'desc')->take(10)->get()],
                     ['title' => 'Best sellers', 'products' => Product::with(['author', 'category', 'language', 'primaryImage'])->take(10)->get()],
                     ['title' => 'Try some indie', 'products' => Product::with(['author', 'category', 'language', 'primaryImage'])->where('category_id', 6)->take(10)->get()]

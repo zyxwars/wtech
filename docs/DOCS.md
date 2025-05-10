@@ -1,4 +1,12 @@
-# Semestrálny projekt - elektronický obchod
+---
+title: Semestrálny projekt - elektronický obchod
+author: Samuel Tvrdoň, Michal Weis
+date: 11.5. 2025
+---
+
+<!-- This is used by pandoc -->
+
+\pagebreak
 
 ## Zadanie
 
@@ -44,7 +52,7 @@ V našom projekte sme si ako tému vybrali eshop s platňami. Každá platňa m�
 
 ### TODO: Zmeny v diagrame
 
-## Návrhové rozhodnutia
+## Návrhové rozhodnutia a technológie
 
 ### Laravel
 
@@ -76,27 +84,73 @@ https://github.com/laravel/breeze
 
 Pre neprihláseného zákazníka sa obsah košíka ukladá do session. Pre prihláseného zákazníka sa obsah košíka ukladá do databázy. Pri prihlásení sa obsah session košíka prekopíruje do databázy, ak je košík v databáze prázdny, inak sa session košík zahodí.
 
-### TODO: roles handling, login etc. -->
-
 ## Implementácia prípadov použitia
 
-### TODO: Zmena množstva pre daný produkt
+### Zmena množstva pre daný produkt
 
-### TODO: Prihlásenie
+1. Užívateľ zmení množstvo produktu v košíku pomocou input elementu definovaného v <strong>cart.blade.php</strong>.
+2. Po zmene množstva onchage listener vykoná form submit.
+3. Vykoná sa POST(PUT hidden field) request na `route(cart.update, productId)` definovanú v <strong>web.php</strong> s form field quantity.
+4. Zavolá sa `update(Request $request, string $productId)` v <strong>CartController.php</strong>
+5. Je užívateľ prihlásený?
+    1. Áno -> záznam sa číta a ukladá do databázy.
+    2. Nie -> záznam sa číta a ukladá do session.
+    3. Ak je nová quantity = 0 produkt sa vymaže s košíka.
+    4. Inak sa aktualizuje kvantita.
 
-<!-- is admin -->
+### Prihlásenie
 
-<!-- is customer -->
+1. Užívateľ klikne na "Sign in" v headery a je presmerovaný na `route('login')`
+2. Užívateľ vyplní mail, heslo a remember me checkbox a klinke sign in button
+3. Vykoná sa post request na `route('login')`
+4. Prihlásenie riadi <strong>AuthenticatedSessionController.php</strong> a <strong>LoginRequest.php</strong>
+5. Zavolá sa `LoginRequest->authenticate()`
+    1. Overí sa či používateľ nespravil príliš veľa nesprávnych pokosov pomocou `ensureIsNotRateLimited()`. Pokusy sú identifikované podľa ` Str::lower($this->input('email')) . '|' . $this->ip();`.
+    2. Overý sa mail a heslo inak autentifikácia zlyhá
+6. Ak je user role admin, užívateľ je presmerovaný na admin portál
+7. Ak má session košík obash a košík pre užívateľa v databáze je prázdny presunie sa obsah do databázy
+8. Regeneruje sa session a užívateľ je presmerovaný na `route('home')`
 
-<!-- has cart items -->
+### Vyhľadávanie
 
-### TODO: Vyhľadávanie
+1. Užívateľ vyplní search input a vykoná form submit.
+2. Vykoná sa GET request na `route('product.search')`
+3. Zavolá sa `search(Request $request)` v <strong>ProductController.php</strong>
+4. Vyberú sa z databázy záznamy, kde `'title', 'like', "%{$search}%"`
+5. Vráti sa `view('search')` s výsledkami
 
-### TODO: Pridanie produktu do košíka
+### Pridanie produktu do košíka
 
-### TODO: Stránkovanie
+1. Užívateľ v zozname produktov klikne na buy button
+    1. Vykoná sa POST request na `route('cart.store')` s productId
+2. Inak užívateľ v produkt detaile nastaví pred kliknutím quantity input
+    1. Vykoná sa POST request na `route('cart.store')` s productId a quantity
+3. Zavolá sa `store(Request $request)` v <strong>CartController.php</strong>
+4. Je užívateľ prihlásený?
+    1. Áno -> záznam sa číta a ukladá do databázy.
+    2. Nie -> záznam sa číta a ukladá do session.
+    3. Quantity default je 1
+    4. Ak už je produkt v košíku, quantity s requestu sa pripočíta ku quantity v zázname
+    5. Inak sa vytvorí nový záznam s quantity z requestu
 
-### TODO: Základné filtrovanie
+### Stránkovanie
+
+Stránkovanie je riešené pomocou laravel utility funkcie `paginate()` v controlleroch a následne pomocou `links()` v blade templatoch. Napríklad `Product()::paginate(15)`
+
+1. Užívateľ klikne na konci zoznamu na číslo stránky, na ktorú sa chce presunúť.
+2. Vykoná sa GET request na url, na ktorej sa nachádza s query parametrom page={number}.
+3. Funkcia `paginate(limit)` v príslušnom controllery vráti počet záznamov podľa limit s offsetom podľa page.
+
+### Základné filtrovanie
+
+Filtrovať je možné podľa price range, author, language a release year range filtrov.
+
+1. Užívateľ vyplní hodnoty, podľa ktorých chce filtrovať a potvrdí výber.
+2. Vykoná sa GET request na url, na ktorej sa nachádza s query parametrami s filter form.
+3. Do requestu sa pridajú aj parametre search a order ako hidden fields, aby ich hodnoty zostali aj po reloade
+4. V ProductController metódach sa zavolá utility funkcia `applyFilters(Request $request, $products)`, ktorá na produkty z databázy aplikuje filtre, ktoré majú v requeste vyplnené hodnotu
+5. Užívateľ je vrátený na pôvodný view s vyfiltrovanými produktami
+6. Aplikuje sa StripQueryParams middleware, ktorý pre krajší vzhľad url zmaže prázdne hodnoty pokiaľ užívateľ nevyplnil všetky filtre
 
 ## Snímky obrazoviek
 
@@ -135,7 +189,7 @@ composer install
 npm install
 ```
 
-### Create <strong>.env</strong>, use <strong>.env.example</strong> as a guide
+### Copy <strong>.env.example</strong>, to <strong>.env</strong>
 
 #### Generate APP_KEY
 
@@ -178,8 +232,6 @@ php artisan db:seed
 ```sh
 composer run dev
 ```
-
-TODO: update product image sources
 
 ## Credits
 
