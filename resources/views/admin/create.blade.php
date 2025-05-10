@@ -5,7 +5,7 @@
 @section('content')
 <main class="mt-8 flex items-start justify-center p-4">
     <div class="max-w-xl px-4 lg:px-20">
-        <form id="create_form" method="POST" action="{{ route('admin.store') }}" >
+        <form id="create_form" method="POST" action="{{ route('admin.store') }}" enctype="multipart/form-data" >
             @csrf
 
             <h2 class="mb-4 text-2xl font-bold">Create Product</h2>
@@ -53,6 +53,17 @@
                 </select>
             </fieldset>
 
+            <fieldset class="fieldset">
+                <legend class="fieldset-legend">Language</legend>
+                <select class="select w-full" name="language_id">
+                    @foreach($languages as $language)
+                        <option value="{{ $language->id }}">
+                            {{ $language->name }}
+                        </option>
+                    @endforeach
+                </select>
+            </fieldset>
+
             <fieldset class="fieldset mb-4">
                 <legend class="fieldset-legend">Release Year</legend>
                 <input
@@ -77,12 +88,18 @@
                 />
             </fieldset>
 
+            <fieldset class="fieldset">
+                <legend class="fieldset-legend">Pick an image file</legend>
+                <input type="file" class="file-input w-full" name="images[]" multiple/>
+            </fieldset>
+
             <div class="mb-4 mt-16">
                 <button class="btn btn-success" type="submit" form="create_form">Save changes</button>
                 <a href="/admin" class="btn btn-error ml-4">Discard changes</a>
             </div>
         </form> 
 
+        
         
     </div>
     

@@ -16,7 +16,8 @@ class Product extends Model
         'author_id',
         'category_id',
         'language_id',
-        'release_year'
+        'release_year',
+        'language_id'
     ];
 
     //    https://laravel.com/docs/12.x/eloquent-relationships#one-to-many

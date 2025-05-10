@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use App\Models\ProductImage;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 
@@ -112,7 +113,8 @@ class ProductController extends Controller
     public function create()
     {
         $categories = Category::all(); // Get all categories
-        return view('admin.create', compact('categories'));
+        $languages = \App\Models\Language::all(); // Get all languages
+        return view('admin.create', compact('categories', 'languages'));
     }
 
     /**
@@ -126,7 +128,9 @@ class ProductController extends Controller
             'description' => 'nullable|string',
             'category_id' => 'nullable|exists:categories,id',
             'release_year' => 'nullable|integer|min:0',
-            'price' => 'nullable|integer|min:0'
+            'price' => 'nullable|integer|min:0',
+            'language_id' => 'nullable|exists:languages,id',
+            'images.*' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048'
         ]);
         //dd($validated);
         
@@ -139,16 +143,34 @@ class ProductController extends Controller
             if (!$author) {
                 // Create a new author if target author doesn't exist
                 $author = \App\Models\Author::create(['name' => $authorName]);
+                //dd('new author ' . $author->name);
             }
-
+            
             // Assign the author to the product
             //dd($author);
             $validated['author_id'] = $author->id; 
         }    
-        // Update only the fields that are filled
-        Product::create($validated);
 
-        return redirect()->route('admin.dashboard');
+        $product = Product::create($validated);
+
+        $primaryFlag = true;
+        // Handle each uploaded image
+        if ($request->hasFile('images')) {
+            //dd('if');
+            foreach ($request->file('images') as $image) {
+                //dd($product->id);
+                $path = $image->store('product-images', 'public'); // Save the file to storage
+                //dd($path);
+                ProductImage::create([
+                    'uri' => '/storage/' . $path, // Save the file path
+                    'is_primary' => $primaryFlag, // Mark as secondary image
+                    'product_id' => $product->id, // Associate with the product
+                ]);
+                $primaryFlag = false;
+            }
+        }
+
+        return redirect()->route('admin.dashboard')->with('success', 'Product created successfully.');
     }
 
     /**
